@@ -1,0 +1,11 @@
+[Unit]
+Description=pypilot detect
+DefaultDependencies=false
+ConditionPathExists=/proc/device-tree/hat/custom_0
+
+[Service]
+Type=simple
+ExecStart=pypilot_detect
+
+[Install]
+WantedBy=local-fs.target

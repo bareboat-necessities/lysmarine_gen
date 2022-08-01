@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+
+import os, json
+
+p = '/proc/device-tree/hat/custom_0'
+# if no eeprom no hat detected
+if not os.path.exists(p):
+    exit(0)
+
+def update_boot_conf(line):
+    p = '/boot/config.txt'
+    if os.system("grep '" + line + "' " + p):
+        os.system("echo >>" + p)
+        os.system("echo '" + line + "'")
+
+try:
+    with open(p) as f:
+        d = json.loads(f.read())
+    if 'lcd' in d:
+        # enable hat service
+        if os.system('systemctl is-enabled pypilot_hat'):
+            os.system('systemctl enable pypilot_hat')
+            os.system('systemctl start pypilot_hat')
+
+    if 'lirc' in d:
+        # enable lirc service, and config gpio
+        update_boot_conf('dtoverlay=gpio-ir,gpio_pin=4')
+
+    if 'mpu' in d:
+        # enable pypilot serial port and disable bluetooth
+        update_boot_conf('enable_uart=1')
+        update_boot_conf('dtoverlay=disable-bt')
+
+except Exception as e:
+    print('failed to read/parse pypilot eeprom', e)
+    exit(1)
+
+# reboot if we made a change??
