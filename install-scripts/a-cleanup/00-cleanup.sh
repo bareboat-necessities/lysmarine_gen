@@ -9,7 +9,7 @@ apt-get remove -y greybird-gtk-theme murrine-themes rpd-icons
 apt-get -y autoremove
 apt-get clean
 npm cache clean --force
-pnpm cache clean --force
+rm -rf ~/.local/share/pnpm
 
 # remove python pip cache
 rm -rf ~/.cache/pip
