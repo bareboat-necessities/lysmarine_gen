@@ -3,7 +3,7 @@
 apt-get clean
 
 apt-get -y -q install nodejs libnss3 gnome-icon-theme unzip
-npm install nativefier@43.1.3 electron@v12.0.7 -g --unsafe-perm
+pnpm install nativefier@43.1.3 electron@v12.0.7 -g --unsafe-perm --production
 
 install -d '/usr/local/share/bbn-checklist'
 install -v -m 0644 $FILE_FOLDER/bbn-checklist/asciidoctor.css "/usr/local/share/bbn-checklist/"
