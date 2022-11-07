@@ -283,6 +283,27 @@
       ],
       "id": "can0",
       "enabled": false
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
+              "type": "tcp",
+              "host": "localhost",
+              "port": "30330",
+              "noDataReceivedTimeout": "15",
+              "suppress0183event": true
+            }
+          }
+        }
+      ],
+      "id": "OpenCPN",
+      "enabled": true
     }
   ],
   "security": {

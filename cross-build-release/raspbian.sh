@@ -16,8 +16,8 @@
   # Create caching folder hierarchy to work with this architecture.
   setupWorkSpace $thisArch
 
-  zipName="lysmarine-bbn-bullseye_2022-09-20-raspios-${cpuArch}.img.xz"
-  imageSource="https://github.com/bareboat-necessities/lysmarine_gen/releases/download/v2022-09-20/${zipName}"
+  zipName="lysmarine-bbn-bullseye_2022-10-24-raspios-${cpuArch}.img.xz"
+  imageSource="https://github.com/bareboat-necessities/lysmarine_gen/releases/download/v2022-10-24/${zipName}"
 
 # Download the official image
   log "Downloading official image from internet."
