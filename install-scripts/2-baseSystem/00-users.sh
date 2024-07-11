@@ -2,7 +2,7 @@
 apt-get -y -q install sudo policykit-1 polkitd-pkla
 
 ## Force keyboard layout to be EN US by default.
-sed -i "s/XKBLAYOUT=.*/XKBLAYOUT=\"us\"/g" /etc/default/keyboard
+#sed -i "s/XKBLAYOUT=.*/XKBLAYOUT=\"us\"/g" /etc/default/keyboard
 
 ### Set root password.
 echo 'root:changeme' | chpasswd
