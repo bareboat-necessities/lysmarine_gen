@@ -7,7 +7,7 @@ apt-get autoremove -y --purge
 #apt-mark unhold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
 
 # https://github.com/bareboat-necessities/lysmarine_gen/issues/375
-#pip3 install scipy
+#pip3 install scipy # TODO
 
 # Clean up applications menu for budgie
 overrideMenu() {
@@ -118,7 +118,7 @@ echo '/usr/lib /usr/share /usr/include /usr/bin /srv' | xargs -n 1 -P 4 hardlink
 #if [ "$BBN_KIND" == "LITE" ] ; then
 #  true
 #else
-#  apt-get -q -y install --download-only avnav-update-plugin
+#  apt-get -q -y install --download-only avnav-update-plugin # TODO
 #fi
 
 for f in /etc/apt/sources.list.d/bbn-*.list
