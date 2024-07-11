@@ -109,6 +109,7 @@ inflateImage() {
     partQty=$(fdisk -l "$imageLocationInflated" | grep -o "^$imageLocationInflated" | wc -l)
     fdisk -l "$imageLocationInflated"
     parted -f "$imageLocationInflated" --script "resizepart $partQty 100%"
+    partprobe "$imageLocationInflated"
     fdisk -l "$imageLocationInflated"
 
     log "Resize the filesystem to fit the partition."
