@@ -11,7 +11,7 @@ setupWorkSpace() {
   thisArch=$1
   mkdir -p ./cache/"$thisArch"/stageCache
   mkdir -p ./work/"$thisArch"/rootfs
-  mkdir -p ./work/"$thisArch"/bootfs
+  #mkdir -p ./work/"$thisArch"/bootfs
   mkdir -p ./release/"$thisArch"
 }
 
@@ -78,7 +78,7 @@ umountImageFile() {
   umount "$rootfs"/tmp
   umount "$rootfs"/install-scripts/stageCache
   umount "$rootfs"/run/shm
-  umount "$rootfs"/boot
+  #umount "$rootfs"/boot
   umount "$rootfs"
 
   kpartx -d "$imageFile"
@@ -100,6 +100,8 @@ inflateImage() {
       log "truncate image to 14G"
       truncate -s "14G" "$imageLocationInflated"
     fi
+    sync
+    sleep 5
 
     log "resize last partition to 100%"
     partQty=$(fdisk -l "$imageLocationInflated" | grep -o "^$imageLocationInflated" | wc -l)
