@@ -1,18 +1,7 @@
 #!/bin/bash -e
 
-# TODO
-exit 0
-
-apt-get -y -q install sudo #policykit-1 polkitd-pkla
-
-## Force keyboard layout to be EN US by default.
-#sed -i "s/XKBLAYOUT=.*/XKBLAYOUT=\"us\"/g" /etc/default/keyboard
-
 ### Set root password.
 echo 'root:changeme' | chpasswd
-
-#DPASS=$(echo 'changeme' | openssl passwd -6 -stdin)
-#echo "user:$DPASS" > /boot/userconf.txt
 
 ## Remove default user (if any).
 oldUser=$(grep 1000:1000 /etc/passwd | cut -f1 -d:)
@@ -52,6 +41,18 @@ usermod -a -G users user
 groupadd -r lirc
 useradd -r -g lirc -d /var/lib/lirc -s /usr/bin/nologin -c "LIRC daemon user" lirc
 usermod -a -G input lirc
+
+# TODO
+exit 0
+
+apt-get -y -q install sudo #policykit-1 polkitd-pkla
+
+## Force keyboard layout to be EN US by default.
+#sed -i "s/XKBLAYOUT=.*/XKBLAYOUT=\"us\"/g" /etc/default/keyboard
+
+#DPASS=$(echo 'changeme' | openssl passwd -6 -stdin)
+#echo "user:$DPASS" > /boot/userconf.txt
+
 
 ## Manage the permissions and privileges.
 if [[ -d /etc/polkit-1 ]]; then
