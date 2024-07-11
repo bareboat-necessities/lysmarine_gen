@@ -67,7 +67,7 @@ EOF
   ls -l ./work/$thisArch/"$imageName"
   wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
   chmod +x "$myCache"/pishrink.sh
-  "$myCache"/pishrink.sh ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
+  "$myCache"/pishrink.sh -s ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
     log "Image already shrunk to smallest size"
   fi
   ls -l ./work/$thisArch/"$imageName"
