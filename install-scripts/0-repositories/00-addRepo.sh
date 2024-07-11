@@ -79,7 +79,8 @@ rm influxdata-archive_compat.key
 
 ## Update && Upgrade
 apt-get update  -y -q
-apt-mark hold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
+#apt-mark hold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
+apt-mark hold linux-base
 apt-get upgrade -y -q
 apt-get autoremove -y --purge
 
