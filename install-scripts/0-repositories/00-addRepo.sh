@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO
+exit 0
+
 apt-get update  -y -q
 apt-get install -y -q wget gnupg ca-certificates
 

@@ -1,4 +1,8 @@
 #!/bin/bash -e
+
+# TODO
+exit 0
+
 apt-get -y -q install sudo #policykit-1 polkitd-pkla
 
 ## Force keyboard layout to be EN US by default.
