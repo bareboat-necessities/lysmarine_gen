@@ -20,15 +20,15 @@ overrideMenu() {
     sed -i "s/Categories=.*/Categories=$category/" /home/user/.local/share/applications/"$baseDesktopFile"
   fi
 }
-
-cat << EOF > /home/user/.local/share/desktop-directories/radio.directory
-[Desktop Entry]
-Name=Radio
-Comment=Radio
-Icon=arrow
-Type=Directory
-EOF
-chown user:user /home/user/.local/share/desktop-directories/radio.directory
+#
+#cat << EOF > /home/user/.local/share/desktop-directories/radio.directory
+#[Desktop Entry]
+#Name=Radio
+#Comment=Radio
+#Icon=arrow
+#Type=Directory
+#EOF
+#chown user:user /home/user/.local/share/desktop-directories/radio.directory
 
 overrideMenu Office /usr/share/applications/org.kiwix.desktop.desktop
 overrideMenu Office /usr/share/applications/thunderbird.desktop
