@@ -49,8 +49,8 @@ mountImageFile() {
 
   if [ "$partQty" == 2 ]; then
     mount $mountOpt -v /dev/mapper/loop"${loopId}"p2 "$rootfs"/
-    if [ ! -d "$rootfs"/boot ]; then mkdir "$rootfs"/boot; fi
-    mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/boot/
+    #if [ ! -d "$rootfs"/boot ]; then mkdir "$rootfs"/boot; fi
+    #mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/boot/
   elif [ "$partQty" == 1 ]; then
     mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/
   else
