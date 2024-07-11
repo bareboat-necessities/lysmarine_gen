@@ -58,18 +58,18 @@
   mount --rbind $myCache/stageCache $mkRoot/install-scripts/stageCache
   mount --rbind /run/shm $mkRoot/run/shm
   chroot $mkRoot /bin/bash -xe <<EOF
-    set -x; set -e; cd /install-scripts; export LMBUILD="debian"; export BBN_KIND="$BBN_KIND"; ls; chmod +x *.sh; ./install.sh 0 2; exit
+    set -x; set -e; cd /install-scripts; export LMBUILD="debian"; export BBN_KIND="$BBN_KIND"; ls; chmod +x *.sh; ./install.sh 0 2 a; exit
 EOF
 
   # Unmount
   umountImageFile $thisArch ./work/$thisArch/"$imageName"
 
-  ls -l ./work/$thisArch/"$imageName"
-  wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
-  chmod +x "$myCache"/pishrink.sh
-  "$myCache"/pishrink.sh -s ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
-    log "Image already shrunk to smallest size"
-  fi
+#  ls -l ./work/$thisArch/"$imageName"
+#  wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
+#  chmod +x "$myCache"/pishrink.sh
+#  "$myCache"/pishrink.sh -s ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
+#    log "Image already shrunk to smallest size"
+#  fi
   ls -l ./work/$thisArch/"$imageName"
 
   # Renaming the OS and moving it to the release folder.
