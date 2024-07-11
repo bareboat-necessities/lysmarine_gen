@@ -64,12 +64,12 @@ EOF
   # Unmount
   umountImageFile $thisArch ./work/$thisArch/"$imageName"
 
-#  ls -l ./work/$thisArch/"$imageName"
-#  wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
-#  chmod +x "$myCache"/pishrink.sh
-#  "$myCache"/pishrink.sh -s ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
-#    log "Image already shrunk to smallest size"
-#  fi
+  ls -l ./work/$thisArch/"$imageName"
+  wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
+  chmod +x "$myCache"/pishrink.sh
+  "$myCache"/pishrink.sh ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
+    log "Image already shrunk to smallest size"
+  fi
   ls -l ./work/$thisArch/"$imageName"
 
   # Renaming the OS and moving it to the release folder.
