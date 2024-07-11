@@ -97,7 +97,7 @@ inflateImage() {
 
     if [ "$BBN_KIND" == "LITE" ] ; then
       log "truncate image to 4G"
-      truncate -s "9G" "$imageLocationInflated"
+      truncate -s "4G" "$imageLocationInflated"
     else
       log "truncate image to 14G"
       truncate -s "14G" "$imageLocationInflated"
@@ -105,9 +105,9 @@ inflateImage() {
     sync
 
     log "resize last partition to 100%"
+    sgdisk -e "$imageLocationInflated"
     partQty=$(fdisk -l "$imageLocationInflated" | grep -o "^$imageLocationInflated" | wc -l)
     fdisk -l "$imageLocationInflated"
-    sgdisk -e "$imageLocationInflated"
     parted -f "$imageLocationInflated" --script "resizepart $partQty 100%"
     fdisk -l "$imageLocationInflated"
 
