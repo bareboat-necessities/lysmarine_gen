@@ -69,13 +69,13 @@ fi
 
 apt-get clean
 
-apt-get remove -y --purge greybird-gtk-theme murrine-themes rpd-icons userconf-pi gdb libsdl2-dev libicu-dev \
-  libnorm-dev libavcodec-dev libfftw3-dev
+#apt-get remove -y --purge greybird-gtk-theme murrine-themes rpd-icons userconf-pi gdb libsdl2-dev libicu-dev \
+#  libnorm-dev libavcodec-dev libfftw3-dev
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  apt-get remove -y --purge system-config-printer gnome-power-manager
-  rm -f /usr/share/applications/thunar-bulk-rename.desktop
-fi
+#if [ "$BBN_KIND" == "LITE" ] ; then
+#  apt-get remove -y --purge system-config-printer gnome-power-manager
+#  rm -f /usr/share/applications/thunar-bulk-rename.desktop
+#fi
 
 apt-get -y autoremove
 apt-get clean
