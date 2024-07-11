@@ -121,10 +121,10 @@ echo '/usr/lib /usr/share /usr/include /usr/bin /srv' | xargs -n 1 -P 4 hardlink
 #  apt-get -q -y install --download-only avnav-update-plugin # TODO
 #fi
 
-for f in /etc/apt/sources.list.d/bbn-*.list
-do
-  mv "$f" "$f"-orig
-done
+#for f in /etc/apt/sources.list.d/bbn-*.list
+#do
+#  mv "$f" "$f"-orig
+#done
 
 # These are launchpad. They are ok to have.
 mv /etc/apt/sources.list.d/bbn-rce.list-orig /etc/apt/sources.list.d/bbn-rce.list || true
