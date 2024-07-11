@@ -95,23 +95,23 @@ rm -f /opt/vc/src/hello_pi/hello_video/test.h264
 
 rm -f /usr/share/applications/org.buddiesofbudgie.BudgieScreenshot.desktop
 
-# speed up boot without ethernet plugged
-rm -rf /etc/systemd/system/dhcpcd.service.d/wait.conf
-systemctl disable systemd-networkd-wait-online.service
-#systemctl disable NetworkManager-wait-online.service
-#systemctl mask plymouth-quit-wait.service
-install -v -d "/etc/systemd/system/networking.service.d"
-bash -c 'cat << EOF > /etc/systemd/system/networking.service.d/reduce-timeout.conf
-[Service]
-TimeoutStartSec=8
-EOF'
-install -v -d "/etc/systemd/system/nmbd.service.d"
-bash -c 'cat << EOF > /etc/systemd/system/nmbd.service.d/reduce-timeout.conf
-[Service]
-TimeoutStartSec=15
-RestartSec=60
-Restart=always
-EOF'
+## speed up boot without ethernet plugged
+#rm -rf /etc/systemd/system/dhcpcd.service.d/wait.conf
+#systemctl disable systemd-networkd-wait-online.service
+##systemctl disable NetworkManager-wait-online.service
+##systemctl mask plymouth-quit-wait.service
+#install -v -d "/etc/systemd/system/networking.service.d"
+#bash -c 'cat << EOF > /etc/systemd/system/networking.service.d/reduce-timeout.conf
+#[Service]
+#TimeoutStartSec=8
+#EOF'
+#install -v -d "/etc/systemd/system/nmbd.service.d"
+#bash -c 'cat << EOF > /etc/systemd/system/nmbd.service.d/reduce-timeout.conf
+#[Service]
+#TimeoutStartSec=15
+#RestartSec=60
+#Restart=always
+#EOF'
 
 echo '/usr/lib /usr/share /usr/include /usr/bin /srv' | xargs -n 1 -P 4 hardlink -v -t
 
