@@ -96,7 +96,7 @@ inflateImage() {
     cp -fv "${imageLocation}" "$imageLocationInflated"
 
     if [ "$BBN_KIND" == "LITE" ] ; then
-      log "truncate image to 9G"
+      log "truncate image to 4G"
       truncate -s "9G" "$imageLocationInflated"
     else
       log "truncate image to 14G"
