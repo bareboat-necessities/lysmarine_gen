@@ -42,6 +42,8 @@ groupadd -r lirc
 useradd -r -g lirc -d /var/lib/lirc -s /usr/bin/nologin -c "LIRC daemon user" lirc
 usermod -a -G input lirc
 
+echo 'PATH="/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:$PATH"' >> /home/user/.profile # Give user capability to halt and reboot.
+
 # TODO
 exit 0
 
@@ -67,8 +69,6 @@ fi
 if [[ -f /etc/sudoers.d/010_pi-nopasswd ]]; then # Remove no-pwd sudo to user pi.
 	rm /etc/sudoers.d/010_pi-nopasswd
 fi
-
-echo 'PATH="/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:$PATH"' >> /home/user/.profile # Give user capability to halt and reboot.
 
 if [ -f /root/.not_logged_in_yet ]; then # Disable first login script.
 	rm /root/.not_logged_in_yet
