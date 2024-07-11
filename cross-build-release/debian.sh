@@ -30,6 +30,8 @@
     ls *.img
     cd ../../
   )
+
+  cp "$imageName" ./work/$thisArch/"$imageName"
 #  inflateImage $thisArch $myCache/"$imageName"
 #
 #  # copy ready image from cache to the work dir
