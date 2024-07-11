@@ -1,10 +1,10 @@
 #!/bin/bash -e
 
-apt-get -y update
-apt-mark hold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
-apt-get -y upgrade
+#apt-get -y update
+#apt-mark hold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
+#apt-get -y upgrade
 apt-get autoremove -y --purge
-apt-mark unhold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
+#apt-mark unhold linux-image-rpi-2712 linux-image-rpi-v8 linux-headers-rpi-2712 linux-headers-rpi-v8 linux-libc-dev
 
 # https://github.com/bareboat-necessities/lysmarine_gen/issues/375
 pip3 install scipy
