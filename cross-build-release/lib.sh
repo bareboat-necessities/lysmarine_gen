@@ -103,10 +103,9 @@ inflateImage() {
     sync
     sleep 5
 
-    parted -l "$imageLocationInflated"
-
     log "resize last partition to 100%"
     partQty=$(fdisk -l "$imageLocationInflated" | grep -o "^$imageLocationInflated" | wc -l)
+    parted -l "$imageLocationInflated"
     parted "$imageLocationInflated" --script "resizepart $partQty 100%"
     fdisk -l "$imageLocationInflated"
 
