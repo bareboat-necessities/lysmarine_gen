@@ -6,14 +6,11 @@
   LYSMARINE_VER=$2
   BBN_KIND=$3
 
-  thisArch="raspios"
-  cpuArch="arm64"
-  zipName="raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz"
-  if [ "armhf" == "$MY_CPU_ARCH" ]; then
-    cpuArch="armhf"
-    zipName="raspios_lite_armhf/images/raspios_lite_armhf-2024-03-15/2024-03-15-raspios-bookworm-armhf-lite.img.xz"
-  fi
-  imageSource="https://downloads.raspberrypi.org/${zipName}"
+  thisArch="debian"
+  cpuArch="armhf"
+  
+  zipName="bareboat-necessities/lysmarine_gen/releases/download/vTest/M5_CoreMP135_debian12_20240628.7z"
+  imageSource="https://github.com/${zipName}"
 
   checkRoot
 
