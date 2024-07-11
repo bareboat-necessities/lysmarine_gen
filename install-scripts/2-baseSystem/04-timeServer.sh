@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 mkdir -p /var/log/chrony
 
 apt-get install -y -q chrony at

@@ -1,5 +1,5 @@
 #!/bin/bash -e
-apt-get install -y -q plymouth plymouth-label libblockdev-mdraid2 parted
+apt-get install -y -q parted # plymouth plymouth-label libblockdev-mdraid2
 
 # TODO:
 exit 0

@@ -84,4 +84,4 @@ apt-mark hold linux-base
 apt-get upgrade -y -q
 apt-get autoremove -y --purge
 
-systemctl preset-all
+#systemctl preset-all

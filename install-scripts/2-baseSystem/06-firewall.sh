@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 apt-get -y -q install ufw
 
 # will be called on first boot
