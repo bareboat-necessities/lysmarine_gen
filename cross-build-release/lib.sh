@@ -53,6 +53,8 @@ mountImageFile() {
     #mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/boot/
   elif [ "$partQty" == 1 ]; then
     mount $mountOpt -v /dev/mapper/loop"${loopId}"p1 "$rootfs"/
+  elif [ "$partQty" == 5 ]; then
+    mount $mountOpt -v /dev/mapper/loop"${loopId}"p5 "$rootfs"/
   else
     log "ERROR: unsupported amount of partitions."
     exit 1
