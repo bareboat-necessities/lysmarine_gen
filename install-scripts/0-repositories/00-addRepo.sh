@@ -1,10 +1,12 @@
 #!/bin/bash -e
 
-# TODO
-exit 0
 
 apt-get update  -y -q
 apt-get install -y -q wget gnupg ca-certificates
+
+# TODO
+exit 0
+
 
 ## Add repository sources
 install -m 0644 -v "$FILE_FOLDER"/nodesource.list "/etc/apt/sources.list.d/"
