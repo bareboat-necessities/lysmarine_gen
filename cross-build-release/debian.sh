@@ -30,17 +30,17 @@
     ls *.img
     cd ../../
   )
-  inflateImage $thisArch $myCache/"$imageName"
-
-  # copy ready image from cache to the work dir
-  cp -fv $myCache/"$imageName"-inflated ./work/$thisArch/"$imageName"
-
-  # Mount the image and make the binds required to chroot.
-  mountImageFile $thisArch ./work/$thisArch/"$imageName"
-
-  # Copy the lysmarine and origin OS config files in the mounted rootfs
-  addLysmarineScripts $thisArch
-
+#  inflateImage $thisArch $myCache/"$imageName"
+#
+#  # copy ready image from cache to the work dir
+#  cp -fv $myCache/"$imageName"-inflated ./work/$thisArch/"$imageName"
+#
+#  # Mount the image and make the binds required to chroot.
+#  mountImageFile $thisArch ./work/$thisArch/"$imageName"
+#
+#  # Copy the lysmarine and origin OS config files in the mounted rootfs
+#  addLysmarineScripts $thisArch
+#
 #  mkRoot=work/${thisArch}/rootfs
 #  ls -l $mkRoot
 #
