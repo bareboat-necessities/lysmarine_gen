@@ -157,8 +157,8 @@ fi
 date --rfc-3339=seconds > /etc/bbn-build
 fake-hwclock save
 
-mkdir -p /home/user/Music || true
-chown user:audio /home/user/Music
+#mkdir -p /home/user/Music || true
+#chown user:audio /home/user/Music
 
 chown root:root /
 chmod 755 /
