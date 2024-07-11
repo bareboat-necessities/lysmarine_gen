@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 # Network manager
 apt-get install -y -q network-manager make avahi-daemon bridge-utils wakeonlan #createap
 

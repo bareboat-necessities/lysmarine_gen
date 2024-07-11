@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 apt-get -y -q install pulseaudio pulseaudio-module-bluetooth
 usermod -a -G audio user
 

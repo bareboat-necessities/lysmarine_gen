@@ -1,6 +1,9 @@
 #!/bin/bash -e
 apt-get install -y -q plymouth plymouth-label libblockdev-mdraid2 parted
 
+# TODO:
+exit 0
+
 ## This override the default tty1 behaviour to make it more discrete during the boot process
 install -v -d "/etc/systemd/system/getty@tty1.service.d"
 install -v -m0644 "$FILE_FOLDER"/skip-prompt.conf "/etc/systemd/system/getty@tty1.service.d/"
