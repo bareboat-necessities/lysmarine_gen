@@ -101,7 +101,6 @@ inflateImage() {
       truncate -s "14G" "$imageLocationInflated"
     fi
     sync
-    sleep 5
 
     log "resize last partition to 100%"
     partQty=$(fdisk -l "$imageLocationInflated" | grep -o "^$imageLocationInflated" | wc -l)
@@ -114,6 +113,7 @@ inflateImage() {
     sleep 3
     ls -l /dev/mapper/
 
+    sync
     e2fsck -y -f /dev/mapper/loop"${loopId}"p"$partQty" || true
     resize2fs /dev/mapper/loop"${loopId}"p"$partQty"
     kpartx -d "$imageLocationInflated"
