@@ -27,7 +27,7 @@ usermod -a -G netdev user
 usermod -a -G adm user
 usermod -a -G tty user
 usermod -a -G i2c user
-usermod -a -G spi user
+#usermod -a -G spi user
 usermod -a -G gpio user
 usermod -a -G sudo user
 usermod -a -G video user
