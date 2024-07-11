@@ -43,6 +43,7 @@ jobs:
       - PKG_RELEASE=debian
       - PKG_DISTRO=bookworm
       - PKG_ARCH=armhf
+      - BBN_KIND=LITE
       - EMU=off
     steps:
       - do-all

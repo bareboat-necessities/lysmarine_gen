@@ -8,7 +8,7 @@
 
   thisArch="debian"
   cpuArch="armhf"
-  
+
   zipName="bareboat-necessities/lysmarine_gen/releases/download/vTest/M5_CoreMP135_debian12_20240628.7z"
   imageSource="https://github.com/${zipName}"
 
@@ -72,9 +72,9 @@ EOF
 
   # Renaming the OS and moving it to the release folder.
   if [ "$BBN_KIND" == "LITE" ] ; then
-    BBN_IMG=lysmarine-bbn-lite-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+    BBN_IMG=bbn-coremp135-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   else
-    BBN_IMG=lysmarine-bbn-full-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+    BBN_IMG=bbn-coremp135-full-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   fi
   cp -v -l ./work/$thisArch/"$imageName" ./release/$thisArch/"$BBN_IMG"
 
