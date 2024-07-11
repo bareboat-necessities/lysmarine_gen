@@ -1,5 +1,5 @@
 #!/bin/bash -e
-apt-get -y -q install sudo policykit-1 polkitd-pkla
+apt-get -y -q install sudo policykit-1 polkitd-pkla parted
 
 ## Force keyboard layout to be EN US by default.
 sed -i "s/XKBLAYOUT=.*/XKBLAYOUT=\"us\"/g" /etc/default/keyboard
