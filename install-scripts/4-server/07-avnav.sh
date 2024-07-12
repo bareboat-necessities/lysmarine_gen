@@ -9,7 +9,6 @@ wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a
 dpkg -i avnav.deb
 rm -f avnav.deb
 
-
 apt-get -q -y install libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa libarchive13 \
   avnav-history-plugin  avnav-more-nmea-plugin avnav-mapproxy-plugin # TODO: ???  avnav-raspi
 
