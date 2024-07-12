@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 apt-get -y -q install shairport-sync usbmuxd
 
 install -v -m 0644 "$FILE_FOLDER"/shairport-sync.conf "/etc/"

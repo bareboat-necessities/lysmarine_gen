@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 # See: https://flaterco.com/xtide/files.html
 
 install -d /usr/share/opencpn
