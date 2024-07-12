@@ -13,7 +13,6 @@ else
 fi
 
 groupadd -r spi
-#groupadd -r audio
 
 ## Add default user.
 adduser --uid 1000 --home /home/user --quiet --disabled-password -gecos "bbn" user
