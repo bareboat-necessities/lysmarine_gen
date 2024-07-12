@@ -16,7 +16,7 @@ install -m 0644 -v "$FILE_FOLDER"/debian-backports.list "/etc/apt/sources.list.d
 
 #wget -q -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -    # NodeJs
 wget -q -O - https://repos.influxdata.com/influxdb.key | apt-key add -
-#wget -q -O - https://repo.jellyfin.org/jellyfin_team.gpg.key | apt-key add -
+wget -q -O - https://repo.jellyfin.org/jellyfin_team.gpg.key | apt-key add -
 curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -
 curl -1sLf https://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | apt-key add -  # Mosquitto
 
