@@ -9,6 +9,9 @@
 install -v -m 0644 "$FILE_FOLDER"/rtl-ais.service "/etc/systemd/system/"
 systemctl disable rtl-ais.service
 
+#TODO:
+exit 0
+
 # AIS-Catcher https://github.com/jvde-github/AIS-catcher
 apt-get install -y librtlsdr0 libairspy0 libairspyhf1 \
   libhackrf0 libsoapysdr0.8 libzmq3-dev libcurl4-openssl-dev zlib1g
