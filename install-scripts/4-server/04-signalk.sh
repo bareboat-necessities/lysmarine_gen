@@ -209,7 +209,7 @@ wget -q -O - https://raw.githubusercontent.com/MatsA/seatalk1-to-NMEA0183/master
 
 systemctl enable signalk
 
-install -d /usr/local/share/applications
+#install -d /usr/local/share/applications
 
 #if [ "$BBN_KIND" == "LITE" ] ; then
 #  true
@@ -241,6 +241,9 @@ install -d /usr/local/share/applications
 rm -rf /home/signalk/.cache
 rm -rf /home/signalk/.npm
 rm -rf /home/signalk/.node-*
+
+# TODO:
+exit 0
 
 if [ "$BBN_KIND" == "LITE" ] ; then
   exit 0
