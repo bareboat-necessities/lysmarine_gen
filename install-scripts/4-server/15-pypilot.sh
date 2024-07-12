@@ -18,7 +18,8 @@ usermod -a -G pypilot user
 # Op way
 apt-get install -y -q --no-install-recommends --no-install-suggests \
   git gcc python3 python3-pip python3-dev python3-setuptools libpython3-dev \
-  python3-wheel python3-numpy python3-scipy swig python3-ujson libjpeg62-turbo \
+  python3-wheel python3-numpy python3-scipy python3-apt 
+  swig python3-ujson libjpeg62-turbo \
   python3-serial python3-pyudev python3-pil python3-flask python3-engineio \
   python3-opengl python3-wxgtk4.0 libwxgtk3.2-1=3.2.2+dfsg-2 libgles1 \
   libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod lm-sensors ir-keytable \
