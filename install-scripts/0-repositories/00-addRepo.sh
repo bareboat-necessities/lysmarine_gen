@@ -33,6 +33,5 @@ rm influxdata-archive_compat.key
 apt-get update  -y -q
 apt-mark hold linux-base
 apt-get upgrade -y -q
-apt-get autoremove -y --purge
 
 #systemctl preset-all
