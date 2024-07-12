@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# TODO:
+exit 0
+
 echo "samba-common samba-common/workgroup string WORKGROUP" | debconf-set-selections
 echo "samba-common samba-common/dhcp boolean true" | debconf-set-selections
 echo "samba-common samba-common/do_debconf boolean true" | debconf-set-selections
