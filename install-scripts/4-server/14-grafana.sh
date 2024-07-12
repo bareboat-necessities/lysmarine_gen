@@ -2,10 +2,6 @@
 
 apt-get clean
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
 apt-get -y -q install grafana
 
 systemctl disable grafana-server
