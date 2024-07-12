@@ -9,16 +9,13 @@ apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4
   libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa libarchive13
 
 wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
-dpkg -i avnav.deb
-rm -f avnav.deb
-
 wget --user-agent="$AGENT" -O avnav-history-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-history-plugin/avnav-history-plugin_20210525_all.deb
 wget --user-agent="$AGENT" -O avnav-mapproxy-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-mapproxy-plugin/avnav-mapproxy-plugin_20230214_all.deb
 wget --user-agent="$AGENT" -O avnav-sailinstrument-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-sailinstrument-plugin/avnav-sailinstrument-plugin_20240503_all.deb
 wget --user-agent="$AGENT" -O avnav-ocharts-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts-plugin/avnav-ocharts-plugin_20231216-raspbian-bookworm_arm64.deb
 wget --user-agent="$AGENT" -O avnav-ocharts.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts/avnav-ocharts_1.0.44.0-1bookworm1_arm64.deb
-dpkg -i avnav-history-plugin.deb avnav-mapproxy-plugin.deb avnav-sailinstrument-plugin.deb avnav-ocharts-plugin.deb avnav-ocharts.deb
-rm -f avnav-history-plugin.deb avnav-mapproxy-plugin.deb avnav-sailinstrument-plugin.deb avnav-ocharts-plugin.deb avnav-ocharts.deb
+dpkg -i avnav.deb avnav-history-plugin.deb avnav-mapproxy-plugin.deb avnav-sailinstrument-plugin.deb avnav-ocharts-plugin.deb avnav-ocharts.deb
+rm -f avnav.deb avnav-history-plugin.deb avnav-mapproxy-plugin.deb avnav-sailinstrument-plugin.deb avnav-ocharts-plugin.deb avnav-ocharts.deb
 
 install -o 0 -g 0 -d /usr/lib/systemd/system/avnav.service.d
 install -o 0 -g 0 -m 0644 "$FILE_FOLDER"/lys-avnav.conf /usr/lib/systemd/system/avnav.service.d/
