@@ -25,7 +25,7 @@ install -m 0644 -v "$FILE_FOLDER"/debian-backports.list "/etc/apt/sources.list.d
 #install -m 0644 -v "$FILE_FOLDER"/bbn-kplex.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/bbn-navtex.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v "$FILE_FOLDER"/avnav.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/avnav.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/openplotter.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/chirp.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/stellarium.list "/etc/apt/sources.list.d/"
@@ -66,7 +66,7 @@ wget -q -O - https://www.free-x.de/debian/oss.boating.gpg.key     | apt-key add 
 #curl -1sLf https://dl.cloudsmith.io/public/bbn-projects/bbn-noaa-apt/gpg.DB5121F72251E833.key | apt-key add -
 #curl -1sLf https://dl.cloudsmith.io/public/bbn-projects/bbn-navtex/gpg.DCC56162C6CE6F68.key | apt-key add -
 #curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/master/public-keys/cloudsmith-bbn-noaa-apt/gpg.DB5121F72251E833.key | apt-key add -
-#curl -1sLf https://open-mind.space/repo/open-mind.space.gpg.key | apt-key add -     # AvNav
+curl -1sLf https://open-mind.space/repo/open-mind.space.gpg.key | apt-key add -     # AvNav
 #curl -1sLf https://raw.githubusercontent.com/bareboat-necessities/lysmarine_gen/master/public-keys/flightaware/gpg.flightaware.key | apt-key add -
 
 #wget -O /etc/apt/trusted.gpg.d/abcd567a-key.gpg https://abcd567a.github.io/rpi/KEY2.gpg # PiAware
