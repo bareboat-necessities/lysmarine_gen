@@ -5,7 +5,7 @@ AGENT="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Geck
 apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4 libusb-1.0-0 \
   mpg123 xvfb wx3.2-i18n python3-psutil
 
-wget --user-agent="$AGENT" -O avnav-ocharts-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
+wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
 dpkg -i avnav.deb
 rm -f avnav.deb
 
