@@ -5,16 +5,17 @@ AGENT="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Geck
 apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4 libusb-1.0-0 \
   mpg123 xvfb wx3.2-i18n python3-psutil \
   bluetooth libbluetooth-dev python3-websocket python3-bluez python3-dbus python3-gdal python3-pip \
-  python3-pyudev python3-netifaces
+  python3-pyudev python3-netifaces \
+  libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa libarchive13
 
 wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
 dpkg -i avnav.deb
 rm -f avnav.deb
 
-apt-get -q -y install libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa libarchive13 \
-  avnav-history-plugin  avnav-more-nmea-plugin avnav-mapproxy-plugin # TODO: ???  avnav-raspi
-
-#apt-get -q -y -o Dpkg::Options::="--force-overwrite" install avnav-oesenc
+wget --user-agent="$AGENT" -O avnav-history-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-history-plugin/avnav-history-plugin_20210525_all.deb
+wget --user-agent="$AGENT" -O avnav-mapproxy-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-mapproxy-plugin/avnav-mapproxy-plugin_20230214_all.deb
+dpkg -i avnav-history-plugin.deb avnav-mapproxy-plugin.deb
+rm -f avnav-history-plugin.deb avnav-mapproxy-plugin.deb
 
 wget --user-agent="$AGENT" -O avnav-ocharts-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts-plugin/avnav-ocharts-plugin_20231216-raspbian-bookworm_arm64.deb
 wget --user-agent="$AGENT" -O avnav-ocharts.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts/avnav-ocharts_1.0.44.0-1bookworm1_arm64.deb
