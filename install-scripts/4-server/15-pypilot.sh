@@ -164,8 +164,8 @@ fi
 install -v -g pypilot -m 0664 "$FILE_FOLDER"/lircd.conf "/etc/lirc/lircd.conf.d/lircd-pypilot.conf"
 
 ## Install The .desktop files
-install -v "$FILE_FOLDER"/pypilot_calibration.desktop "/usr/local/share/applications/"
-install -v "$FILE_FOLDER"/pypilot_control.desktop "/usr/local/share/applications/"
+#install -v "$FILE_FOLDER"/pypilot_calibration.desktop "/usr/local/share/applications/"
+#install -v "$FILE_FOLDER"/pypilot_control.desktop "/usr/local/share/applications/"
 
 install -m 755 "$FILE_FOLDER"/pypilot-restart "/usr/local/sbin/pypilot-restart"
 install -m 755 "$FILE_FOLDER"/pypilot_detect.sh "/usr/local/sbin/pypilot_detect"
