@@ -1,4 +1,4 @@
 #!/bin/sh
 SIGNALK_DISABLE_SERVER_UPDATES=true
 export SIGNALK_DISABLE_SERVER_UPDATES
-/usr/lib/node_modules/signalk-server/bin/signalk-server -c /home/signalk/.signalk $*
+/usr/local/lib/node_modules/signalk-server/bin/signalk-server -c /home/signalk/.signalk $*

@@ -187,16 +187,16 @@ find / -name tokensecurity.js
 find / -name modules.js
 
 
-sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk-server -name tokensecurity.js)" || true
+sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/local/lib/node_modules/signalk-server -name tokensecurity.js)" || true
 
 # see https://github.com/SignalK/signalk-server/pull/1455/
-#sed -i 's/\(filter(.*\]\)/"".join\(\1\)/'  "$(find /usr/lib/node_modules/signalk-server -name pigpio-seatalk.js)" || true
+#sed -i 's/\(filter(.*\]\)/"".join\(\1\)/'  "$(find /usr/local/lib/node_modules/signalk-server -name pigpio-seatalk.js)" || true
 
 # use pnpm instead of npm
-sed -i 's#('"'npm',#\('pnpm'"',#' /usr/lib/node_modules/signalk-server/lib/modules.js
+sed -i 's#('"'npm',#\('pnpm'"',#' /usr/local/lib/node_modules/signalk-server/lib/modules.js
 
 # SignalK fix for pnpm
-sed -i -e s/--save"'",/"--save-prod'",/g /usr/lib/node_modules/signalk-server/lib/modules.js
+sed -i -e s/--save"'",/"--save-prod'",/g /usr/local/lib/node_modules/signalk-server/lib/modules.js
 
 ## Make some space on the drive for the next stages
 npm cache clean --force
