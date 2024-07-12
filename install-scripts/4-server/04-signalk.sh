@@ -41,7 +41,7 @@ bash nodesource_setup.sh
 rm nodesource_setup.sh
 
 ## Dependencies of signalk.
-apt-get install -y -q python3-dev git \
+apt-get install -y -q python3-dev git npm \
  libnss-mdns avahi-utils \
  node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
