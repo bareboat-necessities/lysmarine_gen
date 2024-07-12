@@ -22,6 +22,12 @@ if ! grep -q charts /etc/group; then
 	usermod -a -G charts root
 fi
 
+## Give set-system-time the possibility to change the date.
+echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
+
+echo "" >>/etc/sudoers
+echo 'user ALL=(ALL) NOPASSWD: /usr/local/sbin/signalk-restart' >>/etc/sudoers
+
 ## Create the special charts folder.
 install -v -d -m 6775 -o signalk -g charts /srv/charts
 
@@ -192,9 +198,6 @@ sed -i 's#('"'npm',#\('pnpm'"',#' /usr/lib/node_modules/signalk-server/lib/modul
 # SignalK fix for pnpm
 sed -i -e s/--save"'",/"--save-prod'",/g /usr/lib/node_modules/signalk-server/lib/modules.js
 
-## Give set-system-time the possibility to change the date.
-echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
-
 ## Make some space on the drive for the next stages
 npm cache clean --force
 
@@ -203,9 +206,6 @@ npm cache clean --force
 
 # For Seatalk
 wget -q -O - https://raw.githubusercontent.com/MatsA/seatalk1-to-NMEA0183/master/STALK_read.py > /usr/local/sbin/STALK_read.py
-
-echo "" >>/etc/sudoers
-echo 'user ALL=(ALL) NOPASSWD: /usr/local/sbin/signalk-restart' >>/etc/sudoers
 
 systemctl enable signalk
 
