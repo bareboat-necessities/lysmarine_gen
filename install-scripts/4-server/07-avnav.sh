@@ -2,12 +2,13 @@
 
 AGENT="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
 
+apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4 libusb-1.0-0 \
+  mpg123 xvfb wx3.2-i18n python3-psutil
+
 wget --user-agent="$AGENT" -O avnav-ocharts-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
 dpkg -i avnav.deb
 rm -f avnav.deb
 
-apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4 libusb-1.0-0 \
-  mpg123 xvfb wx3.2-i18n python3-psutil
 
 apt-get -q -y install libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa libarchive13 \
   avnav-history-plugin  avnav-more-nmea-plugin avnav-mapproxy-plugin # TODO: ???  avnav-raspi
