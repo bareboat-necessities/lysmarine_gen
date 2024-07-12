@@ -3,6 +3,9 @@
 apt-get update  -y -q
 apt-get install -y -q wget gnupg ca-certificates
 
+#TODO:
+exit 0
+
 ## Add repository sources
 install -m 0644 -v "$FILE_FOLDER"/nodesource.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/mosquitto.list "/etc/apt/sources.list.d/"
