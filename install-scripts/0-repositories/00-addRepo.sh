@@ -4,11 +4,11 @@ apt-get update  -y -q
 apt-get install -y -q wget gnupg ca-certificates
 
 ## Add repository sources
-#install -m 0644 -v "$FILE_FOLDER"/nodesource.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/nodesource.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/mosquitto.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/grafana.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/raspotify.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v "$FILE_FOLDER"/jellyfin.list "/etc/apt/sources.list.d/"
+install -m 0644 -v "$FILE_FOLDER"/jellyfin.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/debian-backports.list "/etc/apt/sources.list.d/"
 
 ## Prefer opencpn PPA to free-x (for mainly for the opencpn package)
