@@ -38,17 +38,11 @@ install -v -m 0644 "$FILE_FOLDER"/60-watchdog.rules "/etc/udev/rules.d/60-watchd
 # performance of the build, make parallel jobs
 export MAKEFLAGS='-j 4'
 
-if [ "$LMARCH" == 'arm64' ]; then
-#  pip3 install pywavefront pyglet gps gevent-websocket websocket-client importlib_metadata \
-#    python-socketio flask-socketio wmm2020
-  apt-get install -y -q python3-pywavefront python3-pyglet python3-gps python3-gevent-websocket \
+apt-get install -y -q python3-pywavefront python3-pyglet python3-gps python3-gevent-websocket \
     python3-websocket python3-importlib-metadata \
     python3-socketio python3-flask-socketio
-  pip3 install --break-system-packages wmm2020 scipy inotify
-else
-  apt-get install -y -q python3-flask-socketio
-  pip3 install pywavefront pyglet gps gevent-websocket importlib_metadata "python-socketio<5" wmm2020
-fi
+
+pip3 install --break-system-packages wmm2020 scipy inotify
 
 ## Give permission to sudo chrt without a password for the user pypilot.
 {
