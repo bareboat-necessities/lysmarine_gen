@@ -6,7 +6,7 @@ apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4
   mpg123 xvfb wx3.2-i18n python3-psutil python3-netifaces python3-gdal python3-pyudev \
   bluetooth libbluetooth-dev python3-websocket python3-bluez python3-dbus python3-pip \
   python3-mapproxy \
-  libarchive13 # libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa
+  libarchive13 libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa
 
 wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
 wget --user-agent="$AGENT" -O avnav-history-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-history-plugin/avnav-history-plugin_20210525_all.deb
