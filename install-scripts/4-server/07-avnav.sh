@@ -12,8 +12,8 @@ wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a
 wget --user-agent="$AGENT" -O avnav-history-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-history-plugin/avnav-history-plugin_20210525_all.deb
 wget --user-agent="$AGENT" -O avnav-mapproxy-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-mapproxy-plugin/avnav-mapproxy-plugin_20230214_all.deb
 wget --user-agent="$AGENT" -O avnav-sailinstrument-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-sailinstrument-plugin/avnav-sailinstrument-plugin_20240503_all.deb
-wget --user-agent="$AGENT" -O avnav-ocharts-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts-plugin/avnav-ocharts-plugin_20231216-raspbian-bookworm_arm64.deb
-wget --user-agent="$AGENT" -O avnav-ocharts.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts/avnav-ocharts_1.0.44.0-1bookworm1_arm64.deb
+wget --user-agent="$AGENT" -O avnav-ocharts-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts-plugin/avnav-ocharts-plugin_20231216-raspbian-bookworm_armhf.deb
+wget --user-agent="$AGENT" -O avnav-ocharts.deb https://www.free-x.de/debian/pool/main/a/avnav-ocharts/avnav-ocharts_1.0.44.0-1bookworm1_armhf.deb
 dpkg -i avnav.deb avnav-history-plugin.deb avnav-mapproxy-plugin.deb avnav-sailinstrument-plugin.deb avnav-ocharts-plugin.deb avnav-ocharts.deb
 rm -f avnav.deb avnav-history-plugin.deb avnav-mapproxy-plugin.deb avnav-sailinstrument-plugin.deb avnav-ocharts-plugin.deb avnav-ocharts.deb
 
