@@ -2,6 +2,9 @@
 
 rm -rf /usr/lib/python3.11/EXTERNALLY-MANAGED
 
+# TODO:
+exit 0
+
 if [ "$BBN_KIND" == "LITE" ] ; then
   exit 0
 fi
