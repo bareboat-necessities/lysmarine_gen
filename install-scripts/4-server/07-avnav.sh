@@ -3,7 +3,9 @@
 AGENT="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
 
 apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4 libusb-1.0-0 \
-  mpg123 xvfb wx3.2-i18n python3-psutil
+  mpg123 xvfb wx3.2-i18n python3-psutil \
+  bluetooth libbluetooth-dev python3-websocket python3-bluez python3-dbus python3-gdal python3-pip \
+  python3-pyudev python3-netifaces
 
 wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
 dpkg -i avnav.deb
