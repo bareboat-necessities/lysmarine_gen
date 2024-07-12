@@ -1,9 +1,5 @@
 #!/bin/bash -e
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
 ## https://pysselilivet.blogspot.com/2018/06/ais-reciever-for-raspberry.html
 
 # moved into 00-radio-sdr.sh
