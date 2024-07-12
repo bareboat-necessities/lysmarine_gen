@@ -41,7 +41,7 @@ bash nodesource_setup.sh
 rm nodesource_setup.sh
 
 ## Dependencies of signalk.
-apt-get install -y -q python3-dev git npm \
+apt-get install -y -q python3-dev git \
  libnss-mdns avahi-utils \
  node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
@@ -69,9 +69,9 @@ install -d /etc/systemd/system
 install -m 644 "$FILE_FOLDER"/signalk.service "/etc/systemd/system/signalk.service"
 
 ## Install signalk
-npm cache clean --force
-npm install -g npm pnpm patch-package
-npm install -g --unsafe-perm --production signalk-server
+/usr/local/bin/npm cache clean --force
+/usr/local/bin/npm install -g npm pnpm patch-package
+/usr/local/bin/npm install -g --unsafe-perm --production signalk-server
 
 if [ "$BBN_KIND" == "LITE" ] ; then
   ## Install signalk published plugins
