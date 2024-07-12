@@ -36,12 +36,12 @@ if [ ! -f /home/user/charts ] ; then
 	su user -c "ln -s /srv/charts /home/user/charts"
 fi
 
-curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
-bash nodesource_setup.sh
-rm nodesource_setup.sh
+#curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+#bash nodesource_setup.sh
+#rm nodesource_setup.sh
 
 ## Dependencies of signalk.
-apt-get install -y -q python3-dev git nodejs \
+apt-get install -y -q python3-dev git nodejs npm \
  libnss-mdns avahi-utils \
  node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
