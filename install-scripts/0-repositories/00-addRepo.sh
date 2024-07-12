@@ -21,7 +21,7 @@ curl -sSL https://dtcooper.github.io/raspotify/key.asc | apt-key add -
 curl -1sLf https://repo.mosquitto.org/debian/mosquitto-repo.gpg.key | apt-key add -  # Mosquitto
 
 wget -q -O - https://www.free-x.de/debian/oss.boating.gpg.key     | apt-key add -    # XyGrib, AvNav
-curl -1sLf https://open-mind.space/repo/open-mind.space.gpg.key | apt-key add -      # AvNav
+#curl -1sLf https://open-mind.space/repo/open-mind.space.gpg.key | apt-key add -      # AvNav
 wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor > /usr/share/keyrings/grafana.gpg
 
 wget -q https://repos.influxdata.com/influxdata-archive_compat.key
