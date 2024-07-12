@@ -3,11 +3,10 @@
 AGENT="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
 
 apt-get -q -y --no-install-recommends --no-install-suggests install libusb-0.1-4 libusb-1.0-0 \
-  mpg123 xvfb wx3.2-i18n python3-psutil \
-  bluetooth libbluetooth-dev python3-websocket python3-bluez python3-dbus python3-gdal python3-pip \
-  python3-pyudev python3-netifaces \
-  libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa libarchive13
-
+  mpg123 xvfb wx3.2-i18n python3-psutil python3-netifaces python3-gdal python3-pyudev \
+  bluetooth libbluetooth-dev python3-websocket python3-bluez python3-dbus python3-pip \
+  libarchive13 # libwxgtk3.2-1=3.2.2+dfsg-2 libglu1-mesa
+  
 wget --user-agent="$AGENT" -O avnav.deb https://www.free-x.de/debian/pool/main/a/avnav/avnav_20240616_all.deb
 wget --user-agent="$AGENT" -O avnav-history-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-history-plugin/avnav-history-plugin_20210525_all.deb
 wget --user-agent="$AGENT" -O avnav-mapproxy-plugin.deb https://www.free-x.de/debian/pool/main/a/avnav-mapproxy-plugin/avnav-mapproxy-plugin_20230214_all.deb
