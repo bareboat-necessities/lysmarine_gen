@@ -90,7 +90,6 @@ if [ "$BBN_KIND" == "LITE" ] ; then
                  signalk-to-nmea2000  \
                  signalk-sonoff-ewelink  \
                  signalk-shelly \
-                 @mxtommy/kip  \
                  nmea0183-to-nmea0183 \
                  xdr-parser-plugin \
                  signalk-path-filter \
@@ -136,7 +135,6 @@ else
                  node-red-contrib-sensor-htu21d \
                  node-red-contrib-ina-sensor \
                  signalk-sonoff-ewelink  \
-                 @mxtommy/kip  \
                  signalk-fusion-stereo  \
                  signalk-barometer-trend  \
                  signalk-barograph \
