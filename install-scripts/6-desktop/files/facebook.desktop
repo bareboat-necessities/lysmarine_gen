@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Facebook
-Exec=/opt/facebook/facebook
-Terminal=false
-Icon=face-cool
-Categories=Network

@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=MotionEye Cameras
-Exec=/opt/motioneye/motioneye
-Terminal=false
-Icon=/usr/share/icons/gnome/32x32/devices/camera-web.png
-Categories=AudioVideo;Multimedia;Video
-Keywords=AudioVideo;Multimedia;Video

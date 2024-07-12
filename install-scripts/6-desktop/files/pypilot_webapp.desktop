@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Pypilot Webapp
-Exec=/opt/Pypilot_webapp/Pypilot_webapp
-Terminal=false
-Icon=go-jump
-Categories=Navigation;

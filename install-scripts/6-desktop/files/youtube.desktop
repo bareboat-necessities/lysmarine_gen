@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=YouTube
-Exec=/opt/youtube/youtube
-Terminal=false
-Icon=video
-Categories=Network

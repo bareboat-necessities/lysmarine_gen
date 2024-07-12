@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Service Management
-Exec=onlyone servicedialog
-Terminal=false
-Icon=system-run
-Categories=System

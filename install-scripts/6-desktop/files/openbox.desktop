@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=openbox
-Description=OpenBox
-Exec=openbox --replace

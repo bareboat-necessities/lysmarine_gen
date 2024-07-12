@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=TukTuk Chartplotter
-Exec=/opt/tuktuk/tuktuk
-Terminal=false
-Icon=/home/user/.local/share/icons/signalk.png
-Categories=Navigation;

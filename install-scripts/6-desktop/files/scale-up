@@ -1,6 +1,0 @@
-#!/bin/bash
-# Allow displaying larger desktop on low resolution screens
-
-MONITOR=$(xrandr | grep connected | grep -v disconnected | awk '{print $1}')
-xrandr --output "$MONITOR" --scale 1.28x1.28
-
