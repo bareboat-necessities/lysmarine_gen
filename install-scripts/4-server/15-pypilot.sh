@@ -194,5 +194,5 @@ ln -s /etc/avrdude.conf /usr/local/etc/avrdude.conf
 #pip3 install pyglet==1.5.27
 
 # See: https://forums.raspberrypi.com/viewtopic.php?t=359742
-apt-get -y remove python3-rpi.gpio
+#apt-get -y remove python3-rpi.gpio
 pip3 install rpi-lgpio
