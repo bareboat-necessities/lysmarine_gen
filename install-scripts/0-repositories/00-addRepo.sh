@@ -40,7 +40,7 @@ install -m 0644 -v "$FILE_FOLDER"/avnav.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/50-lysmarine.pref "/etc/apt/preferences.d/"
 
 ## Get the signature keys
-#apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 684A14CF2582E0C5           # Influx
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 684A14CF2582E0C5           # Influx
 #apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 04EE7237B7D453EC           # debian backports (stretch)
 #apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138           # debian backports (buster)
 #apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 24A4598E769C8C51           # bbn PPAs on launchpad
