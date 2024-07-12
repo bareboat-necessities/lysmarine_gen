@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+#TODO
+exit 0
+
 apt-get -y -q install wvdial ppp picocom slurm python3-pip
 
 if [ "$LMARCH" == 'armhf' ]; then
