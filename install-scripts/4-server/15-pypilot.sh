@@ -21,8 +21,8 @@ apt-get install -y -q --no-install-recommends --no-install-suggests \
   python3-wheel python3-numpy python3-scipy swig python3-ujson libjpeg62-turbo \
   python3-serial python3-pyudev python3-pil python3-flask python3-engineio \
   python3-opengl python3-wxgtk4.0 libwxgtk3.2-1=3.2.2+dfsg-2 libgles1 \
-  libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod pigpio-tools lm-sensors ir-keytable \
-  pigpio python3-rpi.gpio gettext python3-flask-babel \
+  libffi-dev python3-gevent python3-zeroconf watchdog lirc gpiod lm-sensors ir-keytable \
+  python3-rpi.gpio gettext python3-flask-babel \
   libelf1 libftdi1-2 libhidapi-libusb0 libusb-0.1-4 libusb-1.0-0 \
   meson cmake make acl avrdude # https://kingtidesailing.blogspot.com/2016/02/how-to-setup-mpu-9250-on-raspberry-pi_25.html
   # octave
