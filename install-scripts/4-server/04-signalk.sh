@@ -70,7 +70,6 @@ if [ "$BBN_KIND" == "LITE" ] ; then
                  export NODE_ENV=production; \
                  pnpm install \
                  @signalk/charts-plugin  \
-                 sk-resources-fs  \
                  freeboard-sk-helper  \
                  signalk-venus-plugin  \
                  signalk-mqtt-gw  \
