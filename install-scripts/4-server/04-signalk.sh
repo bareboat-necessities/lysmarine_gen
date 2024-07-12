@@ -180,7 +180,7 @@ fi
 sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk-server -name tokensecurity.js)" || true
 
 # see https://github.com/SignalK/signalk-server/pull/1455/
-sed -i 's/\(filter(.*\]\)/"".join\(\1\)/'  "$(find /usr/lib/node_modules/signalk-server -name pigpio-seatalk.js)" || true
+#sed -i 's/\(filter(.*\]\)/"".join\(\1\)/'  "$(find /usr/lib/node_modules/signalk-server -name pigpio-seatalk.js)" || true
 
 # use pnpm instead of npm
 sed -i 's#('"'npm',#\('pnpm'"',#' /usr/lib/node_modules/signalk-server/lib/modules.js
@@ -195,7 +195,7 @@ echo "signalk ALL=(ALL) NOPASSWD: /bin/date" >>/etc/sudoers
 npm cache clean --force
 
 # For Seatalk
-systemctl disable pigpiod
+#systemctl disable pigpiod
 
 # For Seatalk
 wget -q -O - https://raw.githubusercontent.com/MatsA/seatalk1-to-NMEA0183/master/STALK_read.py > /usr/local/sbin/STALK_read.py
