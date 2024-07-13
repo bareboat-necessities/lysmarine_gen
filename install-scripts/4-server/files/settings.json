@@ -1,10 +1,10 @@
 {
   "interfaces": {
     "applicationData": true,
-    "appstore": true,
+    "appstore": false,
     "logfiles": true,
     "nmea-tcp": true,
-    "playground": true,
+    "playground": false,
     "plugins": true,
     "providers": true,
     "rest": true,
