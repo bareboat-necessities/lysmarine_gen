@@ -19,9 +19,9 @@ for pkg_file in cross-build-release/release/*/*."$EXT"; do
   cd "$zipDir" || exit 255
   export XZ_DEFAULTS='--threads=5'
   if [[ "${zipName}" =~ "full" ]]; then
-    xz -z -c -v -5 --threads=4 --memory=80% "${zipName}" > ../../../tmp/"${zipName}".xz
+    xz -z -c -v -7e --threads=4 --memory=80% "${zipName}" > ../../../tmp/"${zipName}".xz
   else
-    xz -z -c -v -5 --threads=4 --memory=80% "${zipName}" > ../../../tmp/"${zipName}".xz
+    xz -z -c -v -7e --threads=4 --memory=80% "${zipName}" > ../../../tmp/"${zipName}".xz
   fi
   cd ../../..
   cloudsmith push raw "$REPO" ./tmp/"${zipName}".xz --summary "BBN OS built by CircleCi on $(date)" --description "BBN OS build"
