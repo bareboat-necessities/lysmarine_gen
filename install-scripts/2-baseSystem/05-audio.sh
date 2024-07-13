@@ -2,4 +2,3 @@
 
 usermod -a -G audio user
 
-exit 0
