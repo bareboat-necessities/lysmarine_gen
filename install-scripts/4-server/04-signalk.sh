@@ -89,26 +89,8 @@ pushd /home/signalk/.signalk
                signalk-simple-notifications  \
                signalk-wilhelmsk-plugin  \
                signalk-to-nmea2000  \
-               @signalk/sailgauge  \
                @signalk/signalk-autopilot  \
-               @signalk/signalk-node-red  \
-               node-red-dashboard \
-               node-red-contrib-nmea \
-               node-red-contrib-modbus \
-               @victronenergy/node-red-contrib-victron \
-               node-red-contrib-influxdb \
-               node-red-contrib-moment \
-               node-red-contrib-string \
-               node-red-node-email \
-               node-red-node-serialport \
-               node-red-node-openweathermap \
-               node-red-contrib-dht-sensor \
-               node-red-contrib-ds18b20-sensor \
-               node-red-contrib-sht31 \
                @rakwireless/shtc3 \
-               node-red-contrib-bme280 \
-               node-red-contrib-sensor-htu21d \
-               node-red-contrib-ina-sensor \
                signalk-sonoff-ewelink  \
                signalk-fusion-stereo  \
                signalk-barometer-trend  \
@@ -131,7 +113,6 @@ pushd /home/signalk/.signalk
                signalk-switch-automation \
                signalk-shelly \
                @signalk/calibration \
-               @signalk/tracks-plugin \
                signalk-datetime \
                signalk-net-relay \
                signalk-path-mapper \
@@ -152,6 +133,29 @@ pushd /home/signalk/.signalk
                @meri-imperiumi/signalk-autostate \
                @meri-imperiumi/signalk-alternator-engine-on \
                signalk-saillogger --unsafe-perm --loglevel error"
+
+
+#               @signalk/sailgauge  \
+#               @signalk/tracks-plugin \
+#               @signalk/signalk-node-red  \
+#               node-red-dashboard \
+#               node-red-contrib-nmea \
+#               node-red-contrib-modbus \
+#               @victronenergy/node-red-contrib-victron \
+#               node-red-contrib-influxdb \
+#               node-red-contrib-moment \
+#               node-red-contrib-string \
+#               node-red-node-email \
+#               node-red-node-serialport \
+#               node-red-node-openweathermap \
+#               node-red-contrib-dht-sensor \
+#               node-red-contrib-ds18b20-sensor \
+#               node-red-contrib-sht31 \
+#               node-red-contrib-bme280 \
+#               node-red-contrib-sensor-htu21d \
+#               node-red-contrib-ina-sensor \
+
+
 
 #sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js || true
 #sed -i "s#/opt/vc/bin/##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js || true
