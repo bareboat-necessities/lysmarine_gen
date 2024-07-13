@@ -1,6 +1,9 @@
 #!/bin/bash -e
 apt-get install -y -q parted gdisk # plymouth plymouth-label libblockdev-mdraid2
 
+echo "root       -    nofile     -1" >> /etc/security/limits.conf
+echo "*          -    nofile     -1" >> /etc/security/limits.conf
+
 if [ -f /etc/issue ] ; then
   install -m0664 -v "$FILE_FOLDER"/ascii_logo.txt "/etc/issue"
 fi
