@@ -1,15 +1,5 @@
 #!/bin/bash -e
 
-#pushd /usr/share/
-#  git clone --depth=1 https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
-#  #pnpm install
-#  pnpm install caniuse-lite date-fns
-#  pnpm run build
-#  mkdir venus-app
-#  cp -r dist venus-app/app
-#  rm -rf venus-html5-app
-#popd
-
 # see https://github.com/victronenergy/venus-html5-app
 pushd /usr/share/
   wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/venus-html5-app-build.tar.gz
@@ -20,7 +10,6 @@ pushd /usr/share/
 popd
 
 npm install -g serve
-
 
 # to start:
 #
@@ -42,18 +31,3 @@ npm install -g serve
 install -v -m 0644 "$FILE_FOLDER"/victron.service "/etc/systemd/system/"
 
 systemctl enable victron.service
-
-#bash -c 'cat << EOF > /usr/local/share/applications/victron.desktop
-#[Desktop Entry]
-#Type=Application
-#Name=Victron
-#GenericName=Victron
-#Comment=Victron
-#Exec=gnome-www-browser http://localhost:8000/app?host=venus.local&port=9001
-#Exec=gnome-www-browser http://localhost:8000/app?host=<VENUS_DEVICE_IP>&port=9001
-## Read: https://github.com/victronenergy/venus-html5-app
-#Terminal=false
-#Icon=battery-symbolic
-#Categories=X-GNOME-Utilities;
-#EOF'
-
