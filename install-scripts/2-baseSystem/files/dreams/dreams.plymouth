@@ -1,8 +1,0 @@
-[Plymouth Theme]
-Name=Debian Dreams theme
-Description=Desktop theme for Debian 6.0 (Squeeze)
-ModuleName=script
-
-[script]
-ImageDir=/usr/share/plymouth/themes/dreams
-ScriptFile=/usr/share/plymouth/themes/dreams/dreams.script
