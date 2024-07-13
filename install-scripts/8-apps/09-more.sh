@@ -5,12 +5,11 @@ npm cache clean --force
 
 if [ "$BBN_KIND" == "LITE" ] ; then
   apt-get -q -y --no-install-recommends --no-install-suggests install i2c-tools python3-smbus dos2unix \
-    traceroute telnet socat gdal-bin openvpn \
+    traceroute telnet socat \
     sysstat jq xmlstarlet uhubctl iotop libusb-1.0-0-dev
 else
   apt-get -q -y --no-install-recommends --no-install-suggests install i2c-tools python3-smbus dos2unix \
-    traceroute telnet whois socat gdal-bin openvpn seahorse inxi \
-    dconf-editor gedit gnome-calculator \
+    traceroute telnet socat  \
     python3-gpiozero libusb-1.0-0-dev \
     sysstat jq xmlstarlet uhubctl iotop rsync timeshift at
 fi
@@ -49,4 +48,3 @@ install -v -o 1000 -g 1000 -m 0755 "$FILE_FOLDER"/add-ons/windy-install.sh "/hom
 install -v -o 1000 -g 1000 -m 0755 "$FILE_FOLDER"/add-ons/findacrew-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 "$FILE_FOLDER"/add-ons/tripwire-install.sh "/home/user/add-ons/"
 install -v -o 1000 -g 1000 -m 0755 "$FILE_FOLDER"/add-ons/noaa-enc-online-install.sh "/home/user/add-ons/"
-

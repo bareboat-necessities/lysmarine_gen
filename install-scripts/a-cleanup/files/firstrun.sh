@@ -2,7 +2,6 @@
 
 set +e
 
-
 rm -f /etc/localtime
 echo "Etc/UTC" >/etc/timezone
 
@@ -15,4 +14,3 @@ XKBOPTIONS=""
 
 KBEOF
 dpkg-reconfigure -f noninteractive keyboard-configuration
-

@@ -36,14 +36,10 @@ if [ ! -f /home/user/charts ] ; then
 	su user -c "ln -s /srv/charts /home/user/charts"
 fi
 
-#curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
-#bash nodesource_setup.sh
-#rm nodesource_setup.sh
-
 ## Dependencies of signalk.
 apt-get install -y -q python3-dev git nodejs npm \
  libnss-mdns avahi-utils \
- node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
+ node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev
 
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk"
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk/plugin-config-data"
@@ -155,16 +151,6 @@ pushd /home/signalk/.signalk
 #               node-red-contrib-sensor-htu21d \
 #               node-red-contrib-ina-sensor \
 
-
-
-#sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js || true
-#sed -i "s#/opt/vc/bin/##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js || true
-
-#TODO:
-find / -name tokensecurity.js
-find / -name modules.js
-
-
 sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/local/lib/node_modules/signalk-server -name tokensecurity.js)" || true
 
 # see https://github.com/SignalK/signalk-server/pull/1455/
@@ -180,61 +166,16 @@ sed -i -e s/--save"'",/"--save-prod'",/g /usr/local/lib/node_modules/signalk-ser
 npm cache clean --force
 
 # For Seatalk
-#systemctl disable pigpiod
-
-# For Seatalk
 wget -q -O - https://raw.githubusercontent.com/MatsA/seatalk1-to-NMEA0183/master/STALK_read.py > /usr/local/sbin/STALK_read.py
 
 systemctl enable signalk
-
-#install -d /usr/local/share/applications
-
-#if [ "$BBN_KIND" == "LITE" ] ; then
-#  true
-#else
-#  bash -c 'cat << EOF > /usr/local/share/applications/signalk-node-red.desktop
-#[Desktop Entry]
-#Type=Application
-#Name=SignalK-Node-Red
-#GenericName=SignalK-Node-Red
-#Comment=SignalK-Node-Red
-#Exec=gnome-www-browser http://localhost:3000/@signalk/signalk-node-red
-#Terminal=false
-#Icon=gtk-no
-#Categories=Utility;
-#EOF'
-#  bash -c 'cat << EOF > /usr/local/share/applications/signalk-polar.desktop
-#[Desktop Entry]
-#Type=Application
-#Name=SignalK-Polar
-#GenericName=SignalK-Polar
-#Comment=SignalK-Polar
-#Exec=gnome-www-browser http://localhost:3000/signalk-polar
-#Terminal=false
-#Icon=gtk-about
-#Categories=Utility;
-#EOF'
-#fi
 
 rm -rf /home/signalk/.cache
 rm -rf /home/signalk/.npm
 rm -rf /home/signalk/.node-*
 
-# TODO:
-exit 0
-
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
-bash -c 'cat << EOF > /usr/local/bin/gps-loc
-#!/bin/bash
-curl -s http://localhost:3000/signalk/v1/api/vessels/self/navigation/position/ | jq -M -jr '\''.value.latitude," ",.value.longitude','" ",.timestamp'\''
-EOF'
-chmod +x /usr/local/bin/gps-loc
 
 # See https://github.com/allinurl/gwsocket
-
 wget http://tar.gwsocket.io/gwsocket-0.3.tar.gz
 tar -xzvf gwsocket-0.3.tar.gz
 cd gwsocket-0.3/
