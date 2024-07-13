@@ -73,113 +73,85 @@ npm cache clean --force
 npm install -g npm pnpm patch-package
 npm install -g --unsafe-perm --production signalk-server
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  ## Install signalk published plugins
-  pushd /home/signalk/.signalk
-    su signalk --shell=/bin/bash -c "export MAKEFLAGS='-j 8'; \
-                 export NODE_ENV=production; \
-                 pnpm install \
-                 @signalk/charts-plugin  \
-                 freeboard-sk-helper  \
-                 signalk-venus-plugin  \
-                 signalk-mqtt-gw  \
-                 signalk-derived-data  \
-                 signalk-anchoralarm-plugin  \
-                 signalk-alarm-silencer  \
-                 signalk-simple-notifications  \
-                 signalk-to-nmea2000  \
-                 signalk-sonoff-ewelink  \
-                 signalk-shelly \
-                 nmea0183-to-nmea0183 \
-                 xdr-parser-plugin \
-                 signalk-path-filter \
-                 signalk-datetime \
-                 @meri-imperiumi/signalk-autostate --unsafe-perm --loglevel error"
-  popd
-else
-  ## Install signalk published plugins
-  pushd /home/signalk/.signalk
-    su signalk --shell=/bin/bash -c "export MAKEFLAGS='-j 8'; \
-                 export NODE_ENV=production; \
-                 pnpm install \
-                 @signalk/charts-plugin  \
-                 freeboard-sk-helper  \
-                 signalk-venus-plugin  \
-                 signalk-mqtt-gw  \
-                 signalk-mqtt-home-asisstant  \
-                 @codekilo/signalk-modbus-client  \
-                 signalk-derived-data  \
-                 signalk-anchoralarm-plugin  \
-                 signalk-alarm-silencer  \
-                 signalk-simple-notifications  \
-                 signalk-wilhelmsk-plugin  \
-                 signalk-to-nmea2000  \
-                 @signalk/sailgauge  \
-                 @signalk/signalk-autopilot  \
-                 @signalk/signalk-node-red  \
-                 node-red-dashboard \
-                 node-red-contrib-nmea \
-                 node-red-contrib-modbus \
-                 @victronenergy/node-red-contrib-victron \
-                 node-red-contrib-influxdb \
-                 node-red-contrib-moment \
-                 node-red-contrib-string \
-                 node-red-node-email \
-                 node-red-node-serialport \
-                 node-red-node-openweathermap \
-                 node-red-contrib-dht-sensor \
-                 node-red-contrib-ds18b20-sensor \
-                 node-red-contrib-sht31 \
-                 @rakwireless/shtc3 \
-                 node-red-contrib-bme280 \
-                 node-red-contrib-sensor-htu21d \
-                 node-red-contrib-ina-sensor \
-                 signalk-sonoff-ewelink  \
-                 signalk-fusion-stereo  \
-                 signalk-barometer-trend  \
-                 signalk-barograph \
-                 signalk-polar \
-                 signalk-scheduler \
-                 openweather-signalk \
-                 signalk-noaa-weather \
-                 xdr-parser-plugin \
-                 signalk-to-influxdb \
-                 nmea0183-to-nmea0183 \
-                 signalk-path-filter \
-                 signalk-empirbusnxt-plugin \
-                 obd2-signalk \
-                 signalk-n2k-switch-alias \
-                 signalk-n2k-switching \
-                 signalk-n2k-switching-emulator \
-                 signalk-n2k-switching-translator \
-                 signalk-n2k-virtual-switch \
-                 signalk-switch-automation \
-                 signalk-shelly \
-                 @signalk/calibration \
-                 @signalk/tracks-plugin \
-                 signalk-datetime \
-                 signalk-net-relay \
-                 signalk-path-mapper \
-                 signalk-healthcheck \
-                 @signalk/vedirect-serial-usb \
-                 @signalk/udp-nmea-plugin \
-                 signalk-n2kais-to-nmea0183 \
-                 @codekilo/nmea0183-iec61121-450-server \
-                 signalk-generic-pgn-parser \
-                 signalk-maretron-proprietary \
-                 signalk-vessels-to-ais \
-                 @codekilo/signalk-notify \
-                 @codekilo/signalk-trigger-event \
-                 @codekilo/signalk-twilio-notifications \
-                 @meri-imperiumi/signalk-audio-notifications \
-                 signalk-buddylist-plugin \
-                 signalk-navtex-plugin \
-                 @meri-imperiumi/signalk-autostate \
-                 @meri-imperiumi/signalk-alternator-engine-on \
-                 signalk-saillogger --unsafe-perm --loglevel error"
-  popd
-fi
-
+pushd /home/signalk/.signalk
+  su signalk --shell=/bin/bash -c "export MAKEFLAGS='-j 8'; \
+               export NODE_ENV=production; \
+               pnpm install \
+               @signalk/charts-plugin  \
+               freeboard-sk-helper  \
+               signalk-venus-plugin  \
+               signalk-mqtt-gw  \
+               signalk-mqtt-home-asisstant  \
+               @codekilo/signalk-modbus-client  \
+               signalk-derived-data  \
+               signalk-anchoralarm-plugin  \
+               signalk-alarm-silencer  \
+               signalk-simple-notifications  \
+               signalk-wilhelmsk-plugin  \
+               signalk-to-nmea2000  \
+               @signalk/sailgauge  \
+               @signalk/signalk-autopilot  \
+               @signalk/signalk-node-red  \
+               node-red-dashboard \
+               node-red-contrib-nmea \
+               node-red-contrib-modbus \
+               @victronenergy/node-red-contrib-victron \
+               node-red-contrib-influxdb \
+               node-red-contrib-moment \
+               node-red-contrib-string \
+               node-red-node-email \
+               node-red-node-serialport \
+               node-red-node-openweathermap \
+               node-red-contrib-dht-sensor \
+               node-red-contrib-ds18b20-sensor \
+               node-red-contrib-sht31 \
+               @rakwireless/shtc3 \
+               node-red-contrib-bme280 \
+               node-red-contrib-sensor-htu21d \
+               node-red-contrib-ina-sensor \
+               signalk-sonoff-ewelink  \
+               signalk-fusion-stereo  \
+               signalk-barometer-trend  \
+               signalk-barograph \
+               signalk-polar \
+               signalk-scheduler \
+               openweather-signalk \
+               signalk-noaa-weather \
+               xdr-parser-plugin \
+               signalk-to-influxdb \
+               nmea0183-to-nmea0183 \
+               signalk-path-filter \
+               signalk-empirbusnxt-plugin \
+               obd2-signalk \
+               signalk-n2k-switch-alias \
+               signalk-n2k-switching \
+               signalk-n2k-switching-emulator \
+               signalk-n2k-switching-translator \
+               signalk-n2k-virtual-switch \
+               signalk-switch-automation \
+               signalk-shelly \
+               @signalk/calibration \
+               @signalk/tracks-plugin \
+               signalk-datetime \
+               signalk-net-relay \
+               signalk-path-mapper \
+               signalk-healthcheck \
+               @signalk/vedirect-serial-usb \
+               @signalk/udp-nmea-plugin \
+               signalk-n2kais-to-nmea0183 \
+               @codekilo/nmea0183-iec61121-450-server \
+               signalk-generic-pgn-parser \
+               signalk-maretron-proprietary \
+               signalk-vessels-to-ais \
+               @codekilo/signalk-notify \
+               @codekilo/signalk-trigger-event \
+               @codekilo/signalk-twilio-notifications \
+               @meri-imperiumi/signalk-audio-notifications \
+               signalk-buddylist-plugin \
+               signalk-navtex-plugin \
+               @meri-imperiumi/signalk-autostate \
+               @meri-imperiumi/signalk-alternator-engine-on \
+               signalk-saillogger --unsafe-perm --loglevel error"
 
 #sed -i "s#sudo ##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js || true
 #sed -i "s#/opt/vc/bin/##g" /home/signalk/.signalk/node_modules/signalk-raspberry-pi-monitoring/index.js || true
