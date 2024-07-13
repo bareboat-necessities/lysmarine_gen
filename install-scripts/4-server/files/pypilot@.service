@@ -1,7 +1,6 @@
 [Unit]
 Description=pypilot
 Conflicts=pypilot_boatimu.service
-#Before=avnav.service mopidy.service
 
 [Service]
 Type=simple

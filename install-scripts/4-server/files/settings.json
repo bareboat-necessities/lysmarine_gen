@@ -282,7 +282,24 @@
         }
       ],
       "id": "can0",
-      "enabled": false
+      "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA2000",
+            "subOptions": {
+              "type": "canbus-canboatjs",
+              "interface": "can01"
+            }
+          }
+        }
+      ],
+      "id": "can1",
+      "enabled": true
     },
     {
       "pipeElements": [
@@ -294,7 +311,7 @@
             "subOptions": {
               "validateChecksum": true,
               "type": "tcp",
-              "host": "localhost",
+              "host": "lysmarine",
               "port": "30330",
               "noDataReceivedTimeout": "15",
               "suppress0183event": true
@@ -303,7 +320,7 @@
         }
       ],
       "id": "OpenCPN",
-      "enabled": true
+      "enabled": false
     }
   ],
   "security": {

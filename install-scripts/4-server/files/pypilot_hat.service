@@ -1,7 +1,7 @@
 [Unit]
 Description=pypilot hat
 DefaultDependencies=false
-#ConditionPathExists=/proc/device-tree/hat/custom_0
+ConditionPathExists=/proc/device-tree/hat/custom_0
 
 [Service]
 Type=simple
