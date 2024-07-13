@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+echo "net.ipv6.conf.default.disable_ipv6=1" >> /etc/sysctl.conf
+
+
 # TODO:
 exit 0
 
