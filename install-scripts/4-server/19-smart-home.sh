@@ -65,38 +65,6 @@ cp -r ha-smart2000usb/custom_components/smart2000usb/ /home/homeassistant/.homea
 chown -R homeassistant:homeassistant /home/homeassistant/.homeassistant/smart2000usb/
 rm -rf ha-smart2000usb
 
-######################## ESPHome
 
-mkdir -p /home/homeassistant/.homeassistant/esphome
-chown homeassistant:homeassistant /home/homeassistant/.homeassistant/esphome
-cd /srv
-mkdir esphome
-chown homeassistant:homeassistant esphome
 
-su homeassistant --shell=/bin/bash -c "
-  cd /srv/esphome;
-  python3.11 -m venv . ;
-  source bin/activate;
-  python3.11 -m pip install wheel;
-  pip3.11 install esphome tornado esptool;
-  rm -rf /home/homeassistant/.cache"
-
-bash -c 'cat << EOF > /etc/systemd/system/esphome@homeassistant.service
-[Unit]
-Description=ESPHome Dashboard
-After=home-assistant@homeassistant.service
-Requires=home-assistant@homeassistant.service
-
-[Service]
-Environment="PATH=/srv/esphome/bin:/home/homeassistant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-Type=simple
-User=%i
-WorkingDirectory=/home/%i/.homeassistant/esphome
-ExecStart=/srv/esphome/bin/esphome dashboard /home/%i/.homeassistant/esphome/
-
-[Install]
-WantedBy=multi-user.target
-EOF'
-
-systemctl disable esphome@homeassistant
 
