@@ -43,17 +43,17 @@ install -v -m 0644 "$FILE_FOLDER"/victron.service "/etc/systemd/system/"
 
 systemctl enable victron.service
 
-bash -c 'cat << EOF > /usr/local/share/applications/victron.desktop
-[Desktop Entry]
-Type=Application
-Name=Victron
-GenericName=Victron
-Comment=Victron
-Exec=gnome-www-browser http://localhost:8000/app?host=venus.local&port=9001
+#bash -c 'cat << EOF > /usr/local/share/applications/victron.desktop
+#[Desktop Entry]
+#Type=Application
+#Name=Victron
+#GenericName=Victron
+#Comment=Victron
+#Exec=gnome-www-browser http://localhost:8000/app?host=venus.local&port=9001
 #Exec=gnome-www-browser http://localhost:8000/app?host=<VENUS_DEVICE_IP>&port=9001
-# Read: https://github.com/victronenergy/venus-html5-app
-Terminal=false
-Icon=battery-symbolic
-Categories=X-GNOME-Utilities;
-EOF'
+## Read: https://github.com/victronenergy/venus-html5-app
+#Terminal=false
+#Icon=battery-symbolic
+#Categories=X-GNOME-Utilities;
+#EOF'
 

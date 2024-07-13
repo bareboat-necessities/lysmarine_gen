@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+#TODO
+exit 0
+
 apt-get clean
 
 apt-get -y -q install grafana
