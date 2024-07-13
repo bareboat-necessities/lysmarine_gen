@@ -7,10 +7,10 @@ set +e
 
 CURRENT_HOSTNAME=$(cat /etc/hostname | tr -d " \t\n\r")
 if [ -f /usr/lib/raspberrypi-sys-mods/imager_custom ]; then
-   /usr/lib/raspberrypi-sys-mods/imager_custom set_hostname lysmarine
+   /usr/lib/raspberrypi-sys-mods/imager_custom set_hostname coremp135
 else
-   echo lysmarine >/etc/hostname
-   sed -i "s/127.0.1.1.*$CURRENT_HOSTNAME/127.0.1.1\tlysmarine/g" /etc/hosts || true
+   echo coremp135 >/etc/hostname
+   sed -i "s/127.0.1.1.*$CURRENT_HOSTNAME/127.0.1.1\tcoremp135/g" /etc/hosts || true
 fi
 FIRSTUSER=$(getent passwd 1000 | cut -d: -f1)
 FIRSTUSERHOME=$(getent passwd 1000 | cut -d: -f6)
@@ -41,7 +41,7 @@ else
    fi
 fi
 if [ -f /usr/lib/raspberrypi-sys-mods/imager_custom ]; then
-  /usr/lib/raspberrypi-sys-mods/imager_custom set_wlan 'lysmarine-hotspot' '9edadd0c8b779a33b4f336efa49535aa9a5a1c7809a457abb71fd68a1925d91f' 'US'
+  /usr/lib/raspberrypi-sys-mods/imager_custom set_wlan 'coremp135-hotspot' '9edadd0c8b779a33b4f336efa49535aa9a5a1c7809a457abb71fd68a1925d91f' 'US'
 else
   cat >/etc/wpa_supplicant/wpa_supplicant.conf <<'WPAEOF'
 country=US
@@ -50,7 +50,7 @@ ap_scan=1
 
 update_config=1
 network={
-	ssid="lysmarine-hotspot"
+	ssid="coremp135-hotspot"
 	psk=9edadd0c8b779a33b4f336efa49535aa9a5a1c7809a457abb71fd68a1925d91f
 }
 

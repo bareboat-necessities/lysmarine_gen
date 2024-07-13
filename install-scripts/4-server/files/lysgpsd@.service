@@ -1,5 +1,5 @@
 [Unit]
-Description=GPS Daemon for the devices managed by lysmarine
+Description=GPS Daemon for the devices managed by bbn
 After=chronyd.service
 
 [Service]
