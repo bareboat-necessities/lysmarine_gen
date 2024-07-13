@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
-#TODO
-exit 0
-
 apt-get -y -q install canboat can-utils dfu-util
 
 yes | cpan install Config::General # for canboat n2kd_monitor
