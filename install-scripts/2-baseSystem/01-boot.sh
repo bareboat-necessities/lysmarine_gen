@@ -2,7 +2,7 @@
 apt-get install -y -q parted gdisk # plymouth plymouth-label libblockdev-mdraid2
 
 if [ -f /etc/issue ] ; then
-  install -m0664 -v "$FILE_FOLDER"/ascii_logo.jpg "/etc/issue"
+  install -m0664 -v "$FILE_FOLDER"/ascii_logo.txt "/etc/issue"
 fi
 
 if [ -f /usr/local/m5stack/init.sh ] ; then
