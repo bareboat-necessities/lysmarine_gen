@@ -9,3 +9,5 @@ wget -q -O - https://www.free-x.de/debian/oss.boating.gpg.key     | apt-key add 
 
 apt-get update  -y -q
 apt-get upgrade  -y -q
+
+apt-get -y install udev/bookworm-backports
