@@ -3,5 +3,7 @@
 KERNEL=="ttyS*", MODE="0664", GROUP="dialout", GOTO="zzz_com_rules_end"
 KERNEL=="ttyACM*", MODE="0664", GROUP="dialout", GOTO="zzz_com_rules_end"
 KERNEL=="ttyUSB*", MODE="0664", GROUP="dialout", GOTO="zzz_com_rules_end"
+KERNEL=="ttySTM*", MODE="0664", GROUP="dialout", GOTO="zzz_com_rules_end"
+KERNEL=="ttyGS*", MODE="0664", GROUP="dialout", GOTO="zzz_com_rules_end"
 
 LABEL="zzz_com_rules_end"
