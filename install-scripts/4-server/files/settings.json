@@ -275,7 +275,7 @@
             "logging": false,
             "type": "NMEA2000",
             "subOptions": {
-              "type": "canbus-canboatjs",
+              "type": "canbus-canboat",
               "interface": "can0"
             }
           }
@@ -292,8 +292,8 @@
             "logging": false,
             "type": "NMEA2000",
             "subOptions": {
-              "type": "canbus-canboatjs",
-              "interface": "can01"
+              "type": "canbus-canboat",
+              "interface": "can1"
             }
           }
         }
