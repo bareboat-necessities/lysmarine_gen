@@ -36,3 +36,11 @@
 /dev/ttySC3
 /dev/ttySC4
 /dev/ttySC5
+/dev/GS0
+/dev/GS1
+/dev/GS2
+/dev/GS3
+/dev/STM0
+/dev/STM1
+/dev/STM2
+/dev/STM3
