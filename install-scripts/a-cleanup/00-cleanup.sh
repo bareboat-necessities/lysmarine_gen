@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+apt-get remove -y exim4-base
+
 apt-get autoremove -y --purge
 
 rm -rvf /home/user/Public /home/user/Templates 
