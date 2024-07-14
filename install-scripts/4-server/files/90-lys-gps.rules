@@ -27,7 +27,7 @@ SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a6", SYMLINK="tt
 SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a7", SYMLINK="ttyLYS_gps_%n", RUN+="/lib/udev/manage_gps.sh %n"
 
 # U-Blox AG [u-blox 8]
-#SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a8", SYMLINK="ttyLYS_gps_%n", RUN+="/lib/udev/manage_gps.sh %n"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a8", SYMLINK="ttyLYS_gps_%n", RUN+="/lib/udev/manage_gps.sh %n"
 
 # u-blox AG, u-blox 9 (tested with GNSS Evaluation Kit C099-F9P) [linux module: cdc_acm]
 SUBSYSTEM=="tty", ATTRS{idVendor}=="1546", ATTRS{idProduct}=="01a9", SYMLINK="ttyLYS_gps_%n", RUN+="/lib/udev/manage_gps.sh %n"
