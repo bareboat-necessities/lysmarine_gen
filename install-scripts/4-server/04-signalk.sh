@@ -96,7 +96,6 @@ pushd /home/signalk/.signalk
                openweather-signalk \
                signalk-noaa-weather \
                xdr-parser-plugin \
-               signalk-to-influxdb \
                nmea0183-to-nmea0183 \
                signalk-path-filter \
                signalk-empirbusnxt-plugin \
@@ -129,7 +128,7 @@ pushd /home/signalk/.signalk
                @meri-imperiumi/signalk-alternator-engine-on \
                signalk-saillogger --unsafe-perm --loglevel error"
 
-
+#               signalk-to-influxdb \
 #               @signalk/sailgauge  \
 #               @signalk/tracks-plugin \
 #               @signalk/signalk-node-red  \
