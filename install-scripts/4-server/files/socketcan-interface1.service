@@ -1,0 +1,12 @@
+[Unit]
+Description=SocketCAN interface can1 with a baudrate of 250000
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/ip link set can1 type can bitrate 250000 ; /sbin/ifconfig can1 up
+ExecReload=/sbin/ifconfig can1 down ; /sbin/ip link set can1 type can bitrate 250000 ; /sbin/ifconfig can1 up
+ExecStop=/sbin/ifconfig can1 down
+
+[Install]
+WantedBy=multi-user.target
