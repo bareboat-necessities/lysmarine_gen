@@ -1,5 +1,5 @@
 
-## What is BBN Marine OS for CoreMP135
+# What is BBN Marine OS for CoreMP135
 
 BBN Marine OS for CoreMP135 is a Debian OS image for CoreMP135 from M5Stack.
 
@@ -11,6 +11,11 @@ It includes:
 - Kplex
 - Canboat
 - Victron WEB UI
+
+# SignalK usage
+
+CoreMP135 has only 512GB RAM. You won't be able to handle traffic with SignalK having
+too many paths, like 1000s of AIS targets, etc
 
 # About Name
 
