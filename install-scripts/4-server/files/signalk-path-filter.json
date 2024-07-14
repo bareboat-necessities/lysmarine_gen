@@ -7,9 +7,9 @@
         "source": "gpsd.GN"
       },
       {
-        "path": "navigation.courseOverGroundTrue",
+        "path": "navigation.magneticVariation",
         "wildcard": true,
-        "source": "gpsd.GN"
+        "source": "gps0.GN"
       },
       {
         "path": "navigation.magneticVariation",
@@ -17,17 +17,7 @@
         "source": "gps1.GN"
       },
       {
-        "path": "navigation.courseOverGroundTrue",
-        "wildcard": true,
-        "source": "gps1.GN"
-      },
-      {
         "path": "navigation.magneticVariation",
-        "wildcard": true,
-        "source": "gps2.GN"
-      },
-      {
-        "path": "navigation.courseOverGroundTrue",
         "wildcard": true,
         "source": "gps2.GN"
       },
@@ -40,6 +30,11 @@
         "path": "navigation.magneticVariation",
         "wildcard": true,
         "source": "gpsd.GP"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps0.GP"
       },
       {
         "path": "navigation.magneticVariation",
@@ -64,6 +59,11 @@
       {
         "path": "navigation.magneticVariation",
         "wildcard": true,
+        "source": "gps0.GL"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
         "source": "gps1.GL"
       },
       {
@@ -84,6 +84,11 @@
       {
         "path": "navigation.magneticVariation",
         "wildcard": true,
+        "source": "gps0.GA"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
         "source": "gps1.GA"
       },
       {
@@ -100,6 +105,11 @@
         "path": "navigation.magneticVariation",
         "wildcard": true,
         "source": "gpsd.GB"
+      },
+      {
+        "path": "navigation.magneticVariation",
+        "wildcard": true,
+        "source": "gps0.GB"
       },
       {
         "path": "navigation.magneticVariation",
