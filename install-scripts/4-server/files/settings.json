@@ -154,6 +154,27 @@
               "validateChecksum": true,
               "type": "gpsd",
               "host": "localhost",
+              "port": "29470",
+              "noDataReceivedTimeout": "10",
+              "removeNulls": true
+            }
+          }
+        }
+      ],
+      "id": "gps0_gpsd",
+      "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
+              "type": "gpsd",
+              "host": "localhost",
               "port": "29471",
               "noDataReceivedTimeout": "10",
               "removeNulls": true
