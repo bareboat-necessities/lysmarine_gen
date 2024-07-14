@@ -119,7 +119,6 @@ pushd /home/signalk/.signalk
                @codekilo/nmea0183-iec61121-450-server \
                signalk-generic-pgn-parser \
                signalk-maretron-proprietary \
-               signalk-vessels-to-ais \
                @codekilo/signalk-notify \
                @codekilo/signalk-trigger-event \
                @codekilo/signalk-twilio-notifications \
