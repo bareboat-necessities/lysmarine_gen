@@ -7,4 +7,4 @@ install -m 0644 -v "$FILE_FOLDER"/free-x.list "/etc/apt/sources.list.d/"
 wget -q -O - https://www.free-x.de/debian/oss.boating.gpg.key     | apt-key add -
 
 apt-get update  -y -q
-
+apt-get upgrade  -y -q
