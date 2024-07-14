@@ -17,6 +17,9 @@ It includes:
 CoreMP135 has only 512GB RAM. You won't be able to handle traffic with SignalK having
 too many paths, like 1000s of AIS targets, etc
 
+Running SignalK and PyPilot motor controller at same time on CoreMP135 is not a good idea.
+Disable SignalK if you intend using PyPilot as an autopilot.
+
 # About Name
 
 Yes. It's a play of words inspired by the name of the song from "The Jungle Book" 
