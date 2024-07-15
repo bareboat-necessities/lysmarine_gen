@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-apt-get remove -y exim4-base unattended-upgrades
+apt-get remove -y unattended-upgrades # exim4-base 
 
 apt-get autoremove -y --purge
 
