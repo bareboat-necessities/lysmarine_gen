@@ -49,6 +49,8 @@ You can use Balena Etcher or Raspberry Pi imager to burn image to the SD card.
 - Connect 12v power
 - Power on. Wait for about 45 seconds on the first boot. 
 
+NOTE: The default password for root account is 'changeme'.
+
 NOTE: Do not connect USB3.0 devices to coremp135 USB2.0 ports. 
 
 # Access from browser
