@@ -342,6 +342,25 @@
       ],
       "id": "OpenCPN",
       "enabled": false
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
+              "type": "serial",
+              "device": "/dev/ttySTM3",
+              "baudrate": 4800
+            }
+          }
+        }
+      ],
+      "id": "rs485",
+      "enabled": true
     }
   ],
   "security": {
