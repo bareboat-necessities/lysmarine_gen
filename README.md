@@ -33,13 +33,13 @@ Disable SignalK if you intend using PyPilot as an autopilot.
 - Connect 12v power
 - Power on. Wait for about 45 seconds on the first boot. 
 
-Note: Do not connect USB3.0 devices to coremp135 USB2.0 ports. 
+NOTE: Do not connect USB3.0 devices to coremp135 USB2.0 ports. 
 
 # Access from browser
 
 You can access applications on your coremp135 from a browser running on the same network. 
 
-Note: On your router you need to assign fixed IP address by MAC address to your coremp135, to avoid DHCP picking different IP addresses for coremp135. 
+NOTE: On your router you need to assign fixed IP address by MAC address to your coremp135, to avoid DHCP picking different IP addresses for coremp135. 
 
 Hostname: coremp135
 
