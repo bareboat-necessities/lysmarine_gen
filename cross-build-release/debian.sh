@@ -35,7 +35,7 @@
   inflateImage $thisArch $myCache/"$imageName"
 
   # copy ready image from cache to the work dir
-  cp -fv $myCache/"$imageName"-inflated ./work/$thisArch/"$imageName"
+  cp -fv --reflink=auto --sparse=always $myCache/"$imageName"-inflated ./work/$thisArch/"$imageName"
 
   # Mount the image and make the binds required to chroot.
   mountImageFile $thisArch ./work/$thisArch/"$imageName"

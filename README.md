@@ -20,7 +20,22 @@ too many paths, like 1000s of AIS targets, etc
 Running SignalK and PyPilot motor controller at same time on CoreMP135 is not a good idea.
 Disable SignalK if you intend using PyPilot as an autopilot.
 
+# Download
+
+Binaries are downloadable from:
+<https://cloudsmith.io/~bbn-projects/repos/bbn-repo/packages/?q=bbn-coremp135>
+
+[![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=for-the-badge)](https://cloudsmith.com)
+
+Package repository hosting is graciously provided by [Cloudsmith](https://cloudsmith.com).
+Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that
+enables your organization to create, store and share packages in any format, to any place, with total
+confidence.
+
 # Set up
+
+Download the image file following 'Download' link below.
+You can use Balena Etcher or Raspberry Pi imager to burn image to the SD card.
 
 - Connect your NMEA 0183 boat device (wind instrument, etc) to RS-485 port of coremp135
 - Connect your NMEA 2000 boat networks to CAN0 and/or CAN1 ports of coremp135
@@ -30,6 +45,7 @@ Disable SignalK if you intend using PyPilot as an autopilot.
 - Connect mp135 to the router or ethernet switch via ethernet port 
 - Connect keyboard to USB port
 - Connect HDMI monitor
+- Insert SD card with burned image
 - Connect 12v power
 - Power on. Wait for about 45 seconds on the first boot. 
 
@@ -43,11 +59,15 @@ NOTE: On your router you need to assign fixed IP address by MAC address to your 
 
 Hostname: coremp135
 
-Different applications use different http ports. For signalk it's 3000,
-for pypilot it's 8080, for victron web it's 8000. 
+Different applications use different http ports:
 
+- for SignalK it's 3000
+- for PyPilot it's 8080
+- for Victron web it's 8000
 
+# Serial console
 
+You can use USB-C port to access coremp135 via serial console. Baud rate 115200.
 
 # About Name
 
