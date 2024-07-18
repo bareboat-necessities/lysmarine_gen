@@ -116,7 +116,7 @@ const style =
     '    width: 65px;\n' +
     '    height: 65px;\n' +
     '    margin: 0 auto;\n' +
-    '    padding: 16px;\n' +
+    '    padding: 8px;\n' +
     '    text-align: center;\n' +
     '    font-family: Sans, Arial, Helvetica, sans-serif;\n' +
     '}\n' +
@@ -125,7 +125,7 @@ const style =
     '    width: 65px;\n' +
     '    height: 65px;\n' +
     '    margin: 0 auto;\n' +
-    '    padding: 16px;\n' +
+    '    padding: 8px;\n' +
     '    text-align: center;\n' +
     '    font-family: Sans, Arial, Helvetica, sans-serif;\n' +
     '}\n' +
