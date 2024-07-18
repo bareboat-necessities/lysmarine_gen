@@ -17,8 +17,9 @@ It includes:
 CoreMP135 has only 512GB RAM. You won't be able to handle traffic with SignalK having
 too many paths, like 1000s of AIS targets, etc
 
-Running SignalK and PyPilot motor controller at same time on CoreMP135 is not a good idea.
-Disable SignalK if you intend using PyPilot as an autopilot.
+Running SignalK with many connections and PyPilot motor controller at same time on CoreMP135 is not a good idea.
+Disable SignalK if you intend using PyPilot as an autopilot and enable PyPilot NMEA 0183 direct connection 
+(/home/pypilot/.pypilot/nmea0device)
 
 # Download
 
@@ -35,13 +36,13 @@ confidence.
 # Set up
 
 Download the image file following 'Download' link below.
-You can use Balena Etcher or Raspberry Pi imager to burn image to the SD card.
+You can use Balena Etcher or Raspberry Pi imager to burn the image to an SD card.
 
-- Connect your NMEA 0183 boat device (wind instrument, etc) to RS-485 port of coremp135
+- Connect your NMEA 0183 boat device (wind instrument, etc) to RS-485 port of coremp135 (/dev/ttySTM3)
 - Connect your NMEA 2000 boat networks to CAN0 and/or CAN1 ports of coremp135
 - Connect IMU supported by pypilot to i2c port of coremp135
-- Connect pypilot motor controller to UART6 port of coremp135
-- Connect USB GPS to another port of coremp135
+- Connect pypilot motor controller to UART6 port of coremp135 (/dev/ttySTM0)
+- Connect USB GPS to another USB 2.0 port of coremp135
 - Connect mp135 to the router or ethernet switch via ethernet port 
 - Connect keyboard to USB port
 - Connect HDMI monitor
@@ -49,9 +50,13 @@ You can use Balena Etcher or Raspberry Pi imager to burn image to the SD card.
 - Connect 12v power
 - Power on. Wait for about 45 seconds on the first boot. 
 
-NOTE: The default password for root account is 'changeme'.
+NOTE: The default password for the root account is 'changeme'.
 
 NOTE: Do not connect USB3.0 devices to coremp135 USB2.0 ports. 
+
+NOTE: If you are not using PyPilot as an autopilot, you can still use it as a heading source by connecting 
+and calibrating pypilot supported i2c IMU (calibration is done via pypilot web UI). 
+You do not need to connect pypilot motor controller in that case.
 
 # Access from browser
 
