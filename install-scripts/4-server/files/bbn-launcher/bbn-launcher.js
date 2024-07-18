@@ -8,27 +8,13 @@ const url = require('url');
 const fileSystem = require('fs');
 const path = require('path');
 
-const hostname = '127.0.0.1';
-const port = 4997;
+const hostname = '0.0.0.0';
+const port = 80;
 
 function writeSvgResponse(res, status, contentType, parsed) {
     const imgName = parsed.query['name'];
     if (imgName && imgName.match(/^[0-9a-zA-Z_\-]+$/)) {
         const filePath = path.join(__dirname, 'img/' + imgName + '.svg');
-        const stat = fileSystem.statSync(filePath);
-        res.writeHead(status, {
-            'Content-Type': contentType,
-            'Content-Length': stat.size
-        });
-        const readStream = fileSystem.createReadStream(filePath);
-        readStream.pipe(res);
-    }
-}
-
-function writeJsResponse(res, status, contentType, parsed) {
-    const jsName = parsed.query['name'];
-    if (jsName && jsName.match(/^[0-9a-zA-Z_\-]+$/)) {
-        const filePath = path.join(__dirname, 'js/' + jsName + '.js');
         const stat = fileSystem.statSync(filePath);
         res.writeHead(status, {
             'Content-Type': contentType,
@@ -45,8 +31,6 @@ const server = http.createServer((req, res) => {
     //console.log(`path: ${parsed.pathname}`)
     if (parsed.pathname === '/img') {
         writeSvgResponse(res, 200, 'image/svg+xml', parsed, processMain(parsed.query['m']));
-    } else if (parsed.pathname === '/js') {
-        writeJsResponse(res, 200, 'text/javascript', parsed, processMain(parsed.query['m']));
     } else {
         writeResponse(res,200, 'text/html', processMain(parsed.query['m']));
     }
