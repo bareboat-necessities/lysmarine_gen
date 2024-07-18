@@ -64,28 +64,6 @@ function writeResponse(res, status, contentType, content) {
     }).end(content);
 }
 
-function processReq(parsed) {
-    const progName = parsed.query['name'];
-    if (progName) {
-        let commandObj = commands1.find(value => {
-            if (value.name === progName) return value
-        });
-        if (commandObj) {
-            if (commandObj.cmd != null && commandObj.cmd.length > 0) {
-                const cmd = spawn(commandObj.cmd, commandObj.args);
-                cmd.stdout.on('data', data => console.log(`stdout: ${data}`));
-                cmd.stderr.on('data', data => console.log(`stderr: ${data}`));
-                cmd.on('error', (error) => console.log(`error: ${error.message}`));
-                //cmd.on('close', code => console.log(`child process exited with code ${code}`));
-                return '{"return" : "ok"}';
-            }
-        } else {
-            console.log(`not found: ${progName}`)
-        }
-    }
-    return '{"return" : "err"}';
-}
-
 const style =
     '\n' +
     '* {\n' +
@@ -191,6 +169,16 @@ const style =
     '}\n' +
     '\n';
 
+const script = '\n' +
+    '    <script>\n' +
+    'function showPanel(doFocus, id, link) {\n' +
+    '    const w = window.open(link, id);\n' +
+    '    if (doFocus) {\n' +
+    '        w.focus();\n' +
+    '    }\n' +
+    '}\n' +
+    '    </script>\n';
+
 function getCredits(mode) {
     let nextMode = "BW";
     if ("BW" === mode) {
@@ -206,7 +194,7 @@ function getCredits(mode) {
         '    </div>';
 }
 
-function buildTiles(commands, mode) {
+function buildTiles(commands, mode, host) {
     let items = '';
     let suffix = ("Dark" === mode) ? '' : '2';
     commands.forEach(value => {
@@ -214,7 +202,7 @@ function buildTiles(commands, mode) {
         let color = ("Dark" === mode) ? ' style="color: #e00d0d;"' : '';
         items = items + '\n' +
             '            <div class="tile">\n' +
-            '                <div class="tile-img'+ suffix + '"' + bg + ' onclick="run(\'' + value.name + '\');"><img src="img?name=' + value.img + suffix + '" alt="' + value.title + '" class="main-icon"/></div>\n' +
+            '                <div class="tile-img'+ suffix + '"' + bg + ' onclick="showPanel(true, \'' + value.name + '\', \'http://' + host + value.link + '\');"><img src="img?name=' + value.img + suffix + '" alt="' + value.title + '" class="main-icon"/></div>\n' +
             '                <div class="tile-label" ' + color + '>' + value.title + '</div>\n' +
             '            </div>'
     });
@@ -237,10 +225,10 @@ function getStyle(mode) {
 }
 
 function processMain(mode) {
-    const header = '<head>\n<meta charset="UTF-8">\n' + getStyle(mode) +
+    const header = '<head>\n<meta charset="UTF-8">\n' + script + getStyle(mode) +
         '\n    <title>bbn-launcher</title>\n' +
         '\n</head>\n';
-    const items1 = buildTiles(commands1, mode);
+    const items1 = buildTiles(commands1, mode, 'coremp135');
     const panel1 =
         '        <div id="panel1" class="main-panel" style="float: left;">' + items1 + '\n' +
         '        </div>\n';
@@ -253,3 +241,4 @@ function processMain(mode) {
     return '<!DOCTYPE html>\n'
         + '<html lang="en">\n' + header + body + '\n</html>';
 }
+
