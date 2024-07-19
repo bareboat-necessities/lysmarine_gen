@@ -1,5 +1,6 @@
 #!/bin/bash -e
-apt-get install -y -q parted gdisk
+
+apt-get install -y -q parted gdisk telnet
 
 if [ -f /etc/issue ] ; then
   install -m0664 -v "$FILE_FOLDER"/ascii_logo.txt "/etc/issue"
