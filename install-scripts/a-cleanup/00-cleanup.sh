@@ -7,16 +7,16 @@ apt-get autoremove -y --purge
 apt-get -y autoremove
 apt-get clean
 npm cache clean --force || true
-rm -rf /.local/share/pnpm
+rm -rf /root/.local/share/pnpm
 
 # remove python pip cache
-rm -rf /.cache/pip
+rm -rf /root/.cache/pip
 
 # remove all cache
-rm -rf /.cache
-rm -rf /.config
-rm -rf /.npm
-rm -rf /.wget*
+rm -rf /root/.cache
+rm -rf /root/.config
+rm -rf /root/.npm
+rm -rf /root/.wget*
 rm -rf $(find /var/log/ -type f)
 rm -f /opt/vc/src/hello_pi/hello_video/test.h264
 
