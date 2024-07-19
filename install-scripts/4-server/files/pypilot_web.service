@@ -1,5 +1,6 @@
 [Unit]
 Description=pypilot web
+After=pypilot@pypilot.service
 
 [Service]
 Type=simple

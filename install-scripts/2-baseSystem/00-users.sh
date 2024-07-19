@@ -26,7 +26,7 @@ usermod -a -G spi user
 usermod -a -G gpio user
 usermod -a -G sudo user
 usermod -a -G video user
-usermod -a -G input user     # for evdev-rce
+usermod -a -G input user
 usermod -a -G audio user
 usermod -a -G dialout user
 usermod -a -G lp user

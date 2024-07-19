@@ -1,6 +1,0 @@
-[Mount a system-internal device]
-Identity=unix-group:plugdev;unix-user:user
-Action=org.freedesktop.udisks2.*
-ResultAny=yes
-ResultActive=yes
-ResultInactive=yes

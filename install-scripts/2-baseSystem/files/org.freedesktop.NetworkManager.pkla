@@ -1,6 +1,0 @@
-[nm-applet]
-Identity=unix-group:netdev;unix-user:user
-Action=org.freedesktop.NetworkManager.*
-ResultAny=yes
-ResultInactive=no
-ResultActive=yes
