@@ -153,6 +153,9 @@ install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/serial_ports "/home/pypi
 install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/servodevice "/home/pypilot/.pypilot/servodevice.sample"
 install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/nmea0device "/home/pypilot/.pypilot/nmea0device.sample"
 
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/serial_ports "/home/pypilot/.pypilot/serial_ports"
+install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/servodevice "/home/pypilot/.pypilot/servodevice"
+
 
 if [[ -f /home/pypilot/.pypilot/pypilot.conf ]]; then
   chmod 664 /home/pypilot/.pypilot/pypilot.conf
