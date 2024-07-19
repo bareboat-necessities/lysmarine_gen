@@ -1,6 +1,15 @@
 
 # What is BBN Marine OS for CoreMP135
 
+BBN Marine OS for CoreMP135 is a lightweight version of BBN Marine OS
+(https://github.com/bareboat-necessities/lysmarine_gen) designed for CoreMP135 from m5stack.
+Loaded on CoreMP135 it turns CoreMP135 into a low-power consuming boat computer appliance 
+which is able to interface with NMEA 2000 (via CAN ports), NMEA 0183 via RS-485.
+
+You can easily connect IMU to make it a heading sensor.
+You can connect PyPilot motor controller to USART6 port of CoreMP135 to make your own autopilot unit.
+You can access it via a browser to see boat dashboards typical for marine MFDs.
+
 BBN Marine OS for CoreMP135 is a Debian OS image for CoreMP135 from M5Stack.
 
 It includes:
