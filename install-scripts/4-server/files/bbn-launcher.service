@@ -1,0 +1,9 @@
+[Unit]
+Description=BBN Desktop WebUI
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'cd /usr/local/bin/bbn-launcherd'
+
+[Install]
+WantedBy=multi-user.target

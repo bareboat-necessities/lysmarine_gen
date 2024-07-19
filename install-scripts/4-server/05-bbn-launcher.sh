@@ -20,3 +20,7 @@ for f in "$FILE_FOLDER"/bbn-launcher/img/*.svg; do
 done
 
 chown -R www-data:www-data /var/www/bbn-launcher
+
+install -v -m 0644 "$FILE_FOLDER"/bbn-launcher.service "/etc/systemd/system/"
+
+systemctl enable bbn-launcher
