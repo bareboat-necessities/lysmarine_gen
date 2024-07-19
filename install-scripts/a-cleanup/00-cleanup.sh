@@ -50,9 +50,6 @@ fake-hwclock save
 chown root:root /
 chmod 755 /
 
-#rm -rf /boot/issue.txt
-#install -v -m0644 "$FILE_FOLDER"/firstrun.sh "/boot/"
-
 # Fill free space with zeros
 cat /dev/zero > /zer0s || true
 rm -f /zer0s
