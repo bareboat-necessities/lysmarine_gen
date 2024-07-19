@@ -3,7 +3,7 @@
 
 BBN Marine OS for CoreMP135 is a lightweight version of BBN Marine OS
 (https://github.com/bareboat-necessities/lysmarine_gen) designed for CoreMP135 from m5stack.
-Loaded on CoreMP135 it turns CoreMP135 into a low-power consuming boat computer appliance 
+When loaded on CoreMP135 it turns CoreMP135 into a low-power consuming boat computer appliance 
 which is able to interface with NMEA 2000 (via CAN ports), NMEA 0183 via RS-485.
 
 You can easily connect IMU to make it a heading sensor.
