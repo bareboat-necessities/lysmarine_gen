@@ -95,8 +95,8 @@ inflateImage() {
     log "Inflating OS image to have enough space to build BBN OS. "
     cp -fv "${imageLocation}" "$imageLocationInflated"
 
-    log "truncate image to 5G"
-    truncate -s "5G" "$imageLocationInflated"
+    log "truncate image to 4G"
+    truncate -s "4G" "$imageLocationInflated"
     sync
 
     log "resize last partition to 100%"
