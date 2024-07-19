@@ -35,7 +35,7 @@ confidence.
 
 # Set up
 
-Download the image file following 'Download' link below.
+Download the image file following 'Download' link below. Prepare SD card with the image.
 You can use Balena Etcher or Raspberry Pi imager to burn the image to an SD card.
 
 - Connect your NMEA 0183 boat device (wind instrument, etc) to RS-485 port of coremp135 (/dev/ttySTM3)
@@ -43,12 +43,14 @@ You can use Balena Etcher or Raspberry Pi imager to burn the image to an SD card
 - Connect IMU supported by pypilot to i2c port of coremp135
 - Connect pypilot motor controller to UART6 port of coremp135 (/dev/ttySTM0)
 - Connect USB GPS to another USB 2.0 port of coremp135
-- Connect mp135 to the router or ethernet switch via ethernet port 
 - Connect keyboard to USB port
 - Connect HDMI monitor
+- Connect mp135 to the router or ethernet switch via ethernet port
 - Insert SD card with burned image
 - Connect 12v power
 - Power on. Give it few minutes during which the system will reboot a couple of times 
+
+NOTE: many steps above are optional except of the last four ones.
 
 NOTE: The default password for the root account is 'changeme'.
 
