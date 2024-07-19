@@ -4,8 +4,6 @@ apt-get remove -y unattended-upgrades # exim4-base
 
 apt-get autoremove -y --purge
 
-rm -rvf /home/user/Public /home/user/Templates 
-
 apt-get -y autoremove
 apt-get clean
 npm cache clean --force || true
