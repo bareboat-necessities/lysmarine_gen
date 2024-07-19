@@ -44,7 +44,7 @@ confidence.
 
 # Set up
 
-Download the image file following 'Download' link below. Prepare SD card with the image.
+Download the image file following 'Download' link above. Prepare SD card with the image.
 You can use Balena Etcher or Raspberry Pi imager to burn the image to an SD card.
 SD Card should be 'high endurance' ot 'industrial' grade to survive accidental losses of power.
 SD card size of 32GB or more is recommended.
@@ -70,6 +70,9 @@ NOTE: Do not connect USB3.0 devices to coremp135 USB2.0 ports.
 NOTE: If you are not using PyPilot as an autopilot, you can still use it as a heading source by connecting 
 and calibrating pypilot supported i2c IMU (calibration is done via pypilot web UI). 
 You do not need to connect pypilot motor controller in that case.
+
+NOTE: RS-485 (NMEA0183) connection might need change of baud rate to match your device. You 
+can do it in SignalK connections settings.
 
 # Access from browser
 
