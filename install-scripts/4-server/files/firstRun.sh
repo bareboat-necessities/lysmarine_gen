@@ -15,5 +15,7 @@ dpkg-reconfigure -f noninteractive keyboard-configuration
 
 /usr/local/m5stack/resize_mmc.sh
 
+systemctl disable firstRun
+
 sync
 reboot -f
