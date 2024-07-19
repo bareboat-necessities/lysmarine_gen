@@ -37,6 +37,7 @@ confidence.
 
 Download the image file following 'Download' link below. Prepare SD card with the image.
 You can use Balena Etcher or Raspberry Pi imager to burn the image to an SD card.
+SD Card should be 'high endurance' ot 'industrial' grade to survive accidental losses of power.
 
 - Connect your NMEA 0183 boat device (wind instrument, etc) to RS-485 port of coremp135 (/dev/ttySTM3)
 - Connect your NMEA 2000 boat networks to CAN0 and/or CAN1 ports of coremp135
