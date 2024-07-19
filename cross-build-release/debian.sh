@@ -64,20 +64,10 @@ EOF
   # Unmount
   umountImageFile $thisArch ./work/$thisArch/"$imageName"
 
-#  ls -l ./work/$thisArch/"$imageName"
-#  wget "https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh" -P $myCache/
-#  chmod +x "$myCache"/pishrink.sh
-#  "$myCache"/pishrink.sh -s ./work/$thisArch/"$imageName" || if [ $? == 11 ]; then
-#    log "Image already shrunk to smallest size"
-#  fi
   ls -l ./work/$thisArch/"$imageName"
 
   # Renaming the OS and moving it to the release folder.
-  if [ "$BBN_KIND" == "LITE" ] ; then
-    BBN_IMG=bbn-coremp135-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
-  else
-    BBN_IMG=bbn-coremp135-full-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
-  fi
+  BBN_IMG=bbn-coremp135-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   cp -v -l ./work/$thisArch/"$imageName" ./release/$thisArch/"$BBN_IMG"
 
   exit 0
