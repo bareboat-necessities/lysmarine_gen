@@ -3,7 +3,7 @@ Description=BBN Desktop WebUI
 
 [Service]
 Type=simple
-ExecStart=/bin/sh -c 'cd /usr/local/bin/bbn-launcherd'
+ExecStart=/bin/sh -c 'cd /var/www/bbn-launcher; /usr/local/bin/bbn-launcherd'
 
 [Install]
 WantedBy=multi-user.target
