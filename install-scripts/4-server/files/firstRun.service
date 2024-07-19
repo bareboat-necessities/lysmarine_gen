@@ -1,0 +1,10 @@
+[Unit]
+Description=First Run Service
+ConditionFirstBoot=yes
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/firstrun
+
+[Install]
+WantedBy=multi-user.target
