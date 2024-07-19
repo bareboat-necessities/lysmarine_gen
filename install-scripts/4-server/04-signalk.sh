@@ -58,9 +58,6 @@ install -m 644 -o signalk -g signalk "$FILE_FOLDER"/settings.json "/home/signalk
 install -m 755 -o signalk -g signalk "$FILE_FOLDER"/signalk-server "/home/signalk/.signalk/signalk-server"
 install -m 755 "$FILE_FOLDER"/signalk-restart "/usr/local/sbin/signalk-restart"
 
-install -d -o signalk -g signalk "/home/user/.local/share/icons/"
-install -m 644 -o 1000 -g 1000 "$FILE_FOLDER"/icons/signalk.png "/home/user/.local/share/icons/"
-
 install -d /etc/systemd/system
 install -m 644 "$FILE_FOLDER"/signalk.service "/etc/systemd/system/signalk.service"
 
