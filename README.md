@@ -48,7 +48,7 @@ You can use Balena Etcher or Raspberry Pi imager to burn the image to an SD card
 - Connect HDMI monitor
 - Insert SD card with burned image
 - Connect 12v power
-- Power on. Wait for about 45 seconds on the first boot. 
+- Power on. Give it few minutes during which the system will reboot a couple of times 
 
 NOTE: The default password for the root account is 'changeme'.
 
@@ -66,8 +66,11 @@ NOTE: On your router you need to assign fixed IP address by MAC address to your 
 
 Hostname: coremp135
 
+Access using a web browser using http://coremp135.local/
+
 Different applications use different http ports:
 
+- for the main web desktop it's 80 
 - for SignalK it's 3000
 - for PyPilot it's 8080
 - for Victron web it's 8000
