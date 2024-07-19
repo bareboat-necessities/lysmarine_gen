@@ -6,7 +6,7 @@ BBN Marine OS for CoreMP135 is a lightweight version of BBN Marine OS
 When loaded on CoreMP135 it turns CoreMP135 into a low-power consuming boat computer appliance 
 which is able to interface with NMEA 2000 (via CAN ports), NMEA 0183 via RS-485.
 
-You can easily connect IMU to make it a heading sensor.
+You can easily connect IMU to make a heading sensor.
 You can connect PyPilot motor controller to USART6 port of CoreMP135 to make your own autopilot unit.
 You can access it via a browser to see boat dashboards typical for marine MFDs.
 
