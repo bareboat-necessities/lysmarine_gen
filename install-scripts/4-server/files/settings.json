@@ -57,7 +57,7 @@
         }
       ],
       "id": "kplexd_tcp",
-      "enabled": false
+      "enabled": true
     },
     {
       "pipeElements": [
@@ -360,7 +360,7 @@
         }
       ],
       "id": "rs485",
-      "enabled": true
+      "enabled": false
     }
   ],
   "security": {
