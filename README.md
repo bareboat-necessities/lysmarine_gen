@@ -27,7 +27,8 @@ CoreMP135 has only 512GB RAM. You won't be able to handle traffic with SignalK h
 too many paths, like 1000s of AIS targets, etc
 
 Running SignalK with many connections and PyPilot motor controller at same time on CoreMP135 is not a good idea.
-Disabling SignalK is suggested if you intend using PyPilot as an autopilot.
+Disabling SignalK is suggested if you intend using PyPilot as an autopilot and enable PyPilot NMEA 0183 direct connection 
+(/home/pypilot/.pypilot/nmea0device)
 
 # Download
 
