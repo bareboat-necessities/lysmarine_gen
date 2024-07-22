@@ -11,3 +11,9 @@ if [ -f /usr/local/m5stack/init.sh ] ; then
   sed -i "s#m5stack/logo.jpg#m5stack/bbn_logo.jpg#g" /usr/local/m5stack/init.sh
 fi
 
+# see https://github.com/m5stack/CoreMP135_buildroot-external-st/issues/8
+systemctl disable getty@ttyGS0.service
+install -m 644 "$FILE_FOLDER"/usb-otg-state.path "/lib/systemd/system/usb-otg-state.path"
+install -m 644 "$FILE_FOLDER"/usb-otg-service.path "/lib/systemd/system/usb-otg-service.path"
+
+

@@ -1,0 +1,8 @@
+[Unit]
+Description=Monitor USB OTG State Changes
+
+[Path]
+PathModified=/sys/class/udc/49000000.usb-otg/state
+
+[Install]
+WantedBy=multi-user.target
