@@ -14,6 +14,6 @@ fi
 # see https://github.com/m5stack/CoreMP135_buildroot-external-st/issues/8
 systemctl disable getty@ttyGS0.service
 install -m 644 "$FILE_FOLDER"/usb-otg-state.path "/lib/systemd/system/usb-otg-state.path"
-install -m 644 "$FILE_FOLDER"/usb-otg-service.path "/lib/systemd/system/usb-otg-service.path"
+install -m 644 "$FILE_FOLDER"/usb-otg-state.service "/lib/systemd/system/usb-otg-state.service"
 
 
