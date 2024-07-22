@@ -96,9 +96,11 @@ Different applications use different http ports:
 You can use USB-C port to access coremp135 via serial console. Baud rate 115200.
 
 
-# Screenshots
+# Pictures
 
-![BBN_CoreMp135_Screen1](img/bbn-coremp135.png?raw=true "BBN Marine OS on CoreMP135")
+<div style="text-align:center"><img src="img/bbn-on-coremp135.png?raw=true" alt="BBN Marine OS on CoreMP135" /></div>.
+
+<div style="text-align:center"><img src="img/bbn-coremp135.png?raw=true" alt="BBN Marine OS UI on CoreMP135" /></div>.
 
 # About Name
 
