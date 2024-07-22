@@ -95,6 +95,11 @@ Different applications use different http ports:
 
 You can use USB-C port to access coremp135 via serial console. Baud rate 115200.
 
+
+# Screenshots
+
+![BBN_CoreMp135_Screen1](img/bbn-coremp135.png?raw=true "BBN Marine OS on CoreMP135")
+
 # About Name
 
 Yes. It's a play of words inspired by the name of the song from "The Jungle Book" 
