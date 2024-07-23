@@ -8,6 +8,7 @@ fi
 
 if [ -f /usr/local/m5stack/init.sh ] ; then
   install -m0644 -v "$FILE_FOLDER"/bbn_logo.jpg "/usr/local/m5stack/bbn_logo.jpg"
+  install -m0644 -v "$FILE_FOLDER"/1x1-black.jpg "/usr/local/m5stack/1x1-black.jpg"
   sed -i "s#m5stack/logo.jpg#m5stack/bbn_logo.jpg#g" /usr/local/m5stack/init.sh
 fi
 
