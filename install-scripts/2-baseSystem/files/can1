@@ -1,0 +1,7 @@
+# physical can interfaces
+allow-hotplug can1
+  iface can1 can static
+  bitrate 250000
+  pre-up ip link set can1 type can restart-ms 100
+  down /sbin/ip link set $IFACE down
+  up /sbin/ifconfig $IFACE txqueuelen 10000
