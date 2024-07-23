@@ -75,6 +75,8 @@ You do not need to connect pypilot motor controller in that case.
 NOTE: RS-485 (NMEA0183) connection might need change of baud rate to match your device. You 
 can do it in SignalK connections settings.
 
+NOTE: Built-in LCD screen turns off after 10 mins after boot to save power.
+
 # Access from browser
 
 You can access applications on your coremp135 from a browser running on the same network. 
