@@ -1,0 +1,9 @@
+[Unit]
+Description=Delayed Screen Blanking
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/m5stack/scr-off.sh
+
+[Install]
+WantedBy=multi-user.target

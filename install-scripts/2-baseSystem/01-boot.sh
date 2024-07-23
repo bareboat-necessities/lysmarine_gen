@@ -19,3 +19,7 @@ systemctl disable getty@ttyGS0.service
 install -m 644 "$FILE_FOLDER"/usb-otg-state.path "/lib/systemd/system/usb-otg-state.path"
 install -m 644 "$FILE_FOLDER"/usb-otg-state.service "/lib/systemd/system/usb-otg-state.service"
 systemctl enable usb-otg-state.path
+
+install -m 755 -v "$FILE_FOLDER"/scr-off.sh "/usr/local/m5stack/scr-off.sh"
+install -m 644 "$FILE_FOLDER"/delayed-scr-off.service "/etc/systemd/system/delayed-scr-off.service"
+systemctl enable delayed-scr-off.service
