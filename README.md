@@ -26,7 +26,7 @@ It includes:
 CoreMP135 has only 512GB RAM. You won't be able to handle traffic with SignalK having
 too many paths, like 1000s of AIS targets, etc
 
-Running SignalK with many connections and PyPilot motor controller at same time on CoreMP135 is not a good idea.
+Running SignalK with many connections and PyPilot motor controller at the same time on CoreMP135 is not a good idea.
 Disabling SignalK is suggested if you intend to use PyPilot as an autopilot. 
 In that case enable PyPilot NMEA 0183 direct connection to /dev/ttySTM3 RS-485
 (/home/pypilot/.pypilot/nmea0device)
@@ -64,7 +64,8 @@ SD card size of 32GB or more is recommended.
 
 NOTE: Many steps above are optional except of the last four ones.
 
-NOTE: The default password for the root account is 'changeme'.
+NOTE: The default password for the root account is 'changeme'. There is also a user account 'user'
+with the password 'changeme'. Make sure you change those passwords.
 
 NOTE: Do not connect USB3.0 devices to coremp135 USB2.0 ports. 
 
