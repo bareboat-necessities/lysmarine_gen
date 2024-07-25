@@ -23,7 +23,7 @@ It includes:
 
 # SignalK usage
 
-CoreMP135 has only 512GB RAM. You won't be able to handle traffic with SignalK having
+CoreMP135 has only 512MB RAM. You won't be able to handle traffic with SignalK having
 too many paths, like 1000s of AIS targets, etc
 
 Running SignalK with many connections and PyPilot motor controller at the same time on CoreMP135 is not a good idea.
