@@ -18,7 +18,7 @@ pushd /root
   pushd venus-docker
     git submodule update --init --recursive
     git submodule foreach 'git pull --ff origin master --recurse-submodules || true'
-    docker build . -t mqtt --no-cache
+    docker -v /var/run/docker.sock:/var/run/docker.sock build . -t mqtt --no-cache
   popd
 popd
 
