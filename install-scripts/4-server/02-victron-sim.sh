@@ -19,6 +19,7 @@ pushd /root
     docker buildx create --buildkitd-flags '--allow-insecure-entitlement security.insecure' --name insecure-builder
     docker buildx use insecure-builder
     export DOCKER_HOST=tcp://127.0.0.1:2375
+    ls -l /var/run/docker.sock
     docker buildx build --allow security.insecure . -t mqtt --no-cache
   popd
 popd
