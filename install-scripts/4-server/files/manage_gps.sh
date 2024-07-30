@@ -16,7 +16,6 @@ else
     /usr/bin/su -c '/usr/bin/gpsdctl add /dev/ttyLYS_gps_0'
   else
     /usr/bin/su -c '/usr/bin/systemctl restart lysgpsd@'"$1"'.service'
-    /usr/bin/su -c '/usr/bin/systemctl is-enabled signalk && systemctl restart signalk'
     logger "This USB device is known as GPS and will be connected to gpsd on port 2947$1 /dev/ttyLYS_gps_$1"
   fi
 fi
