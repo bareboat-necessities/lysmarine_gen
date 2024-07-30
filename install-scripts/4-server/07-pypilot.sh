@@ -143,7 +143,6 @@ setfacl -d -m g:pypilot:rw "/home/pypilot/.pypilot"
 setfacl -d -m g:pypilot:rw "/home/pypilot/.pypilot/ugfxfonts"
 setfacl -d -m g:pypilot:rw "/home/tc"
 
-install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/signalk.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/webapp.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/pypilot_client.conf "/home/pypilot/.pypilot/"
 install -v -o pypilot -g pypilot -m 0664 "$FILE_FOLDER"/pypilot.conf "/home/pypilot/.pypilot/"
