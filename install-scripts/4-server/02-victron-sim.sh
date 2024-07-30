@@ -18,7 +18,7 @@ pushd /root
     git submodule foreach 'git pull --ff origin master --recurse-submodules || true'
     docker buildx create --buildkitd-flags '--allow-insecure-entitlement security.insecure' --name insecure-builder
     docker buildx use insecure-builder
-    docker buildx build --allow security.insecure . -t mqtt --no-cache
+    DOCKER_HOST=tcp://127.0.0.1:2375 docker buildx build --allow security.insecure . -t mqtt --no-cache
   popd
 popd
 
