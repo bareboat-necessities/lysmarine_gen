@@ -18,7 +18,6 @@ It includes:
 - GPSd
 - Kplex
 - Canboat
-- Victron WEB UI
 - Victron Docker for Victron devices simulator
 
 # Download
@@ -79,7 +78,6 @@ Different applications use different http ports:
 
 - for the main web desktop it's 80
 - for PyPilot it's 8080
-- for Victron web it's 8000
 
 # Serial console
 
