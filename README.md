@@ -14,22 +14,12 @@ BBN Marine OS for CoreMP135 is a Debian OS image for CoreMP135 from M5Stack.
 
 It includes:
 
-- SignalK
 - PyPilot
 - GPSd
 - Kplex
 - Canboat
 - Victron WEB UI
-
-# SignalK usage
-
-CoreMP135 has only 512MB RAM. You won't be able to handle traffic with SignalK having
-too many paths, like 1000s of AIS targets, etc
-
-Running SignalK with many connections and PyPilot motor controller at the same time on CoreMP135 is not a good idea.
-Disabling SignalK is suggested if you intend to use PyPilot as an autopilot. 
-In that case enable PyPilot NMEA 0183 direct connection to /dev/ttySTM3 RS-485
-(/home/pypilot/.pypilot/nmea0device)
+- Victron Docker for Victron devices simulator
 
 # Download
 
@@ -73,9 +63,6 @@ NOTE: If you are not using PyPilot as an autopilot, you can still use it as a he
 and calibrating pypilot supported i2c IMU (calibration is done via pypilot web UI). 
 You do not need to connect pypilot motor controller in that case.
 
-NOTE: RS-485 (NMEA0183) connection might need change of baud rate to match your device. You 
-can do it in SignalK connections settings.
-
 NOTE: Built-in LCD screen turns off after 10 mins after boot to save power.
 
 # Access from browser
@@ -90,8 +77,7 @@ Access using a web browser using http://coremp135.local/
 
 Different applications use different http ports:
 
-- for the main web desktop it's 80 
-- for SignalK it's 3000
+- for the main web desktop it's 80
 - for PyPilot it's 8080
 - for Victron web it's 8000
 
@@ -100,10 +86,6 @@ Different applications use different http ports:
 You can use USB-C port to access coremp135 via serial console. Baud rate 115200.
 
 # Pictures
-
-<p align="center">
-<img src="img/bbn-coremp135.png?raw=true" alt="BBN Marine OS UI on CoreMP135" />
-</p>
 
 <p align="center">
 <img src="img/bbn-on-coremp135.png?raw=true" alt="BBN Marine OS on CoreMP135" />
