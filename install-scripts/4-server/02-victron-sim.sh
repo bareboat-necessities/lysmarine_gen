@@ -16,7 +16,9 @@ pushd /root
   pushd venus-docker
     git submodule update --init --recursive
     git submodule foreach 'git pull --ff origin master --recurse-submodules || true'
-    docker build --privileged -ti "$DOCKER_CONTAINER_ID"  . -t mqtt --no-cache
+    docker buildx create --buildkitd-flags '--allow-insecure-entitlement security.insecure' --name insecure-builder
+    docker buildx use insecure-builder
+    docker buildx build --allow security.insecure . -t mqtt --no-cache
   popd
 popd
 
