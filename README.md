@@ -23,7 +23,7 @@ It includes:
 # Download
 
 Binaries are downloadable from:
-<https://cloudsmith.io/~bbn-projects/repos/bbn-repo/packages/?q=bbn-coremp135>
+<https://cloudsmith.io/~bbn-projects/repos/bbn-repo/packages/?q=bbn-venus-sim-coremp135>
 
 [![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=for-the-badge)](https://cloudsmith.com)
 
