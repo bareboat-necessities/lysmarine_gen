@@ -2,7 +2,7 @@
 
 # install docker
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc
-  do apt-get remove $pkg
+  do apt-get -q -y remove $pkg
 done
 
 apt-get install -q -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
