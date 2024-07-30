@@ -67,7 +67,7 @@ EOF
   ls -l ./work/$thisArch/"$imageName"
 
   # Renaming the OS and moving it to the release folder.
-  BBN_IMG=bbn-coremp135-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+  BBN_IMG=bbn-venus-sim-coremp135_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   cp -v -l ./work/$thisArch/"$imageName" ./release/$thisArch/"$BBN_IMG"
 
   exit 0
