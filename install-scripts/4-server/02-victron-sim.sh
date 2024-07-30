@@ -10,6 +10,8 @@ apt-get install -q -y ebtables docker-ce docker-ce-cli containerd.io docker-buil
 update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
+systemctl start docker
+
 # see: https://github.com/victronenergy/venus-docker
 pushd /root
   git clone --recurse-submodules https://github.com/victronenergy/venus-docker
