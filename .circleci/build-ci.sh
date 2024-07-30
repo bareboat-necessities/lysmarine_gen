@@ -31,7 +31,7 @@ docker exec --privileged -ti "$DOCKER_CONTAINER_ID" apt-get update
 docker exec --privileged -ti "$DOCKER_CONTAINER_ID" apt-get -y install dpkg-dev debhelper devscripts equivs pkg-config apt-utils fakeroot \
   proot git-core live-build kpartx p7zip p7zip-full parted fdisk gdisk e2fsprogs qemu-user zerofree
 
-docker exec --privileged -ti "$DOCKER_CONTAINER_ID" -v /var/run/docker.sock:/var/run/docker.sock /bin/bash -xec \
+docker exec --privileged -ti "$DOCKER_CONTAINER_ID" /bin/bash -xec \
   "cd ci-source/cross-build-release; chmod -v u+w *.sh; /bin/bash -xe ./debian.sh $PKG_ARCH $LYSMARINE_VER $BBN_KIND $DOCKER_CONTAINER_ID"
 
 pwd
