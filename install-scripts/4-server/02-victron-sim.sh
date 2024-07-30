@@ -10,7 +10,7 @@ apt-get install -q -y ebtables docker-ce docker-ce-cli containerd.io docker-buil
 update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
-systemctl start docker
+docker run -v /var/run/docker.sock:/var/run/docker.sock -ti docker
 
 # see: https://github.com/victronenergy/venus-docker
 pushd /root
