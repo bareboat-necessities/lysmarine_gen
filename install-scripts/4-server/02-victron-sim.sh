@@ -11,7 +11,7 @@ apt-get install -q -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 pushd /root
   git clone --recurse-submodules https://github.com/victronenergy/venus-docker
   pushd venus-docker
-    ./build.sh
+    ./build.sh || true
   popd
 popd
 
