@@ -30,7 +30,6 @@ pushd venus-docker
   ls -l .
   docker images
   docker image ls
-  docker save --output victron-mqtt.tar victron-mqtt
 popd
 
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v /var/run/docker.sock:/var/run/docker.sock -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
