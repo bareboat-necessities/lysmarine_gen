@@ -27,10 +27,8 @@ WORK_DIR=$(pwd):/ci-source
 git clone --recurse-submodules https://github.com/victronenergy/venus-docker
 pushd venus-docker
   docker build . -t victron-mqtt
-  docker images
-  docker image ls
   docker save --output victron-mqtt.tar victron-mqtt
-  ls -l 
+  ls -l victron-mqtt.tar
 popd
 
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v /var/run/docker.sock:/var/run/docker.sock -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
