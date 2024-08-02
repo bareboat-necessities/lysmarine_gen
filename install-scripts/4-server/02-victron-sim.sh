@@ -10,6 +10,16 @@ apt-get install -q -y ebtables docker-ce docker-ce-cli containerd.io docker-buil
 update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
-export DOCKER_HOST=tcp://127.0.0.1:2375
-docker load --input "$FILE_FOLDER/mqtt.tar"
+install -d /root/victron
+install -v -m 0644 "$FILE_FOLDER/mqtt.tar" "/root/victron"
+
+cat >/root/victron/readme.txt <<'EOF'
+This is Victron simulator docker image
+To load:
+
+docker load --input ./mqtt.tar
 docker images
+
+See: https://github.com/victronenergy/venus-docker/
+
+EOF
