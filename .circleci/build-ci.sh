@@ -33,7 +33,7 @@ docker exec --privileged -ti "$DOCKER_CONTAINER_ID" apt-get -y install dpkg-dev 
   proot git-core live-build kpartx p7zip p7zip-full parted fdisk gdisk e2fsprogs qemu-user zerofree
 
 docker exec --privileged -ti "$DOCKER_CONTAINER_ID" /bin/bash -xec \
-  "cd ci-source/cross-build-release; chmod -v u+w *.sh; ./victron.sh"
+  "cd ci-source/cross-build-release; chmod -v u+w *.sh; /bin/bash -xe ./victron.sh"
 
 docker exec --privileged -ti "$DOCKER_CONTAINER_ID" /bin/bash -xec \
   "cd ci-source/cross-build-release; chmod -v u+w *.sh; /bin/bash -xe ./debian.sh $PKG_ARCH $LYSMARINE_VER $BBN_KIND $DOCKER_CONTAINER_ID"
