@@ -29,8 +29,9 @@ pushd venus-docker
   docker build . -t victron-mqtt
   docker save --output victron-mqtt.tar victron-mqtt
   ls -l victron-mqtt.tar
-  mv victron-mqtt.tar install-scripts/4-server/files/
 popd
+mv venus-docker/victron-mqtt.tar install-scripts/4-server/files/
+
 
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
 DOCKER_CONTAINER_ID=$(docker ps --last 4 | grep "$CONTAINER_DISTRO" | awk '{print $1}' | head -1)
