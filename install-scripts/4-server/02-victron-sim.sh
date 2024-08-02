@@ -10,6 +10,6 @@ apt-get install -q -y ebtables docker-ce docker-ce-cli containerd.io docker-buil
 update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
-dockerd
+export DOCKER_HOST=tcp://localhost:2375
 docker load --input "$FILE_FOLDER/victron-mqtt.tar"
 docker images
