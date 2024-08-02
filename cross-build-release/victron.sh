@@ -9,5 +9,5 @@ pushd venus-docker
 popd
 pwd
 ls -l "$(pwd)"
-mv venus-docker/mqtt.tar "$(pwd)"/cross-build-release/install-scripts/4-server/files/
+mv venus-docker/mqtt.tar "$(pwd)"/install-scripts/4-server/files/
 rm -rf ./venus-docker
