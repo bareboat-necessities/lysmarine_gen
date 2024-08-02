@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 
-git clone --recurse-submodules https://github.com/victronenergy/venus-docker
+git clone --recurse-submodules --depth=1 https://github.com/victronenergy/venus-docker
 pushd venus-docker
   export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
   docker build . -t mqtt
