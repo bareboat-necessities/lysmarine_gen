@@ -24,6 +24,17 @@ fi
 
 WORK_DIR=$(pwd):/ci-source
 
+git clone --recurse-submodules https://github.com/victronenergy/venus-docker
+pushd venus-docker
+  git submodule update --init --recursive
+  git submodule foreach 'git pull --ff origin master --recurse-submodules || true'
+  docker buildx create --buildkitd-flags '--allow-insecure-entitlement security.insecure' --name insecure-builder
+  docker buildx use insecure-builder
+  export DOCKER_HOST=tcp://127.0.0.1:2375
+  ls -l /var/run/docker.sock
+  docker buildx build --allow security.insecure . -t mqtt --no-cache
+popd
+
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v /var/run/docker.sock:/var/run/docker.sock -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
 DOCKER_CONTAINER_ID=$(docker ps --last 4 | grep "$CONTAINER_DISTRO" | awk '{print $1}' | head -1)
 
