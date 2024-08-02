@@ -27,6 +27,7 @@ WORK_DIR=$(pwd):/ci-source
 git clone --recurse-submodules https://github.com/victronenergy/venus-docker
 pushd venus-docker
   export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
+  apt-get install -y npm nodejs
   docker build . -t mqtt
   docker save --output mqtt.tar mqtt
   ls -l mqtt.tar
