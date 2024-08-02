@@ -26,7 +26,8 @@ WORK_DIR=$(pwd):/ci-source
 
 git clone --recurse-submodules https://github.com/victronenergy/venus-docker
 pushd venus-docker
-  docker build . -t victron-mqtt
+  docker buildx build --output "type=docker,push=false,name=victron-mqtt,dest=./victron-mqtt.tar" . -t victron-mqtt
+  ls -l .
   docker images
   docker image ls
   docker save --output victron-mqtt.tar victron-mqtt
