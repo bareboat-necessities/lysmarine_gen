@@ -30,7 +30,6 @@ pushd venus-docker
   docker save --output victron-mqtt.tar victron-mqtt
   ls -l victron-mqtt.tar
 popd
-ls -l venus-docker/victron-mqtt.tar
 ls -l "$(pwd)"
 mv venus-docker/victron-mqtt.tar "$(pwd)"/cross-build-release/install-scripts/4-server/files/
 
