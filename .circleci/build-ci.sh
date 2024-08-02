@@ -31,7 +31,7 @@ pushd venus-docker
   ls -l victron-mqtt.tar
 popd
 ls -l venus-docker/victron-mqtt.tar
-ls -l "$(pwd)/ci-source"/cross-build-release
+ls -l "$(pwd)/ci-source"
 mv venus-docker/victron-mqtt.tar "$(pwd)/ci-source"/cross-build-release/install-scripts/4-server/files/
 
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
