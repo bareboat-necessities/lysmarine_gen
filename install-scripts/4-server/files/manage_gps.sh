@@ -11,9 +11,7 @@ else
   if [[ $1 == "0" ]] ; then
     /usr/bin/su -c '/usr/bin/systemctl restart gpsd'
     logger "This USB device is known as GPS and will be connected to gpsd on port 2947 /dev/ttyLYS_gps_$1"
-    GPSD_OPTIONS="-p"
-    export GPSD_OPTIONS
-    /usr/bin/su -c '/usr/bin/gpsdctl add /dev/ttyLYS_gps_0'
+    /usr/bin/su -c 'GPSD_OPTIONS="-p"; export GPSD_OPTIONS; /usr/bin/gpsdctl add /dev/ttyLYS_gps_0'
   else
     /usr/bin/su -c '/usr/bin/systemctl restart lysgpsd@'"$1"'.service'
     logger "This USB device is known as GPS and will be connected to gpsd on port 2947$1 /dev/ttyLYS_gps_$1"
