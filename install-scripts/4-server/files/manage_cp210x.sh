@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 chmod a+r /dev/ttyLYS_cp210x_"$1"
 if [[ $2 == "remove" ]] ; then
   logger "The USB device /dev/ttyLYS_cp210x_$1 has been disconnected"
