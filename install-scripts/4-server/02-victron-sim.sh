@@ -11,7 +11,7 @@ update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
 install -d /root/victron
-install -v -m 0644 "$FILE_FOLDER/mqtt.tar" "/root/victron"
+mv "$FILE_FOLDER/mqtt.tar" "/root/victron"
 
 cat >/root/victron/readme.txt <<'EOF'
 This is Victron simulator docker image
