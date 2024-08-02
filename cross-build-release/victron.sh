@@ -1,5 +1,7 @@
 #!/bin/bash -xe
 
+npm install cypress --save-dev
+
 git clone --recurse-submodules --depth=1 https://github.com/victronenergy/venus-docker
 pushd venus-docker
   export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
