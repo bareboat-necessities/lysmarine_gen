@@ -24,15 +24,6 @@ fi
 
 WORK_DIR=$(pwd):/ci-source
 
-git clone --recurse-submodules https://github.com/victronenergy/venus-docker
-pushd venus-docker
-  export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
-  docker build . -t mqtt
-  docker save --output mqtt.tar mqtt
-  ls -l mqtt.tar
-popd
-ls -l "$(pwd)"
-mv venus-docker/mqtt.tar "$(pwd)"/cross-build-release/install-scripts/4-server/files/
 
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
 DOCKER_CONTAINER_ID=$(docker ps --last 4 | grep "$CONTAINER_DISTRO" | awk '{print $1}' | head -1)
@@ -40,6 +31,9 @@ DOCKER_CONTAINER_ID=$(docker ps --last 4 | grep "$CONTAINER_DISTRO" | awk '{prin
 docker exec --privileged -ti "$DOCKER_CONTAINER_ID" apt-get update
 docker exec --privileged -ti "$DOCKER_CONTAINER_ID" apt-get -y install dpkg-dev debhelper devscripts equivs pkg-config apt-utils fakeroot \
   proot git-core live-build kpartx p7zip p7zip-full parted fdisk gdisk e2fsprogs qemu-user zerofree
+
+docker exec --privileged -ti "$DOCKER_CONTAINER_ID" /bin/bash -xec \
+  "cd ci-source/cross-build-release; chmod -v u+w *.sh; ./victron.sh"
 
 docker exec --privileged -ti "$DOCKER_CONTAINER_ID" /bin/bash -xec \
   "cd ci-source/cross-build-release; chmod -v u+w *.sh; /bin/bash -xe ./debian.sh $PKG_ARCH $LYSMARINE_VER $BBN_KIND $DOCKER_CONTAINER_ID"
