@@ -11,5 +11,5 @@ update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 
 export DOCKER_HOST=tcp://127.0.0.1:2375
-docker load --input "$FILE_FOLDER/victron-mqtt.tar"
+docker load --input "$FILE_FOLDER/mqtt.tar"
 docker images
