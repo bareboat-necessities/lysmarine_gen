@@ -32,7 +32,7 @@ pushd venus-docker
   docker buildx use insecure-builder
   #export DOCKER_HOST=tcp://127.0.0.1:2375
   ls -l /var/run/docker.sock
-  docker buildx build --output=. --target=victron-mqtt --allow security.insecure . --no-cache
+  docker buildx build --output=. --target=server --allow security.insecure . -t mqtt --no-cache
   docker images
   docker image ls
   ls -l ./bin
