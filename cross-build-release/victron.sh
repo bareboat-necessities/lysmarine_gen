@@ -4,7 +4,7 @@ npm install cypress --save-dev
 
 git clone --recurse-submodules --depth=1 https://github.com/victronenergy/venus-docker
 pushd venus-docker
-  #export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
+  export DOCKER_DEFAULT_PLATFORM=linux/arm/v7
   docker build . -t mqtt
   docker save --output mqtt.tar mqtt
   ls -l mqtt.tar
