@@ -30,7 +30,7 @@ pushd venus-docker
   docker save --output victron-mqtt.tar victron-mqtt
   ls -l victron-mqtt.tar
 popd
-mv venus-docker/victron-mqtt.tar install-scripts/4-server/files/
+mv "$WORK_DIR"/venus-docker/victron-mqtt.tar install-scripts/4-server/files/
 
 
 docker run --privileged --cap-add=ALL --security-opt="seccomp=unconfined" -d -ti -e "container=docker" -v "$WORK_DIR":rw -v /dev:/dev "$DOCKER_IMAGE" /bin/bash
