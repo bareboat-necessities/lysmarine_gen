@@ -56,7 +56,6 @@
   mount -o bind /sys $mkRoot/sys
   mount -o bind /proc $mkRoot/proc
   mount -o bind /tmp $mkRoot/tmp
-  mount --rbind /var/run/docker.sock $mkRoot/var/run/docker.sock
   mount --rbind $myCache/stageCache $mkRoot/install-scripts/stageCache
   mount --rbind /run/shm $mkRoot/run/shm
   chroot $mkRoot /bin/bash -xe <<EOF
