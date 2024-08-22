@@ -1,0 +1,26 @@
+{
+  "configuration": {
+    "sentenceEventName": "nmea0183",
+    "dictionary": [
+      {
+        "type": "pitch",
+        "data": "angle",
+        "units": "rad",
+        "name": "PTCH",
+        "expression": "(x*0.0174532925199)",
+        "decimal": "5",
+        "sk_path": "navigation.attitude"
+      },
+      {
+        "type": "roll",
+        "data": "angle",
+        "units": "rad",
+        "name": "ROLL",
+        "expression": "(x*0.0174532925199)",
+        "decimal": "5",
+        "sk_path": "navigation.attitude"
+      }
+    ]
+  },
+  "enabled": true
+}

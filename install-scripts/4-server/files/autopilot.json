@@ -1,0 +1,10 @@
+{
+  "configuration": {
+    "deviceid": "205",
+    "controlHead": false,
+    "converterDeviceId": "115",
+    "outputEvent": "seatalkOut",
+    "type": "raymarineN2K"
+  },
+  "enabled": true
+}

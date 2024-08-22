@@ -1,10 +1,10 @@
 {
   "interfaces": {
     "applicationData": true,
-    "appstore": false,
+    "appstore": true,
     "logfiles": true,
     "nmea-tcp": true,
-    "playground": false,
+    "playground": true,
     "plugins": true,
     "providers": true,
     "rest": true,
@@ -154,27 +154,6 @@
               "validateChecksum": true,
               "type": "gpsd",
               "host": "localhost",
-              "port": "29470",
-              "noDataReceivedTimeout": "10",
-              "removeNulls": true
-            }
-          }
-        }
-      ],
-      "id": "gps0_gpsd",
-      "enabled": true
-    },
-    {
-      "pipeElements": [
-        {
-          "type": "providers/simple",
-          "options": {
-            "logging": false,
-            "type": "NMEA0183",
-            "subOptions": {
-              "validateChecksum": true,
-              "type": "gpsd",
-              "host": "localhost",
               "port": "29471",
               "noDataReceivedTimeout": "10",
               "removeNulls": true
@@ -296,51 +275,13 @@
             "logging": false,
             "type": "NMEA2000",
             "subOptions": {
-              "type": "canbus",
+              "type": "canbus-canboatjs",
               "interface": "can0"
             }
           }
         }
       ],
       "id": "can0",
-      "enabled": true
-    },
-    {
-      "pipeElements": [
-        {
-          "type": "providers/simple",
-          "options": {
-            "logging": false,
-            "type": "NMEA2000",
-            "subOptions": {
-              "type": "canbus",
-              "interface": "can1"
-            }
-          }
-        }
-      ],
-      "id": "can1",
-      "enabled": true
-    },
-    {
-      "pipeElements": [
-        {
-          "type": "providers/simple",
-          "options": {
-            "logging": false,
-            "type": "NMEA0183",
-            "subOptions": {
-              "validateChecksum": true,
-              "type": "tcp",
-              "host": "lysmarine",
-              "port": "30330",
-              "noDataReceivedTimeout": "15",
-              "suppress0183event": true
-            }
-          }
-        }
-      ],
-      "id": "OpenCPN",
       "enabled": false
     },
     {
@@ -352,14 +293,16 @@
             "type": "NMEA0183",
             "subOptions": {
               "validateChecksum": true,
-              "type": "serial",
-              "device": "/dev/ttySTM3",
-              "baudrate": 4800
+              "type": "tcp",
+              "host": "localhost",
+              "port": "30330",
+              "noDataReceivedTimeout": "15",
+              "suppress0183event": true
             }
           }
         }
       ],
-      "id": "rs485",
+      "id": "OpenCPN",
       "enabled": true
     }
   ],

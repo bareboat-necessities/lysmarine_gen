@@ -7,7 +7,7 @@
     "air_instances": "outside",
     "air": {
       "Air density": false,
-      "outsidedewPoint": false,
+      "outsidedewPoint": true,
       "Heat Index": false,
       "Wind Chill": false
     },
@@ -54,11 +54,11 @@
       "magneticVariation": true
     },
     "moon": {
-      "Moon": false
+      "Moon": true
     },
     "sun": {
-      "Sun": false,
-      "Sun Time": false
+      "Sun": true,
+      "Sun Time": true
     },
     "tanks": {
       "tankVolume_fuel.0": false,
