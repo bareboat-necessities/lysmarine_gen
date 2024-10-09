@@ -1,0 +1,11 @@
+[Unit]
+Description=Boat Instrument running under flutter-pi
+After=avahi-daemon.service
+Wants=avahi-daemon.service
+
+[Service]
+Type=simple
+ExecStart=/root/boatinstrument/flutter-pi --release /root/boatinstrument
+
+[Install]
+WantedBy=multi-user.target

@@ -19,6 +19,51 @@
         "expression": "(x*0.0174532925199)",
         "decimal": "5",
         "sk_path": "navigation.attitude"
+      },
+      {
+        "type": "IMU rate",
+        "data": "frequency",
+        "units": "H",
+        "name": "SRT1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "navigation.heave.imuSampleRate"
+      },
+      {
+        "type": "Heave Range",
+        "data": "depth",
+        "units": "M",
+        "name": "DRG1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "navigation.heave.range"
+      },
+      {
+        "type": "Heave",
+        "data": "depth",
+        "units": "M",
+        "name": "DRT1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "navigation.heave.heave"
+      },
+      {
+        "type": "Apparent heave freq avg",
+        "data": "frequency",
+        "units": "H",
+        "name": "FAV1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "navigation.heave.apparentFreqAvg"
+      },
+      {
+        "type": "Apparent heave freq",
+        "data": "frequency",
+        "units": "H",
+        "name": "FRT1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "navigation.heave.apparentFreq"
       }
     ]
   },

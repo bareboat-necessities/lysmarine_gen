@@ -304,6 +304,25 @@
       ],
       "id": "OpenCPN",
       "enabled": true
+    },
+    {
+      "pipeElements": [
+        {
+          "type": "providers/simple",
+          "options": {
+            "logging": false,
+            "type": "NMEA0183",
+            "subOptions": {
+              "validateChecksum": true,
+              "type": "serial",
+              "device": "/dev/ttyACM1",
+              "baudrate": 115200
+            }
+          }
+        }
+      ],
+      "id": "bbn_heave_sensor",
+      "enabled": false
     }
   ],
   "security": {

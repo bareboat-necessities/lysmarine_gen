@@ -1,0 +1,649 @@
+{
+  "version": 0,
+  "valueSmoothing": 1,
+  "discoverServer": false,
+  "signalkHost": "127.0.0.1",
+  "signalkPort": 3000,
+  "signalkMinPeriod": 500,
+  "signalkConnectionTimeout": 20000,
+  "dataTimeout": 10000,
+  "darkMode": true,
+  "wrapPages": true,
+  "brightnessControl": false,
+  "keepAwake": true,
+  "autoConfirmActions": false,
+  "pageTimerOnStart": false,
+  "pageChangeSeconds": 20,
+  "distanceUnits": "nm",
+  "m2nmThreshold": 500,
+  "speedUnits": "kts",
+  "windSpeedUnits": "kts",
+  "depthUnits": "ft",
+  "temperatureUnits": "c",
+  "pressureUnits": "millibar",
+  "portStarboardColors": "redGreen",
+  "pages": [
+    {
+      "name": "one",
+      "pageRows": [
+        {
+          "percentage": 0.9167567661830357,
+          "columns": [
+            {
+              "percentage": 0.3735430029374135,
+              "rows": [
+                {
+                  "percentage": 0.66128249040301,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "wind-rose",
+                      "settings": {
+                        "type": "normal",
+                        "showLabels": true,
+                        "showButton": false,
+                        "autoSwitchingDelay": 15
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.17593341286171132,
+                  "boxes": [
+                    {
+                      "percentage": 0.5,
+                      "id": "wind-apparent-angle",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5,
+                      "id": "wind-speed-apparent",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.16278409673527872,
+                  "boxes": [
+                    {
+                      "percentage": 0.5,
+                      "id": "wind-direction-true",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5,
+                      "id": "wind-speed-true",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "percentage": 0.6264569970625865,
+              "rows": [
+                {
+                  "percentage": 0.12561177250990554,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "date-time",
+                      "settings": {
+                        "showDate": false,
+                        "showTime": true,
+                        "utc": false,
+                        "timeFormat": "yyyy-MM-dd HH:mm:ss"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.18970171955829684,
+                  "boxes": [
+                    {
+                      "percentage": 0.6451292165974458,
+                      "id": "navigation-position",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.3548707834025542,
+                      "id": "autopilot-status",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.22397021964764646,
+                  "boxes": [
+                    {
+                      "percentage": 0.48936512802160614,
+                      "id": "navigation-speed-over-ground",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5106348719783939,
+                      "id": "navigation-course-over-ground",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.20636949668113813,
+                  "boxes": [
+                    {
+                      "percentage": 0.48973699924780056,
+                      "id": "navigation-heading-true",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5102630007521994,
+                      "id": "environment-depth-belowSurface",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.12776989707854983,
+                  "boxes": [
+                    {
+                      "percentage": 0.49001659102649636,
+                      "id": "navigation-next-point-distance",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5099834089735036,
+                      "id": "navigation-next-point-time-to-go",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.1265768945244632,
+                  "boxes": [
+                    {
+                      "percentage": 0.4906785957585518,
+                      "id": "navigation-next-point-velocity-made-good",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5093214042414482,
+                      "id": "navigation-xte",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "percentage": 0.0832432338169643,
+          "columns": [
+            {
+              "percentage": 1.0,
+              "rows": [
+                {
+                  "percentage": 1.0,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "boat-rudder-angle",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "two",
+      "pageRows": [
+        {
+          "percentage": 1.0,
+          "columns": [
+            {
+              "percentage": 0.45332278481012656,
+              "rows": [
+                {
+                  "percentage": 0.3528281925059321,
+                  "boxes": [
+                    {
+                      "percentage": 0.5,
+                      "id": "navigation-heading-true",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5,
+                      "id": "boat-speed-through-water",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.35611394756502956,
+                  "boxes": [
+                    {
+                      "percentage": 0.5,
+                      "id": "navigation-course-over-ground",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5,
+                      "id": "navigation-speed-over-ground",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.2910578599290383,
+                  "boxes": [
+                    {
+                      "percentage": 0.5,
+                      "id": "environment-set-and-drift",
+                      "settings": {}
+                    },
+                    {
+                      "percentage": 0.5,
+                      "id": "navigation-xte-delta",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "percentage": 0.5466772151898734,
+              "rows": [
+                {
+                  "percentage": 0.11613100478619699,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "date-time",
+                      "settings": {
+                        "showDate": false,
+                        "showTime": true,
+                        "utc": true,
+                        "timeFormat": "yyyy-MM-dd HH:mm:ss"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.13188565964536703,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "autopilot-status",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.2575533118556828,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "autopilot-control-state-horizontal",
+                      "settings": {
+                        "enableLock": true,
+                        "lockSeconds": 6,
+                        "showLabels": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.24799915502372602,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "autopilot-control-heading-horizontal",
+                      "settings": {
+                        "enableLock": true,
+                        "lockSeconds": 5,
+                        "showLabels": true
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.2464308686890272,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "boat-rudder-angle",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "three",
+      "pageRows": [
+        {
+          "percentage": 1.0,
+          "columns": [
+            {
+              "percentage": 0.2698208491007487,
+              "rows": [
+                {
+                  "percentage": 0.34370815856408937,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "wind-speed-true",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.37429061933369895,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "wind-direction-true",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.2820012221022117,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "wind-speed-true-beaufort",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "percentage": 0.4450568419236403,
+              "rows": [
+                {
+                  "percentage": 0.4593520724670935,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "boat-attitude-roll",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.3456320339082647,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "environment-depth-belowSurface",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.19501589362464178,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "environment-water-temperature",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "percentage": 0.28512230897561097,
+              "rows": [
+                {
+                  "percentage": 0.14116224187428877,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "date-time",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.22390938397206167,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "custom-double-value",
+                      "settings": {
+                        "title": "Mag Variation",
+                        "path": "navigation.magneticVariation",
+                        "precision": 1,
+                        "minLen": 2,
+                        "minValue": -180,
+                        "maxValue": 180,
+                        "angle": false,
+                        "units": "deg",
+                        "multiplier": 57.2957795131
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.6349283741536496,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "environment-sun",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "four",
+      "pageRows": [
+        {
+          "percentage": 1.0,
+          "columns": [
+            {
+              "percentage": 0.5,
+              "rows": [
+                {
+                  "percentage": 0.5,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "environment-moon",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.25,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "environment-depth-belowSurface",
+                      "settings": {}
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.25,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "environment-set-and-drift",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "percentage": 0.5,
+              "rows": [
+                {
+                  "percentage": 1.0,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "anchor-alarm",
+                      "settings": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "five",
+      "timeout": null,
+      "pageRows": [
+        {
+          "percentage": 1.0,
+          "columns": [
+            {
+              "percentage": 0.5,
+              "rows": [
+                {
+                  "percentage": 0.5,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "custom-double-value",
+                      "settings": {
+                        "title": "Heave Range",
+                        "path": "navigation.heave.range",
+                        "precision": 3,
+                        "minLen": 2,
+                        "minValue": 0.0,
+                        "maxValue": 200.0,
+                        "angle": false,
+                        "units": "ft",
+                        "multiplier": 3.28084
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.5,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "custom-double-value",
+                      "settings": {
+                        "title": "Heave",
+                        "path": "navigation.heave.heave",
+                        "precision": 3,
+                        "minLen": 2,
+                        "minValue": -200.0,
+                        "maxValue": 200.0,
+                        "angle": false,
+                        "units": "ft",
+                        "multiplier": 3.28084
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "percentage": 0.5,
+              "rows": [
+                {
+                  "percentage": 0.25,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "custom-double-value",
+                      "settings": {
+                        "title": "Apparent Heave Freq Avg",
+                        "path": "navigation.heave.apparentFreqAvg",
+                        "precision": 3,
+                        "minLen": 2,
+                        "minValue": 0.0,
+                        "maxValue": 100.0,
+                        "angle": false,
+                        "units": "Hz",
+                        "multiplier": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.25,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "custom-double-value",
+                      "settings": {
+                        "title": "Apparent Heave Freq",
+                        "path": "navigation.heave.apparentFreq",
+                        "precision": 3,
+                        "minLen": 2,
+                        "minValue": 0.0,
+                        "maxValue": 100.0,
+                        "angle": false,
+                        "units": "Hz",
+                        "multiplier": 1.0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "percentage": 0.5,
+                  "boxes": [
+                    {
+                      "percentage": 1.0,
+                      "id": "custom-double-value",
+                      "settings": {
+                        "title": "IMU Sample Rate",
+                        "path": "navigation.heave.imuSampleRate",
+                        "precision": 1,
+                        "minLen": 2,
+                        "minValue": 0.0,
+                        "maxValue": 1000.0,
+                        "angle": false,
+                        "units": "Hz",
+                        "multiplier": 1.0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "boxSettings": {
+    "date-time": {
+      "dateFormat": "yyyy-MM-dd"
+    },
+    "autopilot-control": {
+      "clientID": "boatinstrument-autopilot-1"
+    },
+    "anchor-alarm": {
+      "clientID": "boatinstrument-anchor-alarm-1",
+      "recordSeconds": 10,
+      "recordPoints": 1000
+    }
+  }
+}
