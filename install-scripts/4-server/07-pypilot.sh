@@ -129,8 +129,8 @@ patch "$(find /usr/local/lib -name autopilot_calibration.py)" "$FILE_FOLDER"/aut
 
 systemctl disable pypilot_boatimu.service
 systemctl disable pypilot_hat.service
-systemctl enable pypilot@pypilot.service                               # listens on tcp 20220 and 23322
-systemctl enable pypilot_web.service                                   # listens on tcp 8080
+systemctl disable pypilot@pypilot.service                               # listens on tcp 20220 and 23322
+systemctl disable pypilot_web.service                                   # listens on tcp 8080
 
 ## Install the user config files
 install -v -o pypilot -g pypilot -m 0775 -d "/home/pypilot/.pypilot"
