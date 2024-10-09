@@ -16,7 +16,7 @@ dpkg-reconfigure -f noninteractive keyboard-configuration
 /usr/local/m5stack/resize_mmc.sh
 
 systemctl disable firstRun
-systemctl enable boatinstrument-flutter-pi
+systemctl enable boatinstrument-flutter-pi || true
 
 sync
 reboot -f
