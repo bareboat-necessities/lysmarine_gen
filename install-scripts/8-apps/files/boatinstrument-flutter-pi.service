@@ -4,8 +4,11 @@ After=avahi-daemon.service
 Wants=avahi-daemon.service
 
 [Service]
+User=root
+#WorkingDirectory=/root
 Type=simple
-ExecStart=/root/boatinstrument/flutter-pi --release /root/boatinstrument
+ExecStart=sh -c "cd /root/boatinstrument; ./flutter-pi --release ."
+
 
 [Install]
 WantedBy=multi-user.target
