@@ -3,13 +3,13 @@
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument.json "/root/boatinstrument.json"
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument.json "/root/boatinstrument.json-bbn"
 
-apt-get install -y libinput10 libvulkan1 libgstreamer-plugins-base1.0-0
+apt-get install -y libinput10 libvulkan1 libgstreamer-plugins-base1.0-0 libseat1
 
 BK_DIR="$(pwd)"
 
 cd /root
 
-wget -O boatinstrument.tgz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/boatinstrument-0.1.0.1-flutterpi_arm32.tgz
+wget -O boatinstrument.tgz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/boatinstrument-0.3.0.3-flutterpi_arm32.tgz
 gzip -cd < boatinstrument.tgz | tar xvf -
 rm -f boatinstrument.tgz
 
