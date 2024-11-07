@@ -19,3 +19,6 @@ install -d /etc/systemd/system
 install -m 644 "$FILE_FOLDER"/boatinstrument-flutter-pi.service "/etc/systemd/system/boatinstrument-flutter-pi.service"
 
 systemctl disable boatinstrument-flutter-pi
+
+usermod -a -G render user
+
