@@ -9,7 +9,7 @@
   thisArch="debian"
   cpuArch="armhf"
 
-  zipName="bareboat-necessities/lysmarine_gen/releases/download/vTest/M5_CoreMP135_debian12_20240628.7z"
+  zipName="bareboat-necessities/lysmarine_gen/releases/download/vTest/M5_CoreMP135_debian12_20240919.7z"
   imageSource="https://github.com/${zipName}"
 
   checkRoot
