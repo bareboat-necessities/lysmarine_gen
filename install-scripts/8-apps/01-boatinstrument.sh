@@ -2,6 +2,7 @@
 
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument.json "/root/boatinstrument.json"
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument.json "/root/boatinstrument.json-bbn"
+install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument-detailed.json "/root/boatinstrument-detailed.json-bbn"
 
 apt-get install -y libinput10 libvulkan1 libgstreamer-plugins-base1.0-0 libseat1
 
