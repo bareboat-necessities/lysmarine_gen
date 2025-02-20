@@ -10,6 +10,10 @@ You can easily connect IMU to make a heading sensor.
 You can connect PyPilot motor controller to USART6 port of CoreMP135 to make your own autopilot unit.
 You can access it via a browser to see boat dashboards typical for marine MFDs.
 
+<p align="center">
+<img src="img/bbn-on-coremp135.png?raw=true" alt="BBN Marine OS on CoreMP135" />
+</p>
+
 BBN Marine OS for CoreMP135 is a Debian OS image for CoreMP135 from M5Stack.
 
 It includes:
@@ -99,15 +103,12 @@ Different applications use different http ports:
 
 You can use USB-C port to access coremp135 via serial console. Baud rate 115200.
 
-# Pictures
+# Screenshots
 
 <p align="center">
 <img src="img/bbn-coremp135.png?raw=true" alt="BBN Marine OS UI on CoreMP135" />
 </p>
 
-<p align="center">
-<img src="img/bbn-on-coremp135.png?raw=true" alt="BBN Marine OS on CoreMP135" />
-</p>
 
 # About Name
 
