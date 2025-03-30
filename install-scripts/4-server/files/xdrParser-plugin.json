@@ -21,6 +21,24 @@
         "sk_path": "navigation.attitude"
       },
       {
+        "type": "Thermocouple Sensor",
+        "data": "temperature",
+        "units": "C",
+        "name": "THERMOCOUPLE",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.thermocouple.temperature"
+      },
+      {
+        "type": "Tachometer Sensor",
+        "data": "RPM",
+        "units": "R",
+        "name": "THERMOCOUPLE",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.tachometer.rpm"
+      },
+      {
         "type": "Range Sensor",
         "data": "distance",
         "units": "M",
