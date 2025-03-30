@@ -38,6 +38,7 @@ install -o 1000 -g 1000 -d /home/user/.config/autostart
   echo "dconf write /org/gnome/system/location/enabled true"
   echo "dconf write /org/gnome/desktop/interface/enable-animations false"
   echo "dconf write /org/gnome/desktop/interface/icon-theme \"'gnome'\""
+  echo "dconf write /org/gnome/desktop/interface/overlay-scrolling false"
   echo "dconf write /org/gnome/desktop/background/picture-uri \"''\""
   echo "dconf write /org/gnome/Weather/automatic-location true"
   echo "dconf write /org/gnome/Weather/Application/automatic-location true"
