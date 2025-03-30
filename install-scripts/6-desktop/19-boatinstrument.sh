@@ -9,7 +9,7 @@ BK_DIR="$(pwd)"
 
 cd /home/user
 
-wget -O boatinstrument.tgz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/boatinstrument-0.5.0.5-linux-aarch64.tgz
+wget -O boatinstrument.tgz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/boatinstrument-0.6.0.6-linux-aarch64.tgz
 gzip -cd < boatinstrument.tgz | tar xvf -
 chown -R user:user ./boatinstrument/
 rm -f boatinstrument.tgz
