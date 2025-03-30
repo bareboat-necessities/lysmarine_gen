@@ -165,6 +165,42 @@
         "sk_path": "sensor.generic.temperature.bmp280"
       },
       {
+        "type": "Air Quality",
+        "data": "TVOC ppb",
+        "units": "X",
+        "name": "TVOC",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.airQuality.TVOC"
+      },
+      {
+        "type": "Air Quality",
+        "data": "eCO2 ppm",
+        "units": "X",
+        "name": "eCO2",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.airQuality.eCO2"
+      },
+      {
+        "type": "Air Quality",
+        "data": "rawEthanol",
+        "units": "X",
+        "name": "rawEthanol",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.airQuality.rawEthanol"
+      },
+      {
+        "type": "Air Quality",
+        "data": "rawH2",
+        "units": "X",
+        "name": "rawH2",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.airQuality.rawH2"
+      },
+      {
         "type": "Open Flame Sensor",
         "data": "",
         "units": "",
