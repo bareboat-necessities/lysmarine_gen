@@ -39,6 +39,15 @@
         "sk_path": "sensor.generic.tachometer.rpm"
       },
       {
+        "type": "Open Flame Sensor",
+        "data": "",
+        "units": "",
+        "name": "OPEN_FLAME",
+        "expression": "x",
+        "decimal": "0",
+        "sk_path": "sensor.generic.openFlame.detected"
+      },
+      {
         "type": "Range Sensor",
         "data": "distance",
         "units": "M",
