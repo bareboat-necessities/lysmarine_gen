@@ -294,6 +294,114 @@
         "type": "Electric Voltage",
         "data": "U",
         "units": "V",
+        "name": "VOLT_INA219_0_1",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.voltage.0.1"
+      },
+      {
+        "type": "Electric Current",
+        "data": "I",
+        "units": "A",
+        "name": "AMPS_INA219_0_1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "sensor.generic.electric.current.0.1"
+      },
+      {
+        "type": "Electric Resistance",
+        "data": "G",
+        "units": "O",
+        "name": "OHMS_INA219_0_1",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.resistance.0.1"
+      },
+      {
+        "type": "Electric Power",
+        "data": "W",
+        "units": "W",
+        "name": "WATT_INA219_0_1",
+        "expression": "x",
+        "decimal": "4",
+        "sk_path": "sensor.generic.electric.power.0.1"
+      },
+      {
+        "type": "Electric Voltage",
+        "data": "U",
+        "units": "V",
+        "name": "VOLT_INA219_0_2",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.voltage.0.2"
+      },
+      {
+        "type": "Electric Current",
+        "data": "I",
+        "units": "A",
+        "name": "AMPS_INA219_0_2",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "sensor.generic.electric.current.0.2"
+      },
+      {
+        "type": "Electric Resistance",
+        "data": "G",
+        "units": "O",
+        "name": "OHMS_INA219_0_2",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.resistance.0.2"
+      },
+      {
+        "type": "Electric Power",
+        "data": "W",
+        "units": "W",
+        "name": "WATT_INA219_0_2",
+        "expression": "x",
+        "decimal": "4",
+        "sk_path": "sensor.generic.electric.power.0.2"
+      },
+      {
+        "type": "Electric Voltage",
+        "data": "U",
+        "units": "V",
+        "name": "VOLT_INA219_0_3",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.voltage.0.3"
+      },
+      {
+        "type": "Electric Current",
+        "data": "I",
+        "units": "A",
+        "name": "AMPS_INA219_0_3",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "sensor.generic.electric.current.0.3"
+      },
+      {
+        "type": "Electric Resistance",
+        "data": "G",
+        "units": "O",
+        "name": "OHMS_INA219_0_3",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.resistance.0.3"
+      },
+      {
+        "type": "Electric Power",
+        "data": "W",
+        "units": "W",
+        "name": "WATT_INA219_0_3",
+        "expression": "x",
+        "decimal": "4",
+        "sk_path": "sensor.generic.electric.power.0.3"
+      },
+      {
+        "type": "Electric Voltage",
+        "data": "U",
+        "units": "V",
         "name": "VOLT_INA219_1_0",
         "expression": "x",
         "decimal": "3",
@@ -325,6 +433,114 @@
         "expression": "x",
         "decimal": "4",
         "sk_path": "sensor.generic.electric.power.1.0"
+      },
+      {
+        "type": "Electric Voltage",
+        "data": "U",
+        "units": "V",
+        "name": "VOLT_INA219_1_1",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.voltage.1.1"
+      },
+      {
+        "type": "Electric Current",
+        "data": "I",
+        "units": "A",
+        "name": "AMPS_INA219_1_1",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "sensor.generic.electric.current.1.1"
+      },
+      {
+        "type": "Electric Resistance",
+        "data": "G",
+        "units": "O",
+        "name": "OHMS_INA219_1_1",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.resistance.1.1"
+      },
+      {
+        "type": "Electric Power",
+        "data": "W",
+        "units": "W",
+        "name": "WATT_INA219_1_1",
+        "expression": "x",
+        "decimal": "4",
+        "sk_path": "sensor.generic.electric.power.1.1"
+      },
+      {
+        "type": "Electric Voltage",
+        "data": "U",
+        "units": "V",
+        "name": "VOLT_INA219_1_2",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.voltage.1.2"
+      },
+      {
+        "type": "Electric Current",
+        "data": "I",
+        "units": "A",
+        "name": "AMPS_INA219_1_2",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "sensor.generic.electric.current.1.2"
+      },
+      {
+        "type": "Electric Resistance",
+        "data": "G",
+        "units": "O",
+        "name": "OHMS_INA219_1_2",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.resistance.1.2"
+      },
+      {
+        "type": "Electric Power",
+        "data": "W",
+        "units": "W",
+        "name": "WATT_INA219_1_2",
+        "expression": "x",
+        "decimal": "4",
+        "sk_path": "sensor.generic.electric.power.1.2"
+      },
+      {
+        "type": "Electric Voltage",
+        "data": "U",
+        "units": "V",
+        "name": "VOLT_INA219_1_3",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.voltage.1.3"
+      },
+      {
+        "type": "Electric Current",
+        "data": "I",
+        "units": "A",
+        "name": "AMPS_INA219_1_3",
+        "expression": "x",
+        "decimal": "5",
+        "sk_path": "sensor.generic.electric.current.1.3"
+      },
+      {
+        "type": "Electric Resistance",
+        "data": "G",
+        "units": "O",
+        "name": "OHMS_INA219_1_3",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.electric.resistance.1.3"
+      },
+      {
+        "type": "Electric Power",
+        "data": "W",
+        "units": "W",
+        "name": "WATT_INA219_1_3",
+        "expression": "x",
+        "decimal": "4",
+        "sk_path": "sensor.generic.electric.power.1.3"
       },
       {
         "type": "Angle",
