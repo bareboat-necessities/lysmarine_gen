@@ -75,6 +75,24 @@
         "sk_path": "sensor.generic.temperature.shtc3"
       },
       {
+        "type": "Pressure Sensor",
+        "data": "pressure",
+        "units": "P",
+        "name": "PRES_QMP6988",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.pressure.qmp6988"
+      },
+      {
+        "type": "Temperature Sensor",
+        "data": "temperature",
+        "units": "C",
+        "name": "TEMP_QMP6988",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.temperature.qmp6988"
+      },
+      {
         "type": "Open Flame Sensor",
         "data": "",
         "units": "",
