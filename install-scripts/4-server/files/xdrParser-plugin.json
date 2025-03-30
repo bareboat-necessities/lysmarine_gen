@@ -39,6 +39,15 @@
         "sk_path": "sensor.generic.tachometer.rpm"
       },
       {
+        "type": "1-wire Temperature Probe",
+        "data": "temperature",
+        "units": "C",
+        "name": "TEMP_283CF146D4A9142B",
+        "expression": "x",
+        "decimal": "3",
+        "sk_path": "sensor.generic.temperature.1w.0"
+      },
+      {
         "type": "Humidity Sensor",
         "data": "percent",
         "units": "P",
