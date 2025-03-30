@@ -39,6 +39,42 @@
         "sk_path": "sensor.generic.tachometer.rpm"
       },
       {
+        "type": "Humidity Sensor",
+        "data": "percent",
+        "units": "P",
+        "name": "HUMI_SHT3X",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.humidity.sht3x"
+      },
+      {
+        "type": "Temperature Sensor",
+        "data": "temperature",
+        "units": "C",
+        "name": "TEMP_SHT3X",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.temperature.sht3x"
+      },
+      {
+        "type": "Humidity Sensor",
+        "data": "percent",
+        "units": "P",
+        "name": "HUMI_SHTC3",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.humidity.shtc3"
+      },
+      {
+        "type": "Temperature Sensor",
+        "data": "temperature",
+        "units": "C",
+        "name": "TEMP_SHTC3",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.temperature.shtc3"
+      },
+      {
         "type": "Open Flame Sensor",
         "data": "",
         "units": "",
