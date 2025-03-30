@@ -42,6 +42,24 @@
         "type": "Humidity Sensor",
         "data": "percent",
         "units": "P",
+        "name": "HUMI_DHT12",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.humidity.dht12"
+      },
+      {
+        "type": "Temperature Sensor",
+        "data": "temperature",
+        "units": "C",
+        "name": "TEMP_DHT12",
+        "expression": "x",
+        "decimal": "2",
+        "sk_path": "sensor.generic.temperature.dht12"
+      },
+      {
+        "type": "Humidity Sensor",
+        "data": "percent",
+        "units": "P",
         "name": "HUMI_SHT3X",
         "expression": "x",
         "decimal": "2",
