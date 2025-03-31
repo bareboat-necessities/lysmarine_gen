@@ -33,7 +33,7 @@
         "type": "Tachometer Sensor",
         "data": "RPM",
         "units": "R",
-        "name": "THERMOCOUPLE",
+        "name": "RPM",
         "expression": "x",
         "decimal": "2",
         "sk_path": "sensor.generic.tachometer.rpm"
