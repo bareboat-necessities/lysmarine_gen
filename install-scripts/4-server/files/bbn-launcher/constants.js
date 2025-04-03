@@ -13,7 +13,7 @@ module.exports = {
     {name: 't-storms', title: 'T-Storms', img: 'weather', bg: 'Tan', cmd: 'gtk-launch', args: ['lightningmaps']},
 
     {name: 'music', title: 'Music', img: 'multimedia', bg: 'IndianRed', cmd: '/opt/Iris/Iris', args: []},
-    {name: 'video', title: 'Video', img: 'youtube', bg: 'Peru', cmd: '/opt/youtube/youtube', args: []},
+    {name: 'video', title: 'Video', img: 'youtube', bg: 'Peru', cmd: 'gtk-launch', args: ['youtube']},
     {name: 'commands', title: 'Commands', img: 'travel', bg: 'Tan',  cmd: '/usr/local/bin/bbn-commands', args: []},
     {name: 'www', title: 'WWW', img: 'internet', bg: 'SteelBlue', cmd: 'onlyone', args: ['gnome-www-browser']},
     {name: 'email', title: 'Email', img: 'email', bg: 'RoyalBlue', cmd: 'onlyone', args: ['thunderbird']},

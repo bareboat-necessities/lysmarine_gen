@@ -1,7 +1,9 @@
 [Desktop Entry]
 Type=Application
 Name=YouTube
-Exec=/opt/youtube/youtube
+GenericName=YouTube
+Comment=YouTube
+Exec=gnome-www-browser https://www.youtube.com/
 Terminal=false
 Icon=video
 Categories=Network
