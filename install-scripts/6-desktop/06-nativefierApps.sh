@@ -4,7 +4,7 @@ apt-get clean
 
 apt-get -y -q install nodejs libnss3 gnome-icon-theme unzip
 
-npm install nativefier electron@v34.1.1 -g --unsafe-perm --production
+npm install nativefier electron -g --unsafe-perm --production
 
 ## Install icons and .desktop files
 install -d -o 1000 -g 1000 /home/user/.local/share/icons
