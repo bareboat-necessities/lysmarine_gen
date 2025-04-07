@@ -678,6 +678,15 @@
         "sk_path": "environment.lightning.energyLevel"
       },
       {
+        "type": "Lightning Disturbance",
+        "data": "disturber",
+        "units": "",
+        "name": "LIGHTNING_DISTURBER",
+        "expression": "x",
+        "decimal": "0",
+        "sk_path": "environment.lightning.disturber"
+      },
+      {
         "type": "IMU rate",
         "data": "frequency",
         "units": "H",
