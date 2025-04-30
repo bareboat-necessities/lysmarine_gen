@@ -124,6 +124,7 @@ else
                  signalk-raspberry-pi-ina219  \
                  signalk-raspberry-pi-1wire  \
                  signalk-venus-plugin  \
+                 bt-sensors-plugin-sk \
                  signalk-mqtt-gw  \
                  signalk-mqtt-home-asisstant  \
                  @codekilo/signalk-modbus-client  \
