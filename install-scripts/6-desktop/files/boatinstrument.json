@@ -885,7 +885,7 @@
                         "maxValue": 120.0,
                         "angle": false,
                         "units": "%",
-                        "multiplier": 1.0,
+                        "multiplier": 100.0,
                         "step": 1.0
                       }
                     },
