@@ -878,7 +878,7 @@
                       "id": "custom-double-value",
                       "settings": {
                         "title": "Humidity",
-                        "path": "environment.outside.humidity",
+                        "path": "environment.inside.relativeHumidity",
                         "precision": 1,
                         "minLen": 2,
                         "minValue": 0.0,
