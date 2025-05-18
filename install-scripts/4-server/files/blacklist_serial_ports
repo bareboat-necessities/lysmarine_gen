@@ -26,6 +26,7 @@
 /dev/ttyS4
 /dev/ttyS5
 /dev/ttyS6
+/dev/ttyS7
 /dev/ttyACM0
 /dev/ttyACM1
 /dev/ttyACM10
@@ -68,3 +69,19 @@
 /dev/ttySC7
 /dev/ttySC8
 /dev/ttySC9
+/dev/ttySTM0
+/dev/ttySTM1
+/dev/ttySTM2
+/dev/ttySTM3
+/dev/ttySTM4
+/dev/ttySTM5
+/dev/ttySTM6
+/dev/ttySTM7
+/dev/ttyGS0
+/dev/ttyGS1
+/dev/ttyGS2
+/dev/ttyGS3
+/dev/ttyGS4
+/dev/ttyGS5
+/dev/ttyGS6
+/dev/ttyGS7
