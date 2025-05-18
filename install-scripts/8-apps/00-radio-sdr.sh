@@ -173,7 +173,7 @@ apt-get install -y librtlsdr0 libairspy0 libairspyhf1 \
 AGENT="Debian APT-HTTP/1.3 (2.6.1)"
 xargs -n 1 -P 2 wget --user-agent="$AGENT" -q << EOF
 https://www.free-x.de/deb4op/pool/main/a/ais-catcher-webassets/ais-catcher-webassets_20240817_all.deb
-https://www.free-x.de/deb4op/pool/main/a/ais-catcher/ais-catcher_0.6.1-deb12u2_arm64.deb
+https://www.free-x.de/deb4op/pool/main/a/ais-catcher/ais-catcher_0.6.2-deb12u1_arm64.deb
 EOF
 dpkg -i ais-catcher_*.deb ais-catcher-webassets_*.deb
 rm -rf ais-catcher*.deb
