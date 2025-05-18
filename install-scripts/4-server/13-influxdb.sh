@@ -7,7 +7,7 @@ if [ "$BBN_KIND" == "LITE" ] ; then
 fi
 
 groupadd -g 988 influxdb
-useradd -u 994 -g influxdb -r influxdb -d /var/lib/influxdb
+useradd -u 982 -g influxdb -r influxdb -d /var/lib/influxdb
 
 apt-get -y -q install influxdb chronograf kapacitor telegraf
 
