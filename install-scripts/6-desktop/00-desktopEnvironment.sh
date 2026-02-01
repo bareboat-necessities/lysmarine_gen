@@ -77,7 +77,7 @@ install -m 644 -v "$FILE_FOLDER"/panel.ini /etc/budgie-desktop/
 apt-get clean
 
 ## Install www apps.
-apt-get install -y -q chromium-browser rpi-chromium-mods
+apt-get install -y -q chromium chromium-common chromium-sandbox rpi-chromium-mods
 
 # Adobe Flash Player. Copyright 1996-2015. Adobe Systems Incorporated. All Rights Reserved.
 #DEBIAN_FRONTEND=noniterractive apt-get -o Dpkg::Options:=="--force-confnew" -q -y install rpi-chromium-mods
