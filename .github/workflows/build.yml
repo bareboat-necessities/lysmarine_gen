@@ -6,10 +6,9 @@ on:
   workflow_dispatch: {}
 
 jobs:
-
   build-lite-raspios-trixie-arm64:
     name: build-lite-raspios-trixie-arm64
-    runs-on: [self-hosted, Linux, ARM64] # needs an ARM64 runner
+    runs-on: ubuntu-24.04-arm64
     env:
       DOCKER_IMAGE: arm64v8/debian:trixie
       CONTAINER_DISTRO: debian:trixie
@@ -37,4 +36,3 @@ jobs:
       - name: Build
         run: ci/build-ci.sh
         timeout-minutes: 20
-
