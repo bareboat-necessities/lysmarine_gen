@@ -3,12 +3,17 @@ name: build_all
 on:
   push:
     branches: ["**"]
-  workflow_dispatch: {}
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-lite-raspios-trixie-arm64:
     name: build-lite-raspios-trixie-arm64
-    runs-on: ubuntu-24.04-arm64
+    runs-on: ubuntu-24.04-arm
     env:
       DOCKER_IMAGE: arm64v8/debian:trixie
       CONTAINER_DISTRO: debian:trixie
