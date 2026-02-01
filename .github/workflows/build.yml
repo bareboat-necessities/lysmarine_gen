@@ -1,0 +1,40 @@
+name: build_all
+
+on:
+  push:
+    branches: ["**"]
+  workflow_dispatch: {}
+
+jobs:
+
+  build-lite-raspios-trixie-arm64:
+    name: build-lite-raspios-trixie-arm64
+    runs-on: [self-hosted, Linux, ARM64] # needs an ARM64 runner
+    env:
+      DOCKER_IMAGE: arm64v8/debian:trixie
+      CONTAINER_DISTRO: debian:trixie
+      PKG_RELEASE: raspios
+      PKG_DISTRO: trixie
+      PKG_ARCH: arm64
+      BBN_KIND: LITE
+      EMU: off
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Move install-scripts
+        run: mv install-scripts cross-build-release/
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install wget
+
+      - name: Make CI scripts executable
+        run: chmod a+x ci/*.sh
+
+      - name: Build
+        run: ci/build-ci.sh
+        timeout-minutes: 20
+
