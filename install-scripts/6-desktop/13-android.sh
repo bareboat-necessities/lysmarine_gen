@@ -43,6 +43,6 @@ install -v -m 0644 "$FILE_FOLDER"/scrcpy.desktop "/usr/local/share/applications/
 # TODO: disabled
 #apt-get install -y autoadb  # v4l2loopback-dkms
 
-wget https://github.com/bareboat-necessities/autoadb/releases/download/1.0.0.0-bookworm/autoadb_1.0.0.0_arm64.deb
+wget https://github.com/bareboat-necessities/autoadb/releases/download/1.0.0.0-trixie/autoadb_1.0.0.0_arm64.deb
 dpkg -i autoadb_1.0.0.0_arm64.deb
 rm autoadb_1.0.0.0_arm64.deb

@@ -1,2 +1,2 @@
-deb https://www.free-x.de/debian/ bookworm main contrib non-free
+deb https://www.free-x.de/debian/ trixie main contrib non-free
 # XyGrib and AvNav

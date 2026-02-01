@@ -31,9 +31,9 @@ mkdir tmp-o-bundle-"$LMARCH" || exit 2
 cd tmp-o-bundle-"$LMARCH"
 
 if [ "$BBN_KIND" == "LITE" ] ; then
-  wget -O opencpn-plugins-bundle-"$LMARCH".tar.gz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-plugins-bundle-o_5_10_x-bookworm-lite-2-"$LMARCH".tar.gz
+  wget -O opencpn-plugins-bundle-"$LMARCH".tar.gz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-plugins-bundle-o_5_10_x-trixie-lite-2-"$LMARCH".tar.gz
 else
-  wget -O opencpn-plugins-bundle-"$LMARCH".tar.gz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-plugins-bundle-o_5_10_x-bookworm-full-2-"$LMARCH".tar.gz
+  wget -O opencpn-plugins-bundle-"$LMARCH".tar.gz https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/opencpn-plugins-bundle-o_5_10_x-trixie-full-2-"$LMARCH".tar.gz
 fi
 gzip -cd opencpn-plugins-bundle-"$LMARCH".tar.gz | tar xvf -
 
@@ -107,12 +107,12 @@ chown user:user /home/user/.opencpn/ocpn-plugins.xml
 apt-mark hold opencpn
 
 # fixes for touchscreen
-# we use gtk3 update with the fix from https://www.free-x.de/deb4op bookworm-preview
+# we use gtk3 update with the fix from https://www.free-x.de/deb4op trixie-preview
 # (Note: disabled this fix as it broke other programs Stellarium, APMPlanner2, swipe gesture on BBNLauncher
 # It worked for OpenCPN and make zoom more sensitive (same might be achieved with twofing to change zoom step in
 # default profile)
-#cat << EOF > /etc/apt/sources.list.d/bookworm-preview.list
-#deb https://www.free-x.de/deb4op bookworm-preview main
+#cat << EOF > /etc/apt/sources.list.d/trixie-preview.list
+#deb https://www.free-x.de/deb4op trixie-preview main
 #EOF
 #wget -O - https://www.free-x.de/deb4op/oss.boating.gpg.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/oss.boating.gpg
 

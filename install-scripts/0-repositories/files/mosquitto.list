@@ -1,1 +1,1 @@
-deb https://repo.mosquitto.org/debian bookworm main
+deb https://repo.mosquitto.org/debian trixie main

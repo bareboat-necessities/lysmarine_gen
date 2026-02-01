@@ -1,1 +1,1 @@
-deb [signed-by=/etc/apt/keyrings/mopidy-archive-keyring.gpg] https://apt.mopidy.com/ bookworm main contrib non-free
+deb [signed-by=/etc/apt/keyrings/mopidy-archive-keyring.gpg] https://apt.mopidy.com/ trixie main contrib non-free

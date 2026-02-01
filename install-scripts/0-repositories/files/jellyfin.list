@@ -1,1 +1,1 @@
-deb https://repo.jellyfin.org/raspbian bookworm main
+deb https://repo.jellyfin.org/raspbian trixie main

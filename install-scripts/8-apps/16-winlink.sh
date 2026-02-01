@@ -8,7 +8,7 @@ fi
 
 apt-get -y install libax25 ax25-tools tmd710-tncsetup
 
-wget https://dl.cloudsmith.io/public/bbn-projects/bbn-deb-repo/deb/debian/pool/bookworm/main/p/pa/pat_0.15.1/pat_0.15.1_arm64.deb
+wget https://dl.cloudsmith.io/public/bbn-projects/bbn-deb-repo/deb/debian/pool/trixie/main/p/pa/pat_0.15.1/pat_0.15.1_arm64.deb
 dpkg -i pat_0.15.1_arm64.deb && rm pat_0.15.1_arm64.deb
 
 # See: https://www.cantab.net/users/john.wiseman/Documents/ARDOPC.html

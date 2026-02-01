@@ -8,10 +8,10 @@
 
   thisArch="raspios"
   cpuArch="arm64"
-  zipName="raspios_lite_arm64/images/raspios_lite_arm64-2025-05-13/2025-05-13-raspios-bookworm-arm64-lite.img.xz"
+  zipName="raspios_lite_arm64/images/raspios_lite_arm64-2025-05-13/2025-05-13-raspios-trixie-arm64-lite.img.xz"
   if [ "armhf" == "$MY_CPU_ARCH" ]; then
     cpuArch="armhf"
-    zipName="raspios_lite_armhf/images/raspios_lite_armhf-2025-05-13/2025-05-13-raspios-bookworm-armhf-lite.img.xz"
+    zipName="raspios_lite_armhf/images/raspios_lite_armhf-2025-05-13/2025-05-13-raspios-trixie-armhf-lite.img.xz"
   fi
   imageSource="https://downloads.raspberrypi.org/${zipName}"
 
@@ -75,9 +75,9 @@ EOF
 
   # Renaming the OS and moving it to the release folder.
   if [ "$BBN_KIND" == "LITE" ] ; then
-    BBN_IMG=lysmarine-bbn-lite-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+    BBN_IMG=lysmarine-bbn-lite-trixie_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   else
-    BBN_IMG=lysmarine-bbn-full-bookworm_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+    BBN_IMG=lysmarine-bbn-full-trixie_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   fi
   cp -v -l ./work/$thisArch/"$imageName" ./release/$thisArch/"$BBN_IMG"
 

@@ -35,36 +35,36 @@ commands:
       - git-checkout
       - build-n-publish-debian
 jobs:
-  build-raspbian-bookworm-arm32:
+  build-raspbian-trixie-arm32:
     executor: boot-linux-arm
     environment:
-      - DOCKER_IMAGE=arm32v7/debian:bookworm
-      - CONTAINER_DISTRO=debian:bookworm
+      - DOCKER_IMAGE=arm32v7/debian:trixie
+      - CONTAINER_DISTRO=debian:trixie
       - PKG_RELEASE=raspbian
-      - PKG_DISTRO=bookworm
+      - PKG_DISTRO=trixie
       - PKG_ARCH=armhf
       - EMU=off
     steps:
       - do-all
-  build-full-raspbian-bookworm-arm64:
+  build-full-raspbian-trixie-arm64:
     executor: boot-linux-arm
     environment:
-      - DOCKER_IMAGE=arm64v8/debian:bookworm
-      - CONTAINER_DISTRO=debian:bookworm
+      - DOCKER_IMAGE=arm64v8/debian:trixie
+      - CONTAINER_DISTRO=debian:trixie
       - PKG_RELEASE=raspbian
-      - PKG_DISTRO=bookworm
+      - PKG_DISTRO=trixie
       - PKG_ARCH=arm64
       - BBN_KIND=FULL
       - EMU=off
     steps:
       - do-all
-  build-lite-raspbian-bookworm-arm64:
+  build-lite-raspbian-trixie-arm64:
     executor: boot-linux-arm
     environment:
-      - DOCKER_IMAGE=arm64v8/debian:bookworm
-      - CONTAINER_DISTRO=debian:bookworm
+      - DOCKER_IMAGE=arm64v8/debian:trixie
+      - CONTAINER_DISTRO=debian:trixie
       - PKG_RELEASE=raspbian
-      - PKG_DISTRO=bookworm
+      - PKG_DISTRO=trixie
       - PKG_ARCH=arm64
       - BBN_KIND=LITE
       - EMU=off
@@ -74,5 +74,5 @@ workflows:
   version: 2
   build_all:
     jobs:
-      - build-full-raspbian-bookworm-arm64
-      - build-lite-raspbian-bookworm-arm64
+      - build-full-raspbian-trixie-arm64
+      - build-lite-raspbian-trixie-arm64

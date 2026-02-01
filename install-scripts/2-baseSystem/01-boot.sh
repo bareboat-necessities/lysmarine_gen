@@ -11,7 +11,7 @@ if [ -f /boot/config.txt ]; then
     echo "arm_64bit=1" >> "$(realpath /boot/config.txt)"
   fi
 	cat "$FILE_FOLDER"/appendToConfig.txt >> "$(realpath /boot/config.txt)"
-	#sed -i 's/-kms-v3d$/-fkms-v3d,cma-128/' /boot/config.txt # breaks on bookworm
+	#sed -i 's/-kms-v3d$/-fkms-v3d,cma-128/' /boot/config.txt # breaks on trixie
 fi
 
 ## RaspOS

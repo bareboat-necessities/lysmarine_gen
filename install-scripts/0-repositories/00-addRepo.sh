@@ -24,7 +24,7 @@ install -m 0644 -v "$FILE_FOLDER"/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/openplotter.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/chirp.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/stellarium.list "/etc/apt/sources.list.d/"
-#install -m 0644 -v "$FILE_FOLDER"/piaware-bookworm.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/piaware-trixie.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/box86.list "/etc/apt/sources.list.d/"
 
 #wget -O /etc/apt/sources.list.d/piaware.list https://abcd567a.github.io/rpi/abcd567a.list

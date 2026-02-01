@@ -19,7 +19,7 @@ wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/lak
 wget -q -O - https://github.com/martinber/noaa-apt/raw/master/res/shapefiles/states.shp > "/usr/local/share/noaa-apt/res/shapefiles/states.shp"
 
 if [ "$LMARCH" == 'arm64' ]; then
-  wget https://github.com/bareboat-necessities/noaa-apt/releases/download/v1.4.1-bookworm/noaa-apt_1.4.1-2_arm64.deb -O noaa-apt.deb
+  wget https://github.com/bareboat-necessities/noaa-apt/releases/download/v1.4.1-trixie/noaa-apt_1.4.1-2_arm64.deb -O noaa-apt.deb
 fi
 dpkg -i noaa-apt.deb && rm -f noaa-apt.deb
 rm -f /usr/local/share/noaa-apt/test/test*.wav
@@ -166,7 +166,7 @@ rm -rf kalibrate-rtl/
 apt-get install -y librtlsdr0 libairspy0 libairspyhf1 \
   libhackrf0 libsoapysdr0.8 libzmq3-dev libcurl4-openssl-dev zlib1g
 
-#wget -q -O - https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/AIS-catcher-20231216-bookworm-arm64.zip > AIS-catcher.zip
+#wget -q -O - https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/AIS-catcher-20231216-trixie-arm64.zip > AIS-catcher.zip
 #unzip AIS-catcher.zip && rm AIS-catcher.zip
 #mv AIS-catcher /usr/local/bin/ && chmod +x /usr/local/bin/AIS-catcher
 
