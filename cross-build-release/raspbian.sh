@@ -8,10 +8,10 @@
 
   thisArch="raspios"
   cpuArch="arm64"
-  zipName="raspios_lite_arm64/images/raspios_lite_arm64-2025-05-13/2025-05-13-raspios-trixie-arm64-lite.img.xz"
+  zipName="raspios_lite_arm64/images/raspios_lite_arm64-2025-12-04/2025-12-04-raspios-trixie-arm64-lite.img.xz"
   if [ "armhf" == "$MY_CPU_ARCH" ]; then
     cpuArch="armhf"
-    zipName="raspios_lite_armhf/images/raspios_lite_armhf-2025-05-13/2025-05-13-raspios-trixie-armhf-lite.img.xz"
+    zipName="raspios_lite_armhf/images/raspios_lite_armhf-2025-12-04/2025-12-04-raspios-trixie-armhf-lite.img.xz"
   fi
   imageSource="https://downloads.raspberrypi.org/${zipName}"
 
