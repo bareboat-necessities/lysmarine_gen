@@ -1,2 +1,0 @@
-#deb https://deb.nodesource.com/node_20.x trixie main
-deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main
