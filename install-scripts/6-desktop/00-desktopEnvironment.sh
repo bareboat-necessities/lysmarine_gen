@@ -13,7 +13,7 @@ apt-get install -y -q \
 apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-calibrator gldriver-test \
  budgie-desktop budgie-weathershow-applet budgie-rotation-lock-applet \
  gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
- gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-v4l2 \
+ gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav \
  gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-alsa \
  gstreamer1.0-libav alsa-utils libavahi-compat-libdnssd-dev git \
  xsettingsd xserver-xorg \
