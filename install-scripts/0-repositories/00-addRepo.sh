@@ -5,14 +5,14 @@ apt-get install -y -q wget gnupg ca-certificates
 
 ## Add repository sources
 install -m 0644 -v "$FILE_FOLDER"/nodesource.list "/etc/apt/sources.list.d/"
-install -m 0644 -v "$FILE_FOLDER"/mosquitto.list "/etc/apt/sources.list.d/"
-install -m 0644 -v "$FILE_FOLDER"/grafana.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/mosquitto.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/grafana.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/mopidy.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/bbn-gpsd.list "/etc/apt/sources.list.d/"
-install -m 0644 -v "$FILE_FOLDER"/bbn-autoadb.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/bbn-autoadb.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/bbn-rce.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/raspotify.list "/etc/apt/sources.list.d/"
-install -m 0644 -v "$FILE_FOLDER"/jellyfin.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/jellyfin.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/debian-backports.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/opencpn.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/xygrib.list "/etc/apt/sources.list.d/"
@@ -25,7 +25,7 @@ install -m 0644 -v "$FILE_FOLDER"/bbn-noaa-apt.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/chirp.list "/etc/apt/sources.list.d/"
 install -m 0644 -v "$FILE_FOLDER"/stellarium.list "/etc/apt/sources.list.d/"
 #install -m 0644 -v "$FILE_FOLDER"/piaware-trixie.list "/etc/apt/sources.list.d/"
-install -m 0644 -v "$FILE_FOLDER"/box86.list "/etc/apt/sources.list.d/"
+#install -m 0644 -v "$FILE_FOLDER"/box86.list "/etc/apt/sources.list.d/"
 
 #wget -O /etc/apt/sources.list.d/piaware.list https://abcd567a.github.io/rpi/abcd567a.list
 #wget -O /etc/apt/sources.list.d/box86.list https://ryanfortner.github.io/box86-debs/box86.list
