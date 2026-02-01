@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  noop:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: No-op
+          command: |
+            echo "noop"
+            exit 0
+
+workflows:
+  version: 2
+  noop:
+    jobs:
+      - noop
