@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 ## Create signalK user to run the server.
 if [ ! -d /home/signalk ]; then
 	echo "Creating signalk user"

@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 apt-get -y -q install raspotify
 
 #if [ $LMARCH == 'armhf' ]; then

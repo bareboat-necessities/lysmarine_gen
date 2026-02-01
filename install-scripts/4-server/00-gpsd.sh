@@ -2,8 +2,6 @@
 
 apt-get install -y -q gpsd gpsd-clients gpsd-tools
 
-ln -s /usr/lib/python3/dist-packages/gps /usr/local/lib/python3.11/dist-packages/
-
 ## Automatically start gpsd when a USB gps detected, handle AIS
 install -d /etc/udev/rules.d
 install -v -m 0644 "$FILE_FOLDER"/90-lys-ais.rules "/etc/udev/rules.d/90-lys-ais.rules"
@@ -32,3 +30,7 @@ install -v -m 0755 "$FILE_FOLDER"/manage_prolific.sh "/lib/udev/manage_prolific.
 install -d /etc/systemd/system
 install -v -m 0644 "$FILE_FOLDER"/lysgpsd@.service "/etc/systemd/system/lysgpsd@.service"
 install -v -m 0644 "$FILE_FOLDER"/gpsd.conf "/etc/default/gpsd"
+
+exit 0
+
+ln -s /usr/lib/python3/dist-packages/gps /usr/local/lib/python3.11/dist-packages/

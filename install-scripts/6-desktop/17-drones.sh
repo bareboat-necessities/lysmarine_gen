@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 # https://github.com/ArduPilot/apm_planner
 
 if [ "$LMARCH" == 'arm64' ]; then
