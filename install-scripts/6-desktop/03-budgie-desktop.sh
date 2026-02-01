@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 apt-get install -y -q --no-install-recommends --no-install-suggests \
-  gvfs-fuse gvfs-backends gnome-bluetooth gnome-weather \
+  gvfs-fuse gvfs-backends ayatana-indicator-bluetooth gnome-bluetooth-sendto gnome-weather \
   lightdm lightdm-autologin-greeter # added lightdm due to https://github.com/BuddiesOfBudgie/budgie-desktop/issues/508
 
 apt-get install -y -q geoclue-2-demo ibus
