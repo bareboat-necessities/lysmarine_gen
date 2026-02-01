@@ -14,7 +14,7 @@ apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-c
  budgie-desktop budgie-weathershow-applet budgie-rotation-lock-applet \
  gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
  gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav \
- gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-alsa \
+ gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-alsa v4l-utils \
  gstreamer1.0-libav alsa-utils libavahi-compat-libdnssd-dev git \
  xsettingsd xserver-xorg \
  xinit cpanminus perl-base wmctrl openbox python3-xdg arandr gnome-clocks \
