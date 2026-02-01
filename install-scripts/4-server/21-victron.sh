@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 #pushd /usr/share/
 #  git clone --depth=1 https://github.com/victronenergy/venus-html5-app && cd venus-html5-app/
 #  #pnpm install
