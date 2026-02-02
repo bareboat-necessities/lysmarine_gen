@@ -147,7 +147,7 @@ fi
 for f in /etc/apt/sources.list.d/bbn-*.list
 do
   mv "$f" "$f"-orig
-done
+done || true
 
 # These are launchpad. They are ok to have.
 mv /etc/apt/sources.list.d/bbn-rce.list-orig /etc/apt/sources.list.d/bbn-rce.list || true
