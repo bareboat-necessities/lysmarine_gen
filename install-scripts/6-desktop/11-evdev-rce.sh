@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 if [ "$LMARCH" == 'arm64' ]; then
   wget https://github.com/bareboat-necessities/lysmarine_gen/releases/download/vTest/evdev-rce_1.0.0.4_arm64.deb -O evdev-rce.deb
 fi
