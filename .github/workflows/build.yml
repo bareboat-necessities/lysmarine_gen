@@ -41,3 +41,35 @@ jobs:
       - name: Build
         run: ci/build-ci.sh
         timeout-minutes: 20
+
+      - name: XZ compress image
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          IMG="cross-build-release/release/raspios"
+          test -f "$IMG"/*.img
+
+          echo "Compressing: $IMG"/*.img
+          # Use all cores; keep original (drop -k if runner disk gets tight)
+          xz -T0 -9 -v -k "$IMG"/*.img
+
+          ls -lh "$IMG" "$IMG/*.img.xz"
+
+      - name: Upload artifact (.img.xz)
+        uses: actions/upload-artifact@v4
+        with:
+          name: lysmarine-bbn-lite-trixie-raspios-arm64-img
+          path: |
+            cross-build-release/release/raspios/*.img.xz
+          if-no-files-found: error
+          compression-level: 0
+
+      # Publish to GitHub Release only for tags v*
+      - name: Publish GitHub Release asset (tag v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ github.token }}
+          files: |
+            cross-build-release/release/raspios/*.img.xz
