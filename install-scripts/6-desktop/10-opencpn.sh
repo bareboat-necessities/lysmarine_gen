@@ -1,11 +1,8 @@
 #!/bin/bash -e
 
-exit 0
-
 usermod -a -G render user
 
-apt-get install -y -q libglew2.2 gettext libwxsvg3 libtinyxml2.6.2v5 libunarr1 libwxgtk-webview3.2-1 wx3.2-i18n \
-  libjs-mathjax libjs-highlight.js libcxx-serial1 fonts-mathjax
+apt-get install -y -q opencpn
 
 install -o 1000 -g 1000 -d "/home/user/.opencpn"
 install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins"
@@ -14,6 +11,7 @@ install -o 1000 -g 1000 -d "/home/user/.opencpn/plugins/weather_routing/data"
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/opencpn.conf "/home/user/.opencpn/"
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/opencpn.conf "/home/user/.opencpn/opencpn.conf-bbn"
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/opencpn.conf-highres-bbn "/home/user/.opencpn/opencpn.conf-highres-bbn"
+
 
 # Polar Diagrams
 
@@ -28,6 +26,17 @@ chmod 664 ./*
 rm All_polar_files.zip
 
 cd "$BK_DIR"
+
+
+exit 0
+
+
+
+apt-get install -y -q libglew2.2 gettext libwxsvg3 libtinyxml2.6.2v5 libunarr1 libwxgtk-webview3.2-1 wx3.2-i18n \
+  libjs-mathjax libjs-highlight.js libcxx-serial1 fonts-mathjax
+
+
+
 
 mkdir tmp-o-bundle-"$LMARCH" || exit 2
 cd tmp-o-bundle-"$LMARCH"
