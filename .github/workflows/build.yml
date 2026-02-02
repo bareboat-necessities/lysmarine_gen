@@ -42,28 +42,44 @@ jobs:
         run: ci/build-ci.sh
         timeout-minutes: 120
 
-      - name: XZ compress image
+      - name: XZ compress image (to dist/)
         shell: bash
         run: |
           set -euo pipefail
+          DIR="cross-build-release/release/raspios"
+          OUTDIR="dist"
+          mkdir -p "$OUTDIR"
 
-          IMG="cross-build-release/release/raspios"
-          test -f "$IMG"/*.img
+          IMG="$(ls -1t "${DIR}"/*.img 2>/dev/null | head -n1 || true)"
+          if [ -z "${IMG}" ]; then
+            echo "ERROR: No .img found in ${DIR}"
+            ls -lah "${DIR}" || true
+            exit 1
+          fi
 
-          echo "Compressing: $IMG"/*.img
-          # Use all cores; keep original (drop -k if runner disk gets tight)
-          xz -T0 -9 -v -k "$IMG"/*.img
+          BASENAME="$(basename "$IMG")"
+          OUT="${OUTDIR}/${BASENAME}.xz"
 
-          ls -lh "$IMG" "$IMG/*.img.xz"
+          echo "Compressing: ${IMG} -> ${OUT}"
+          # stream-compress so we don't need write perms in DIR
+          xz -T0 -9 -c -v "${IMG}" > "${OUT}"
+
+          ls -lh "${IMG}" "${OUT}"
 
       - name: Upload artifact (.img.xz)
         uses: actions/upload-artifact@v4
         with:
           name: lysmarine-bbn-lite-trixie-raspios-arm64-img
-          path: |
-            cross-build-release/release/raspios/*.img.xz
+          path: dist/*.img.xz
           if-no-files-found: error
           compression-level: 0
+
+      - name: Publish GitHub Release asset (tag v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ github.token }}
+          files: dist/*.img.xz
 
       # Publish to GitHub Release only for tags v*
       - name: Publish GitHub Release asset (tag v*)
