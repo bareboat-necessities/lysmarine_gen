@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 apt-get clean
-npm cache clean --force
+npm cache clean --force || true
 
 if [ "$BBN_KIND" == "LITE" ] ; then
   apt-get -q -y --no-install-recommends --no-install-suggests install i2c-tools python3-smbus dos2unix \
@@ -48,7 +48,7 @@ install -v "$FILE_FOLDER"/piclone.desktop -o 1000 -g 1000 "/home/user/.local/sha
 install -v "$FILE_FOLDER"/noforeignland.desktop "/usr/local/share/applications/"
 
 apt-get clean
-npm cache clean --force
+npm cache clean --force || true
 
 install -v -m 0755 "$FILE_FOLDER"/bbn-change-password.sh "/usr/local/bin/bbn-change-password"
 install -v -m 0755 "$FILE_FOLDER"/bbn-rename-host.sh "/usr/local/sbin/bbn-rename-host"
