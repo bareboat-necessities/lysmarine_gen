@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 install -d -o 1000 -g 1000 /home/user/Documents/
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument.json "/home/user/Documents/boatinstrument.json"
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/boatinstrument.json "/home/user/Documents/boatinstrument.json-bbn"
