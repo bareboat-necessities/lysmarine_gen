@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 apt-get install -y -q xygrib
 
 ## Provide an alternative more meaningful icon for xygrib
