@@ -33,14 +33,14 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get -y install wget
+          sudo apt-get -y install wget xz-utils
 
       - name: Make CI scripts executable
         run: chmod a+x ci/*.sh
 
       - name: Build
         run: ci/build-ci.sh
-        timeout-minutes: 20
+        timeout-minutes: 120
 
       - name: XZ compress image
         shell: bash
