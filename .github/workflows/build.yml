@@ -80,12 +80,3 @@ jobs:
         with:
           token: ${{ github.token }}
           files: dist/*.img.xz
-
-      # Publish to GitHub Release only for tags v*
-      - name: Publish GitHub Release asset (tag v*)
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v2
-        with:
-          token: ${{ github.token }}
-          files: |
-            cross-build-release/release/raspios/*.img.xz
