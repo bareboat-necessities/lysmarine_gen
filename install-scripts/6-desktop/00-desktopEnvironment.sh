@@ -22,7 +22,8 @@ apt-get -q -y install xserver-xorg-input-libinput xinput libinput-tools xinput-c
  lxterminal gpsbabel file-roller lxtask thunar git \
  libqt5quickwidgets5 libqt5widgets5 libqt5gui5 libqt5webenginewidgets5 libqt5webengine-data \
  libqt5sql5 libqt5printsupport5 libqt5network5 libqt5serialport5 \
- libqt5svg5 libqt5opengl5 libqt5test5 libqt5xml5 libqt5qml5 qml-module-qtquick-controls libsndfile1
+ libqt5svg5 libqt5opengl5 libqt5test5 libqt5xml5 libqt5qml5 qml-module-qtquick-controls libsndfile1 \
+ libgtkmm-3.0-1t64 libglibmm-2.4-1t64 libatkmm-1.6-1v5 libpangomm-1.4-1v5 libcairomm-1.0-1v5
 
 
 #if [ "$LMOS" == Raspbian ]; then
