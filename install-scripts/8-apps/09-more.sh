@@ -53,6 +53,7 @@ npm cache clean --force || true
 install -v -m 0755 "$FILE_FOLDER"/bbn-change-password.sh "/usr/local/bin/bbn-change-password"
 install -v -m 0755 "$FILE_FOLDER"/bbn-rename-host.sh "/usr/local/sbin/bbn-rename-host"
 
+install -d -o 1000 -g 1000 -m 0755 "/home/user/add-ons"
 chmod +x "$FILE_FOLDER"/add-ons/*.sh
 "$FILE_FOLDER"/add-ons/windy-install.sh
 "$FILE_FOLDER"/add-ons/lightningmaps-install.sh
