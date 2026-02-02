@@ -8,7 +8,7 @@ if [ "$BBN_KIND" == "LITE" ] ; then
     traceroute telnet socat gdal-bin openvpn \
     gedit sysstat jq xmlstarlet uhubctl iotop libusb-1.0-0-dev \
     rpi-imager piclone fontconfig gnome-disk-utility xfce4-screenshooter \
-    libcanberra-gtk-module hardinfo baobab
+    hardinfo baobab # libcanberra-gtk-module
 else
   apt-get -q -y --no-install-recommends --no-install-suggests install i2c-tools python3-smbus dos2unix \
     traceroute telnet whois socat gdal-bin openvpn seahorse inxi \
@@ -16,7 +16,7 @@ else
     python3-gpiozero libusb-1.0-0-dev \
     sysstat jq xmlstarlet uhubctl iotop rsync timeshift at \
     rpi-imager piclone fontconfig gnome-disk-utility xfce4-screenshooter catfish \
-    libcanberra-gtk-module hardinfo baobab #  restic gnome-chess openpref nautic foxtrotgps
+    hardinfo baobab # libcanberra-gtk-module restic gnome-chess openpref nautic foxtrotgps
 fi
 
 O_DIR=$(pwd)

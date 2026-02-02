@@ -4,4 +4,4 @@ if [ "$BBN_KIND" == "LITE" ] ; then
   exit 0
 fi
 
-apt-get -y -q install libcanberra-gtk-module gnome-calendar gnome-todo
+apt-get -y -q install gnome-calendar gnome-todo # libcanberra-gtk-module
