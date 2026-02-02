@@ -9,6 +9,8 @@ rm -f /opt/vc/src/hello_pi/hello_video/test.h264
 
 apt-get clean
 
+exit 0
+
 install -d -m 755 "/usr/local/share/noaa-apt"
 install -d -m 755 "/usr/local/share/noaa-apt/res"
 install -d -m 755 "/usr/local/share/noaa-apt/res/shapefiles"
