@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+exit 0
+
 usermod -a -G render user
 
 apt-get install -y -q libglew2.2 gettext libwxsvg3 libtinyxml2.6.2v5 libunarr1 libwxgtk-webview3.2-1 wx3.2-i18n \
