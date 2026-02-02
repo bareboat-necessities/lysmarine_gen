@@ -7,7 +7,7 @@ apt-get remove -y --purge greybird-gtk-theme murrine-themes # rpd-icons
 apt-get -y autoremove --purge
 
 apt-get clean
-npm cache clean --force
+npm cache clean --force || true
 
 # remove python pip cache
 rm -rf ~/.cache/pip
