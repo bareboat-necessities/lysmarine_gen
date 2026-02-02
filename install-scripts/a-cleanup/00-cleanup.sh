@@ -178,7 +178,7 @@ if [ "$BBN_KIND" == "LITE" ] ; then
 fi
 
 date --rfc-3339=seconds > /etc/bbn-build
-fake-hwclock save
+fake-hwclock save || true
 
 mkdir -p /home/user/Music || true
 chown user:audio /home/user/Music
