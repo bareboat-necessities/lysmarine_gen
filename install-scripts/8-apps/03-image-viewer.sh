@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-apt-get -y -q install eog evince
+apt-get -y -q install eog #evince
