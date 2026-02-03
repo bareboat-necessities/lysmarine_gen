@@ -25,7 +25,7 @@ echo "renaming from $OLD_HOSTNAME to $NEW_HOSTNAME"
 sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" /etc/hostname
 sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" /etc/hosts
 
-sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" "/etc/NetworkManager/system-connections/lysmarine-hotspot.nmconnection"
+sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" "/etc/NetworkManager/system-connections/bbn-hotspot.nmconnection"
 
 sed -i "s/$OLD_HOSTNAME/$NEW_HOSTNAME/g" "/home/pypilot/.pypilot/signalk.conf"
 

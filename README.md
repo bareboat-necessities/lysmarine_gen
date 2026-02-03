@@ -43,25 +43,12 @@ Third place in RealVNC Raspberry Pi Prize 2023.
 # Download
 
 To get start it's easier to download pre-built image using the links below (or you can build your own 
-following instructions in the next chapter). 
-CircleCI is the tool which is used to create the OS image.
+following instructions in the next chapter).
+Download location for releases on GitHub https://github.com/bareboat-necessities/lysmarine_gen/releases
 
 NOTE: Do not forget to set Wi-Fi country after the installation.
 
-Binaries are downloadable from: 
- <https://cloudsmith.io/~bbn-projects/repos/bbn-repo/packages/?q=lysmarine>
-
-[![Hosted By: Cloudsmith](https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith&style=for-the-badge)](https://cloudsmith.com)
-
-Package repository hosting is graciously provided by [Cloudsmith](https://cloudsmith.com).
-Cloudsmith is the only fully hosted, cloud-native, universal package management solution, that
-enables your organization to create, store and share packages in any format, to any place, with total
-confidence.
-
-If Cloudsmith download link does not work for you, check 
-[Getting Started Guide](https://bareboat-necessities.github.io/my-bareboat/bareboat-os.html). It contains 
-an alternative download location from releases are on GitHub https://github.com/bareboat-necessities/lysmarine_gen/releases
-
+[Getting Started Guide](https://bareboat-necessities.github.io/my-bareboat/bareboat-os.html). 
 
 # BBN Marine OS Documentation
 

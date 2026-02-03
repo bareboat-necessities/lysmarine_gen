@@ -1,5 +1,5 @@
 [connection]
-id=lysmarine-hotspot
+id=bbn-hotspot
 uuid=cabf5cf8-e457-4480-bfdb-17e8e2c8a327
 type=wifi
 interface-name=wlan0
@@ -9,7 +9,7 @@ permissions=user:user:;
 band=bg
 mac-address-blacklist=
 mode=ap
-ssid=lysmarine-hotspot
+ssid=bbn-hotspot
 
 [wifi-security]
 key-mgmt=wpa-psk

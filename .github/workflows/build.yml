@@ -69,7 +69,7 @@ jobs:
       - name: Upload artifact (.img.xz)
         uses: actions/upload-artifact@v4
         with:
-          name: lysmarine-bbn-lite-trixie-raspios-arm64-img
+          name: bbn-os-lite-trixie-raspios-arm64-img
           path: dist/*.img.xz
           if-no-files-found: error
           compression-level: 0
