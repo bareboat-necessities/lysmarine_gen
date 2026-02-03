@@ -32,7 +32,7 @@ fi
 rm -rf /usr/lib/python3.11/EXTERNALLY-MANAGED
 
 ## Dependencies of signalK.
-apt-get install -y -q git nodejs node-nan python3-dev  \
+apt-get install -y -q git nodejs node-nan python3-dev python3-distutils python3-setuptools \
  libnss-mdns avahi-utils libsqlite3-0 libsqlite3-dev i2c-tools g++ \
  node-abstract-leveldown libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
