@@ -1,0 +1,35 @@
+{
+  "configuration": {
+    "paths": [
+      {
+        "enabled": false,
+        "key": "environment.depth.belowSurface",
+        "name": "depth",
+        "lowValue": 1.8288,
+        "state": "emergency",
+        "visual": true,
+        "sound": true
+      },
+      {
+        "enabled": true,
+        "key": "electrical.batteries.0.voltage",
+        "name": "battery voltage",
+        "lowValue": 11.5,
+        "highValue": 14.5,
+        "state": "alert",
+        "visual": true,
+        "sound": true
+      },
+      {
+        "enabled": false,
+        "key": "propulsion.port.temperature",
+        "name": "engine temperature",
+        "highValue": 327.594,
+        "state": "alert",
+        "visual": true,
+        "sound": true
+      }
+    ]
+  },
+  "enabled": true
+}

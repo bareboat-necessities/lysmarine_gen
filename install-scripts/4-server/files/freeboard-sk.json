@@ -1,0 +1,16 @@
+{
+  "configuration": {
+    "weather": {
+      "enable": false,
+      "apiVersion": 3,
+      "apiKey": "",
+      "pollInterval": 60
+    },
+    "pypilot": {
+      "enable": true,
+      "host": "localhost",
+      "port": 8080
+    }
+  },
+  "enabled": true
+}

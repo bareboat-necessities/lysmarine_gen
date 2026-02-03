@@ -1,0 +1,14 @@
+{
+  "configuration": {
+    "on": false,
+    "delay": 0,
+    "warningPercentage": 0,
+    "warningNotification": false,
+    "noPositionAlarmTime": 10,
+    "fudge": 0,
+    "bowHeight": 0,
+    "state": "emergency",
+    "radius": 20
+  },
+  "enabled": true
+}
