@@ -1,19 +1,6 @@
 #!/bin/bash -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
-npm cache clean --force
-
-# remove python pip cache
-rm -rf ~/.cache/pip
-
-# remove all cache
-rm -rf ~/.cache
-rm -rf ~/.config
-rm -rf ~/.npm
-rm -rf ~/.wget*
-rm -rf /var/cache/apt/archives
-
-apt-get -y install libqt5webenginecore5 libqt5webenginewidgets5 zim-tools kiwix
+skip_if_lite "19-wikipedia.sh"

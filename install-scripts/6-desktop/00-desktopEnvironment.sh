@@ -1,4 +1,7 @@
 #!/bin/bash -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
 
 install  -v "$FILE_FOLDER"/Xwrapper.config "/etc/X11/"  # Needed to allow the service file start X
 
@@ -45,11 +48,7 @@ install -o 1000 -g 1000 -v "$FILE_FOLDER"/lysmarine-applications.menu /home/user
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/navigation.directory /home/user/.local/share/desktop-directories/
 install -o 1000 -g 1000 -v "$FILE_FOLDER"/openplotter.directory /home/user/.local/share/desktop-directories/
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  install -m 755 -v "$FILE_FOLDER"/bbn-commands-lite.sh /usr/local/bin/bbn-commands
-else
-  install -m 755 -v "$FILE_FOLDER"/bbn-commands.sh /usr/local/bin/bbn-commands
-fi
+install -m 755 -v "$FILE_FOLDER"/bbn-commands-lite.sh /usr/local/bin/bbn-commands
 
 install -d /usr/local/share/applications
 install -v "$FILE_FOLDER"/commands.desktop /usr/local/share/applications/

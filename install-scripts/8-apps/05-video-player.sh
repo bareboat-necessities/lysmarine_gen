@@ -1,13 +1,6 @@
 #!/bin/bash -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
-apt-get clean
-
-apt-get -y -q install vlc webcamoid vokoscreen # totem
-
-install -o 1000 -g 1000 -d /home/user/.config/Webcamoid
-install -o 1000 -g 1000 -v "$FILE_FOLDER"/Webcamoid.conf /home/user/.config/Webcamoid/
-
+skip_if_lite "05-video-player.sh"

@@ -1,22 +1,17 @@
-#!/bin/bash -xe
+#!/bin/bash -euo pipefail
 
-echo "Install script for BBN OS :)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/lib/common.sh"
 
-## Check variable declaration
-if [[ -z $LMARCH ]]; then
-  LMARCH="$(dpkg --print-architecture)"
-  export LMARCH
-fi
+echo "Install script for BBN OS (LITE) :)"
+
+require_root
+require_arch
+require_trixie
+
 echo "Architecture: $LMARCH"
-
-if [[ -z $LMOS ]]; then
-  if [ ! -f /usr/bin/lsb_release ]; then
-    apt-get install -y -q lsb-release
-  fi
-  LMOS="$(lsb_release -id -s | head -1)"
-  export LMOS
-fi
-echo "Base OS: $LMOS"
+echo "Base OS codename: $BBN_OS_CODENAME"
 
 ## This makes less noise in cross-build environment.
 export LANG="en_US.UTF-8"
@@ -43,7 +38,7 @@ for argument in $argumentList; do # access each element of array
   fi
 
   set +f
-  for scriptLocation in ./$stage*/$script*.sh; do
+  for scriptLocation in "$SCRIPT_DIR"/$stage*/$script*.sh; do
     if [ -f "$scriptLocation" ]; then
       echo "From request $argument "
       echo "Running stage $stage -> $script ( $scriptLocation )"
@@ -55,4 +50,4 @@ for argument in $argumentList; do # access each element of array
   done
 done
 
-echo "Done installing script for BBN OS $ARCH :)"
+echo "Done installing script for BBN OS $BBN_KIND :)"
