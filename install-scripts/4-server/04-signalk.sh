@@ -30,6 +30,8 @@ if [ ! -f /home/user/charts ] ; then
 	su user -c "ln -s /srv/charts /home/user/charts"
 fi
 
+rm -rf /usr/lib/python3.11/EXTERNALLY-MANAGED
+
 ## Dependencies of signalK.
 apt-get install -y -q python3-dev git nodejs \
  libnss-mdns avahi-utils libsqlite3-0 libsqlite3-dev i2c-tools g++ \
