@@ -122,7 +122,7 @@ inflateImage() {
 function addLysmarineScripts() {
   thisArch=$1
   rootfs=./work/${thisArch}/rootfs
-  log "copying lysmarine on the image"
+  log "copying BBN OS on the image"
   ls "$rootfs"
   cp -r ./install-scripts "${rootfs}"/
   chmod 0775 "${rootfs}"/install-scripts/install.sh

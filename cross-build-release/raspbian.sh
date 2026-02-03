@@ -41,7 +41,7 @@
   # Mount the image and make the binds required to chroot.
   mountImageFile $thisArch ./work/$thisArch/"$imageName"
 
-  # Copy the lysmarine and origine OS config files in the mounted rootfs
+  # Copy the BBN and original OS config files in the mounted rootfs
   addLysmarineScripts $thisArch
 
   mkRoot=work/${thisArch}/rootfs
