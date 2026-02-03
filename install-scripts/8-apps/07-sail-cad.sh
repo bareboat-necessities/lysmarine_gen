@@ -1,8 +1,6 @@
 #!/bin/bash -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
-apt-get -q -y install sailcut sailcut-doc
-
+skip_if_lite "07-sail-cad.sh"

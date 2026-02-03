@@ -1,4 +1,7 @@
 #!/bin/bash -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
 
 rm -rf ~/.local/share/pnpm
 rm -rf ~/.cache/pip
@@ -94,10 +97,8 @@ apt-get clean
 apt-get remove -y --purge greybird-gtk-theme murrine-themes  userconf-pi gdb libsdl2-dev libicu-dev \
   libnorm-dev libavcodec-dev libfftw3-dev # rpd-icons
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  apt-get remove -y --purge system-config-printer gnome-power-manager
-  rm -f /usr/share/applications/thunar-bulk-rename.desktop
-fi
+apt-get remove -y --purge system-config-printer gnome-power-manager
+rm -f /usr/share/applications/thunar-bulk-rename.desktop
 
 npm cache clean --force || true
 rm -rf ~/.local/share/pnpm
@@ -138,12 +139,6 @@ EOF'
 
 echo '/usr/lib /usr/share /usr/include /usr/bin /srv' | xargs -n 1 -P 4 hardlink -v -t
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  true
-else
-  apt-get -q -y install --download-only avnav-update-plugin
-fi
-
 for f in /etc/apt/sources.list.d/bbn-*.list
 do
   mv "$f" "$f"-orig
@@ -173,9 +168,7 @@ rm -f /2
 find /usr/share/doc -name changelog\*.gz -exec rm -f {} \;
 find /usr/share/doc -name NEWS\*.gz -exec rm -f {} \;
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  echo 1 > /etc/bbn-lite
-fi
+echo 1 > /etc/bbn-lite
 
 date --rfc-3339=seconds > /etc/bbn-build
 fake-hwclock save || true

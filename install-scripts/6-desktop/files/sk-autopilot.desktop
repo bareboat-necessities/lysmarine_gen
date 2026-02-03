@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Autopilot Remote
-Exec=/opt/sk-autopilot/sk-autopilot
-Terminal=false
-Icon=/home/user/.local/share/icons/signalk.png
-Categories=Navigation;

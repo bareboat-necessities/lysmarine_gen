@@ -1,2 +1,0 @@
-#KERNEL=="watchdog", OWNER="pypilot", GROUP="pypilot", MODE="0660"
-#KERNEL=="watchdog0", OWNER="pypilot", GROUP="pypilot", MODE="0660"

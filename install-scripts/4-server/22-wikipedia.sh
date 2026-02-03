@@ -1,7 +1,6 @@
 #!/bin/bash -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
 
-if [ "$BBN_KIND" == "LITE" ] ; then
-  exit 0
-fi
-
-apt-get install -y liblzma5 libicu72 libzstd1 libxapian30 libcurl3-gnutls aria2 libkiwix11 kiwix-tools
+skip_if_lite "offline wikipedia"

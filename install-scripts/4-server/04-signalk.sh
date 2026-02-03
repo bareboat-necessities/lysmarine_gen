@@ -1,14 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=/dev/null
+source "$SCRIPT_DIR/../lib/common.sh"
+
 : "${FILE_FOLDER:?FILE_FOLDER must be set (folder containing config/json/service files)}"
-: "${BBN_KIND:=LITE}"
 
-export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=a
-export TERM="${TERM:-dumb}"
-
-log() { echo "[$(date -Is)] $*"; }
 
 # systemctl will fail inside containers/chroots without systemd as PID 1
 has_systemd() { command -v systemctl >/dev/null 2>&1 && [ -d /run/systemd/system ]; }
@@ -199,124 +198,33 @@ pushd /home/signalk/.signalk >/dev/null
 # Prefer pnpm (more deterministic); npm can still be used if you want.
 # IMPORTANT: pnpm may block postinstall scripts unless approve-builds is used.
 # We pipe approve-builds to auto-approve (your original behavior).
-if [ "$BBN_KIND" = "LITE" ]; then
-  log "Installing Signal K plugins (LITE) via pnpm..."
-  run_as_signalk "
-    pnpm install --unsafe-perm --loglevel error \
-      @signalk/resources-provider \
-      @signalk/charts-plugin \
-      @signalk/course-provider \
-      signalk-raspberry-pi-bme280 \
-      signalk-raspberry-pi-bmp180 \
-      signalk-raspberry-pi-ina219 \
-      signalk-raspberry-pi-1wire \
-      signalk-venus-plugin \
-      signalk-mqtt-gw \
-      signalk-derived-data \
-      signalk-anchoralarm-plugin \
-      signalk-alarm-silencer \
-      signalk-simple-notifications \
-      signalk-to-nmea2000 \
-      signalk-sonoff-ewelink \
-      signalk-shelly \
-      @mxtommy/kip \
-      nmea0183-to-nmea0183 \
-      xdr-parser-plugin \
-      signalk-path-filter \
-      signalk-datetime \
-      @meri-imperiumi/signalk-autostate
-    ( echo a; sleep 1; echo y ) | pnpm approve-builds
-  "
-else
-  log "Installing Signal K plugins (FULL) via pnpm..."
-  run_as_signalk "
-    pnpm install --unsafe-perm --loglevel error \
-      @signalk/resources-provider \
-      @signalk/charts-plugin \
-      @signalk/course-provider \
-      signalk-pmtiles-plugin \
-      signalk-raspberry-pi-bme280 \
-      signalk-raspberry-pi-bmp180 \
-      signalk-raspberry-pi-ina219 \
-      signalk-raspberry-pi-1wire \
-      signalk-venus-plugin \
-      bt-sensors-plugin-sk \
-      signalk-mqtt-gw \
-      signalk-mqtt-home-asisstant \
-      @codekilo/signalk-modbus-client \
-      signalk-derived-data \
-      signalk-anchoralarm-plugin \
-      signalk-alarm-silencer \
-      signalk-simple-notifications \
-      signalk-wilhelmsk-plugin \
-      signalk-to-nmea2000 \
-      @signalk/signalk-autopilot \
-      @signalk/signalk-node-red \
-      node-red-dashboard \
-      node-red-contrib-nmea \
-      node-red-contrib-modbus \
-      @victronenergy/node-red-contrib-victron \
-      node-red-contrib-influxdb \
-      node-red-contrib-moment \
-      node-red-contrib-string \
-      node-red-node-email \
-      node-red-node-serialport \
-      node-red-node-openweathermap \
-      node-red-contrib-ds18b20-sensor \
-      node-red-contrib-sht31 \
-      @rakwireless/shtc3 \
-      node-red-contrib-bme280 \
-      node-red-contrib-sensor-htu21d \
-      node-red-contrib-ina-sensor \
-      signalk-sonoff-ewelink \
-      signalk-raspberry-pi-monitoring \
-      @mxtommy/kip \
-      signalk-barometer-trend \
-      @oehoe83/signalk-raspberry-pi-bme680 \
-      signalk-barograph \
-      signalk-polar \
-      signalk-scheduler \
-      openweather-signalk \
-      ocearo-ui \
-      signalk-noaa-weather \
-      xdr-parser-plugin \
-      signalk-to-influxdb \
-      nmea0183-to-nmea0183 \
-      signalk-path-filter \
-      signalk-empirbusnxt-plugin \
-      obd2-signalk \
-      signalk-n2k-switch-alias \
-      signalk-n2k-switching \
-      signalk-n2k-switching-emulator \
-      signalk-n2k-switching-translator \
-      signalk-n2k-virtual-switch \
-      signalk-switch-automation \
-      signalk-shelly \
-      @signalk/calibration \
-      @signalk/tracks-plugin \
-      signalk-datetime \
-      signalk-net-relay \
-      signalk-path-mapper \
-      signalk-healthcheck \
-      @signalk/vedirect-serial-usb \
-      @signalk/udp-nmea-plugin \
-      signalk-n2kais-to-nmea0183 \
-      @codekilo/nmea0183-iec61121-450-server \
-      signalk-generic-pgn-parser \
-      signalk-maretron-proprietary \
-      signalk-vessels-to-ais \
-      @codekilo/signalk-notify \
-      @codekilo/signalk-trigger-event \
-      @codekilo/signalk-twilio-notifications \
-      @meri-imperiumi/signalk-audio-notifications \
-      signalk-buddylist-plugin \
-      signalk-navtex-plugin \
-      @meri-imperiumi/signalk-autostate \
-      @meri-imperiumi/signalk-alternator-engine-on \
-      signalk-saillogger
-    ( echo a; sleep 1; echo y ) | pnpm approve-builds
-  "
-fi
+log "Installing Signal K plugins (LITE) via pnpm..."
+run_as_signalk "
+  pnpm install --unsafe-perm --loglevel error \
+    @signalk/resources-provider \
+    @signalk/charts-plugin \
+    @signalk/course-provider \
+    signalk-raspberry-pi-bme280 \
+    signalk-raspberry-pi-bmp180 \
+    signalk-raspberry-pi-ina219 \
+    signalk-raspberry-pi-1wire \
+    signalk-venus-plugin \
+    signalk-mqtt-gw \
+    signalk-derived-data \
+    signalk-anchoralarm-plugin \
+    signalk-alarm-silencer \
+    signalk-simple-notifications \
+    signalk-to-nmea2000 \
+    signalk-sonoff-ewelink \
+    signalk-shelly \
+    @mxtommy/kip \
+    nmea0183-to-nmea0183 \
+    xdr-parser-plugin \
+    signalk-path-filter \
+    signalk-datetime \
+    @meri-imperiumi/signalk-autostate
+  ( echo a; sleep 1; echo y ) | pnpm approve-builds
+"
 
 popd >/dev/null
 
@@ -355,62 +263,8 @@ chmod 0755 /usr/local/sbin/STALK_read.py || true
 # Enable SignalK service (guarded)
 systemctl_safe enable signalk || true
 
-# Desktop entries (only for FULL)
 install -d /usr/local/share/applications
-
-if [ "$BBN_KIND" != "LITE" ]; then
-  cat > /usr/local/share/applications/signalk-node-red.desktop <<'EOF'
-[Desktop Entry]
-Type=Application
-Name=SignalK-Node-Red
-GenericName=SignalK-Node-Red
-Comment=SignalK-Node-Red
-Exec=gnome-www-browser http://localhost:3000/@signalk/signalk-node-red
-Terminal=false
-Icon=gtk-no
-Categories=Utility;
-EOF
-
-  cat > /usr/local/share/applications/signalk-polar.desktop <<'EOF'
-[Desktop Entry]
-Type=Application
-Name=SignalK-Polar
-GenericName=SignalK-Polar
-Comment=SignalK-Polar
-Exec=gnome-www-browser http://localhost:3000/signalk-polar
-Terminal=false
-Icon=gtk-about
-Categories=Utility;
-EOF
-fi
 
 # Clean caches
 rm -rf /home/signalk/.cache /home/signalk/.npm /home/signalk/.node-* || true
 npm cache clean --force || true
-
-# If LITE, stop here
-if [ "$BBN_KIND" = "LITE" ]; then
-  exit 0
-fi
-
-# FULL extras
-cat > /usr/local/bin/gps-loc <<'EOF'
-#!/bin/bash
-curl -s http://localhost:3000/signalk/v1/api/vessels/self/navigation/position/ | jq -M -jr '.value.latitude," ",.value.longitude," ",.timestamp'
-EOF
-chmod +x /usr/local/bin/gps-loc
-
-# gwsocket build (native compile)
-apt-get update -q
-apt-get install -y -q --no-install-recommends build-essential autoconf automake libtool
-
-wget -q http://tar.gwsocket.io/gwsocket-0.3.tar.gz
-tar -xzf gwsocket-0.3.tar.gz
-pushd gwsocket-0.3/ >/dev/null
-./configure
-make -j 5
-make install
-popd >/dev/null
-rm -rf gwsocket-0.3/ gwsocket-0.3.tar.gz
-
-exit 0

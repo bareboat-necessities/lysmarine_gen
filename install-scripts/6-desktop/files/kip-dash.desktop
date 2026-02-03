@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=KIP Dashboard
-Exec=/opt/kip-dash/kip-dash
-Terminal=false
-Icon=/home/user/.local/share/icons/signalk.png
-Categories=Navigation;

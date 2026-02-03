@@ -1,6 +1,0 @@
-#!/bin/sh
-
-sudo systemctl stop avnav
-sleep 2
-sudo systemctl daemon-reload
-sudo systemctl start avnav

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Instrument Panel
-Exec=/opt/instrumentpanel/instrumentpanel
-Terminal=false
-Icon=/home/user/.local/share/icons/signalk.png
-Categories=Navigation;
