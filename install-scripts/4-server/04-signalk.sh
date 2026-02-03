@@ -3,6 +3,8 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash  # Download and install nvm
 \. "$HOME/.nvm/nvm.sh"  # in lieu of restarting the shell
 nvm install 24  # Download and install Node.js
+node -v
+npm -v # Verify npm version
 
 groupadd --system signalk
 adduser --home /home/signalk --gecos --system --disabled-password --disabled-login signalk
@@ -31,12 +33,10 @@ if [ ! -f /home/user/charts ] ; then
 	su user -c "ln -s /srv/charts /home/user/charts"
 fi
 
-rm -rf /usr/lib/python3.11/EXTERNALLY-MANAGED
-
 ## Dependencies of signalK.
-apt-get install -y -q python3-dev git nodejs \
+apt-get install -y -q python3-dev git \
  libnss-mdns avahi-utils libsqlite3-0 libsqlite3-dev i2c-tools g++ \
- node-abstract-leveldown node-nan libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
+ node-abstract-leveldown libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev jq
 
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk"
 install -d -m 755 -o signalk -g signalk "/home/signalk/.signalk/plugin-config-data"
