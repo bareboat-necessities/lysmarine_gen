@@ -2,10 +2,7 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# shellcheck source=/dev/null
 source "$SCRIPT_DIR/../lib/common.sh"
-
-: "${FILE_FOLDER:?FILE_FOLDER must be set (folder containing config/json/service files)}"
 
 export NEEDRESTART_MODE=a
 
@@ -63,11 +60,6 @@ apt-get install -y -q --no-install-recommends \
   i2c-tools \
   libzmq3-dev libkrb5-dev libavahi-compat-libdnssd-dev
 
-# NOTE:
-# - python3-distutils is removed in Debian trixie (Python 3.13). Do NOT install it.
-# - node-gyp 8.x fails on Python 3.13 because it imports distutils.
-#   We force a modern node-gyp (v10+) and force npm/pnpm to use it.
-
 log "Installing modern node-gyp + tooling..."
 npm cache clean --force || true
 npm install -g npm pnpm patch-package typescript node-gyp@latest
@@ -108,10 +100,6 @@ install -v -d -m 6775 -o signalk -g charts /srv/charts
 if [ -d /home/user ] && [ ! -e /home/user/charts ]; then
   su user -c "ln -s /srv/charts /home/user/charts" || true
 fi
-
-# Debian/Ubuntu policy file:
-# Do NOT remove /usr/lib/python3.11/EXTERNALLY-MANAGED (wrong version, and unsafe).
-# If you need pip installs, use --break-system-packages on trixie, but we avoided it above.
 
 # Optional deps that may not exist everywhere; install if available
 install_if_available() {
@@ -160,7 +148,7 @@ install -m 755 "$FILE_FOLDER/signalk-restart" "/usr/local/sbin/signalk-restart"
 # Icons for desktop user (guard if /home/user exists)
 if [ -d /home/user ]; then
   install -d -o signalk -g signalk "/home/user/.local/share/icons/"
-  # Use user:group ids only if they exist; otherwise fall back to signalk ownership
+  # Use user:group ids only if they exist; otherwise fall back to SignalK ownership
   if id -u user >/dev/null 2>&1; then
     install -m 644 -o user -g user "$FILE_FOLDER/icons/signalk.png" "/home/user/.local/share/icons/" || \
     install -m 644 -o signalk -g signalk "$FILE_FOLDER/icons/signalk.png" "/home/user/.local/share/icons/"
@@ -174,12 +162,12 @@ install -d /etc/systemd/system
 install -m 644 "$FILE_FOLDER/signalk.service" "/etc/systemd/system/signalk.service"
 
 # Install Signal K server globally
-log "Installing signalk-server globally..."
+log "Installing SignalK-server globally..."
 npm cache clean --force || true
 # --unsafe-perm is often needed for native addons/scripts when running as root during image build
 npm install -g --unsafe-perm --production signalk-server
 
-# Helper to run npm/pnpm as signalk with correct env (node-gyp override + flags)
+# Helper to run npm/pnpm as SignalK with correct env (node-gyp override + flags)
 run_as_signalk() {
   local cmd="$1"
   su signalk --shell=/bin/bash -c "

@@ -1,8 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-: "${FILE_FOLDER:?FILE_FOLDER must be set}"
-
 export DEBIAN_FRONTEND=noninteractive
 export NEEDRESTART_MODE=a
 export TERM="${TERM:-dumb}"
