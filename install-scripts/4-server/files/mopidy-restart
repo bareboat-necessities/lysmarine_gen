@@ -1,5 +1,0 @@
-#!/bin/sh
-
-sudo systemctl stop mopidy
-sleep 2
-sudo systemctl start mopidy

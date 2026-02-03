@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Pypilot Calibration
-Exec=onlyone pypilot_calibration
-Terminal=false
-Icon=go-jump
-Categories=X-GNOME-Utilities;

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Freeboard-sk Chartplotter
-Exec=/opt/Freeboard-sk/Freeboard-sk
-Terminal=false
-Icon=/home/user/.local/share/icons/signalk.png
-Categories=Navigation;

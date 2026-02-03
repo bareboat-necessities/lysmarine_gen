@@ -1,5 +1,0 @@
-#!/bin/sh
-
-sudo systemctl stop pypilot@pypilot
-sleep 2
-sudo systemctl start pypilot@pypilot

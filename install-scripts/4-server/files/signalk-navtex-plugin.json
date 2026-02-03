@@ -1,8 +1,0 @@
-{
-  "configuration": {
-    "tty": "/dev/navtex",
-    "baudrate": 4800,
-    "expire": 48
-  },
-  "enabled": false
-}

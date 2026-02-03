@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=YouTube
-GenericName=YouTube
-Comment=YouTube
-Exec=gnome-www-browser https://www.youtube.com/
-Terminal=false
-Icon=video
-Categories=Network

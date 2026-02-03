@@ -1,3 +1,0 @@
-[GNOME Session]
-Name=GNOME Openbox
-RequiredComponents=openbox;gnome-settings-daemon;
