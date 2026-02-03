@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-exit 0
-
 ## Create signalK user to run the server.
 if [ ! -d /home/signalk ]; then
 	echo "Creating signalk user"
@@ -70,8 +68,36 @@ install -m 644 "$FILE_FOLDER"/signalk.service "/etc/systemd/system/signalk.servi
 ## Install signalK
 npm cache clean --force
 npm install -g npm pnpm patch-package typescript node-gyp
-npm install -g --unsafe-perm --production signalk-server@2.13.5
+npm install -g --unsafe-perm --production signalk-server
 
+
+pushd /home/signalk/.signalk
+  su signalk --shell=/bin/bash -c "export MAKEFLAGS='-j 8'; \
+               export NODE_ENV=production;
+               npm install \
+               @signalk/resources-provider \
+               @signalk/charts-plugin  \
+               @signalk/course-provider \
+               signalk-raspberry-pi-bme280  \
+               signalk-raspberry-pi-bmp180  \
+               signalk-raspberry-pi-ina219  \
+               signalk-raspberry-pi-1wire  \
+               signalk-venus-plugin  \
+               signalk-mqtt-gw  \
+               signalk-derived-data  \
+               signalk-anchoralarm-plugin  \
+               signalk-alarm-silencer  \
+               signalk-simple-notifications  \
+               signalk-to-nmea2000  \
+               signalk-sonoff-ewelink  \
+               signalk-shelly \
+               @mxtommy/kip  \
+               nmea0183-to-nmea0183 \
+               xdr-parser-plugin \
+               signalk-path-filter"
+popd
+
+exit 0
 
 # pnpm approve-builds needed to fix
 # Ignored build scripts: @serialport/bindings, @serialport/bindings-cpp,
