@@ -62,7 +62,7 @@ apt-get install -y -q --no-install-recommends \
 
 log "Installing modern node-gyp + tooling..."
 npm cache clean --force || true
-npm install -g npm pnpm patch-package typescript node-gyp@latest
+npm install -g npm patch-package typescript node-gyp@latest
 
 NODE_GYP_JS="$(npm root -g)/node-gyp/bin/node-gyp.js"
 if [ ! -f "$NODE_GYP_JS" ]; then
@@ -72,10 +72,8 @@ if [ ! -f "$NODE_GYP_JS" ]; then
   exit 1
 fi
 export npm_config_node_gyp="$NODE_GYP_JS"
-export PNPM_HOME="${PNPM_HOME:-/usr/local/share/pnpm}"
-export PATH="$PNPM_HOME:$PATH"
 log "Using node-gyp: $npm_config_node_gyp ($(node-gyp --version || true))"
-log "Node: $(node -v), npm: $(npm -v), pnpm: $(pnpm -v), python: $(python3 -V)"
+log "Node: $(node -v), npm: $(npm -v), python: $(python3 -V)"
 
 # Create user/group
 ensure_group signalk
@@ -167,7 +165,7 @@ npm cache clean --force || true
 # --unsafe-perm is often needed for native addons/scripts when running as root during image build
 npm install -g --unsafe-perm --production signalk-server
 
-# Helper to run npm/pnpm as SignalK with correct env (node-gyp override + flags)
+# Helper to run npm as SignalK with correct env (node-gyp override + flags)
 run_as_signalk() {
   local cmd="$1"
   su signalk --shell=/bin/bash -c "
@@ -183,12 +181,9 @@ run_as_signalk() {
 # Install plugins in /home/signalk/.signalk
 pushd /home/signalk/.signalk >/dev/null
 
-# Prefer pnpm (more deterministic); npm can still be used if you want.
-# IMPORTANT: pnpm may block postinstall scripts unless approve-builds is used.
-# We pipe approve-builds to auto-approve (your original behavior).
-log "Installing Signal K plugins (LITE) via pnpm..."
+log "Installing Signal K plugins (LITE) via npm..."
 run_as_signalk "
-  pnpm install --unsafe-perm --loglevel error \
+  npm install --unsafe-perm --loglevel error --omit=dev \
     @signalk/resources-provider \
     @signalk/charts-plugin \
     @signalk/course-provider \
@@ -211,7 +206,6 @@ run_as_signalk "
     signalk-path-filter \
     signalk-datetime \
     @meri-imperiumi/signalk-autostate
-  ( echo a; sleep 1; echo y ) | pnpm approve-builds
 "
 
 popd >/dev/null
@@ -223,11 +217,6 @@ sed -i 's#@signalk/server-admin-ui#admin#' "$(find /usr/lib/node_modules/signalk
 
 # see https://github.com/SignalK/signalk-server/pull/1455/
 sed -i 's/\(filter(.*\]\)/"".join(\1)/'  "$(find /usr/lib/node_modules/signalk-server -name pigpio-seatalk.js 2>/dev/null)" || true
-
-# use pnpm instead of npm
-sed -i "s#('npm',#('pnpm',#" /usr/lib/node_modules/signalk-server/lib/modules.js || true
-# SignalK fix for pnpm
-sed -i -e "s/--save\"',/\"--save-prod'\",/g" /usr/lib/node_modules/signalk-server/lib/modules.js || true
 
 # sudoers tweaks
 {
