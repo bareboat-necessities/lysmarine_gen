@@ -20,7 +20,7 @@ else
 fi
 
 ## Add default user.
-adduser --uid 1000 --home /home/user --quiet --disabled-password -gecos "lysmarine" user
+adduser --uid 1000 --home /home/user --quiet --disabled-password -gecos "bbn" user
 echo 'user:changeme' | chpasswd
 echo "user ALL=(ALL:ALL) ALL" >> /etc/sudoers
 usermod -a -G netdev user

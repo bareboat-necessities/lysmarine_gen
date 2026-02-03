@@ -75,9 +75,9 @@ EOF
 
   # Renaming the OS and moving it to the release folder.
   if [ "$BBN_KIND" == "LITE" ] ; then
-    BBN_IMG=lysmarine-bbn-lite-trixie_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+    BBN_IMG=bbn-os-lite-trixie_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   else
-    BBN_IMG=lysmarine-bbn-full-trixie_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
+    BBN_IMG=bbn-os-bbn-full-trixie_"${LYSMARINE_VER}"-${thisArch}-${cpuArch}.img
   fi
   cp -v -l ./work/$thisArch/"$imageName" ./release/$thisArch/"$BBN_IMG"
 
