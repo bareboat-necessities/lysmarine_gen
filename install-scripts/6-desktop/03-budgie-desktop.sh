@@ -89,6 +89,6 @@ users=
 EOF
 
 
-wget https://github.com/bareboat-necessities/sv-dashboard-gtk/releases/download/v0.3.7/sv-dashboard-gtk_0.3.7-1_arm64.deb
-dpkg -i sv-dashboard-gtk_0.3.7-1_arm64.deb
+wget https://github.com/bareboat-necessities/sv-dashboard-gtk/releases/download/v0.3.8/sv-dashboard-gtk_0.3.8-1_arm64.deb
+dpkg -i sv-dashboard-gtk_0.3.8-1_arm64.deb
 rm -rf sv-dashboard-*.deb
