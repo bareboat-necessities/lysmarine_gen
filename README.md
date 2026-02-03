@@ -85,13 +85,13 @@ Default username in login screens is 'user'.
 
 # Screenshots
 
-![Lysmarine BBN Screen1](img/lysmarine-bbn-screen1.png?raw=true "BBN Marine OS Screen1")
+![Lysmarine BBN Screen1](img/bbn-screen1.png?raw=true "BBN Marine OS Screen1")
 
-![Lysmarine BBN Screen2](img/lysmarine-bbn-screen2.png?raw=true "BBN Marine OS Screen2")
+![Lysmarine BBN Screen2](img/bbn-screen2.png?raw=true "BBN Marine OS Screen2")
 
-![Lysmarine BBN Screen3](img/lysmarine-bbn-screen3.png?raw=true "BBN Marine OS Screen3")
+![Lysmarine BBN Screen3](img/bbn-screen3.png?raw=true "BBN Marine OS Screen3")
 
-![Lysmarine BBN Screen4](img/lysmarine-bbn-screen4.png?raw=true "BBN Marine OS Screen4")
+![Lysmarine BBN Screen4](img/bbn-screen4.png?raw=true "BBN Marine OS Screen4")
 
 # BBN Marine OS installation video
 
