@@ -1,10 +1,7 @@
 #!/bin/bash -e
 
-## Create signalK user to run the server.
-if [ ! -d /home/signalk ]; then
-	echo "Creating signalk user"
-	adduser --home /home/signalk --gecos --system --disabled-password --disabled-login signalk
-fi
+groupadd --system signalk
+adduser --home /home/signalk --gecos --system --disabled-password --disabled-login signalk
 
 usermod -a -G tty signalk
 usermod -a -G i2c signalk
