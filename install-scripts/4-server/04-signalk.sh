@@ -1,5 +1,9 @@
 #!/bin/bash -e
 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash  # Download and install nvm
+\. "$HOME/.nvm/nvm.sh"  # in lieu of restarting the shell
+nvm install 24  # Download and install Node.js
+
 groupadd --system signalk
 adduser --home /home/signalk --gecos --system --disabled-password --disabled-login signalk
 
