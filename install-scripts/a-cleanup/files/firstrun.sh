@@ -7,10 +7,10 @@ set +e
 
 CURRENT_HOSTNAME=$(cat /etc/hostname | tr -d " \t\n\r")
 if [ -f /usr/lib/raspberrypi-sys-mods/imager_custom ]; then
-   /usr/lib/raspberrypi-sys-mods/imager_custom set_hostname lysmarine
+   /usr/lib/raspberrypi-sys-mods/imager_custom set_hostname bbn
 else
-   echo lysmarine >/etc/hostname
-   sed -i "s/127.0.1.1.*$CURRENT_HOSTNAME/127.0.1.1\tlysmarine/g" /etc/hosts || true
+   echo bbn >/etc/hostname
+   sed -i "s/127.0.1.1.*$CURRENT_HOSTNAME/127.0.1.1\tbbn/g" /etc/hosts || true
 fi
 FIRSTUSER=$(getent passwd 1000 | cut -d: -f1)
 FIRSTUSERHOME=$(getent passwd 1000 | cut -d: -f6)

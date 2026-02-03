@@ -13,7 +13,7 @@ if [ $# -eq 0 ] ; then
 fi
 
 NEW_HOSTNAME=$(echo "$1" | tr '[:upper:]' '[:lower:]' | sed 's/[^0-9a-z-]*//g')
-OLD_HOSTNAME="${HOSTNAME:-lysmarine}"
+OLD_HOSTNAME="${HOSTNAME:-bbn}"
 
 if [ -z "$NEW_HOSTNAME" ] ; then
   echo "New host name can't be empty"
