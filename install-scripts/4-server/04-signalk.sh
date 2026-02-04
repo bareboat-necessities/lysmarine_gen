@@ -33,8 +33,8 @@ add_to_group_if_exists() {
 }
 
 # Install Node.js 22 from NodeSource
-log "Configuring NodeSource Node.js 22..."
-curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+log "Configuring NodeSource Node.js 24..."
+curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
 
 log "Updating apt + installing base deps..."
 apt-get update -q
