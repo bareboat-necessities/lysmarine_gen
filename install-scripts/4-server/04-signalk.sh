@@ -6,17 +6,6 @@ source "$SCRIPT_DIR/../lib/common.sh"
 
 export NEEDRESTART_MODE=a
 
-# systemctl will fail inside containers/chroots without systemd as PID 1
-has_systemd() { command -v systemctl >/dev/null 2>&1 && [ -d /run/systemd/system ]; }
-systemctl_safe() {
-  if has_systemd; then
-    systemctl "$@"
-  else
-    log "[skip] systemctl $* (systemd not active)"
-    return 0
-  fi
-}
-
 # Ensure a group exists
 ensure_group() {
   local g="$1"
@@ -230,15 +219,15 @@ echo "" >> /etc/sudoers
 echo "user ALL=(ALL) NOPASSWD: /usr/local/sbin/signalk-restart" >> /etc/sudoers
 
 # Seatalk: disable pigpio if possible
-systemctl_safe disable pigpiod || true
+systemctl disable pigpiod || true
 
 # Seatalk helper
 wget -q -O /usr/local/sbin/STALK_read.py \
   https://raw.githubusercontent.com/MatsA/seatalk1-to-NMEA0183/master/STALK_read.py
 chmod 0755 /usr/local/sbin/STALK_read.py || true
 
-# Enable SignalK service (guarded)
-systemctl_safe enable signalk || true
+# Enable SignalK service
+systemctl enable signalk || true
 
 install -d /usr/local/share/applications
 
