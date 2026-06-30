@@ -92,3 +92,7 @@ EOF
 wget https://github.com/bareboat-necessities/sv-dashboard-gtk/releases/download/v0.3.8/sv-dashboard-gtk_0.3.8-1_arm64.deb
 dpkg -i sv-dashboard-gtk_0.3.8-1_arm64.deb
 rm -rf sv-dashboard-*.deb
+
+# openbox icon spacing
+sudo sed -i.bak -E 's/^([[:space:]]*padding\.width:[[:space:]]*).*/\115/' /usr/share/themes/Natura/openbox-3/themerc
+
