@@ -94,5 +94,13 @@ dpkg -i sv-dashboard-gtk_0.3.8-1_arm64.deb
 rm -rf sv-dashboard-*.deb
 
 # openbox icon spacing
-sudo sed -i.bak -E 's/^([[:space:]]*padding\.width:[[:space:]]*).*/\115/' /usr/share/themes/Natura/openbox-3/themerc
+theme=/usr/share/themes/Natura/openbox-3/themerc
 
+sed -i.bak -E \
+  -e 's/^[[:space:]]*padding\.width:[[:space:]]*.*/padding.width: 15/' \
+  -e 's/^[[:space:]]*padding\.height:[[:space:]]*.*/padding.height: 8/' \
+  "$theme"
+
+grep -qE '^[[:space:]]*padding\.height:' "$theme" || \
+  sudo sed -i -E '/^[[:space:]]*padding\.width:/a padding.height: 8' "$theme"
+  
